@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zo2-TD-TYF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notes-->
+        <scene sceneID="DXH-Jj-2Pp">
+            <objects>
+                <tableViewController id="Zo2-TD-TYF" customClass="NotesController" customModule="MoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="233" sectionHeaderHeight="28" sectionFooterHeight="28" id="tcU-k6-s5U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="233" id="dxl-gJ-jab" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="233"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dxl-gJ-jab" id="B8b-06-xhs">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="232.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uua-Ez-aIa">
+                                            <rect key="frame" x="8" y="52" width="160" height="147"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="160" id="yZY-v8-PbQ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuL-uI-JYF">
+                                            <rect key="frame" x="8" y="0.0" width="584" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="DXY-D1-Hcr"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Y-B5-50e">
+                                            <rect key="frame" x="176" y="52" width="256" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="256" id="Sc8-Dh-PzD"/>
+                                                <constraint firstAttribute="height" constant="32" id="iyW-QP-Gg2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2e-pE-IdI">
+                                            <rect key="frame" x="176" y="98" width="320" height="112"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uua-Ez-aIa" firstAttribute="bottom" secondItem="P2e-pE-IdI" secondAttribute="bottom" id="1mv-Kp-gkb"/>
+                                        <constraint firstItem="uua-Ez-aIa" firstAttribute="top" secondItem="Y5Y-B5-50e" secondAttribute="top" id="Csi-LP-deO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="P2e-pE-IdI" secondAttribute="trailing" constant="96" id="Eov-rK-auX"/>
+                                        <constraint firstItem="fuL-uI-JYF" firstAttribute="trailing" secondItem="B8b-06-xhs" secondAttribute="trailingMargin" id="Igo-K2-ljR"/>
+                                        <constraint firstItem="uua-Ez-aIa" firstAttribute="bottom" secondItem="B8b-06-xhs" secondAttribute="bottomMargin" id="LtX-ph-9nZ"/>
+                                        <constraint firstItem="uua-Ez-aIa" firstAttribute="top" secondItem="fuL-uI-JYF" secondAttribute="bottom" constant="8" symbolic="YES" id="j6i-tW-Aij"/>
+                                        <constraint firstItem="Y5Y-B5-50e" firstAttribute="leading" secondItem="P2e-pE-IdI" secondAttribute="leading" id="k1j-nb-1cd"/>
+                                        <constraint firstItem="Y5Y-B5-50e" firstAttribute="leading" secondItem="uua-Ez-aIa" secondAttribute="trailing" constant="8" symbolic="YES" id="liV-7H-sXq"/>
+                                        <constraint firstItem="fuL-uI-JYF" firstAttribute="top" secondItem="B8b-06-xhs" secondAttribute="top" id="m9A-82-tfN"/>
+                                        <constraint firstItem="P2e-pE-IdI" firstAttribute="top" secondItem="Y5Y-B5-50e" secondAttribute="bottom" constant="14" id="nwh-gE-bi4"/>
+                                        <constraint firstItem="fuL-uI-JYF" firstAttribute="leading" secondItem="B8b-06-xhs" secondAttribute="leadingMargin" id="qRX-3O-pix"/>
+                                        <constraint firstItem="fuL-uI-JYF" firstAttribute="leading" secondItem="uua-Ez-aIa" secondAttribute="leading" id="t4Z-nS-sQb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="date" destination="fuL-uI-JYF" id="SEl-63-Xpu"/>
+                                    <outlet property="moodIcon" destination="uua-Ez-aIa" id="n6T-cz-YKh"/>
+                                    <outlet property="note" destination="P2e-pE-IdI" id="u7W-e3-T99"/>
+                                    <outlet property="score" destination="Y5Y-B5-50e" id="3Ru-uo-Crv"/>
+                                    <segue destination="xpG-eP-zIM" kind="show" id="gSS-2A-zWY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Zo2-TD-TYF" id="3gh-yI-5M7"/>
+                            <outlet property="delegate" destination="Zo2-TD-TYF" id="rmF-aG-hZO"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Notes" id="lmB-h5-2Xv"/>
+                    <navigationItem key="navigationItem" id="k1M-Zz-CmT"/>
+                    <connections>
+                        <outlet property="TableView" destination="tcU-k6-s5U" id="mKr-4q-nVh"/>
+                        <outlet property="searchDisplayController" destination="XEa-LW-fbu" id="7te-NL-cMX"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngC-pS-0Rw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="qhC-H5-RjH">
+                    <connections>
+                        <outlet property="delegate" destination="Zo2-TD-TYF" id="5jD-re-QRe"/>
+                        <outlet property="searchContentsController" destination="Zo2-TD-TYF" id="ued-8A-nFi"/>
+                        <outlet property="searchResultsDataSource" destination="Zo2-TD-TYF" id="8Zq-9u-xFk"/>
+                        <outlet property="searchResultsDelegate" destination="Zo2-TD-TYF" id="PZp-iF-qMJ"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="XEa-LW-fbu">
+                    <connections>
+                        <outlet property="delegate" destination="Zo2-TD-TYF" id="qQJ-UY-cca"/>
+                        <outlet property="searchContentsController" destination="Zo2-TD-TYF" id="Mvx-sT-30n"/>
+                        <outlet property="searchResultsDataSource" destination="Zo2-TD-TYF" id="OtW-JC-5cY"/>
+                        <outlet property="searchResultsDelegate" destination="Zo2-TD-TYF" id="Ie6-dk-9Ah"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="850" y="1111"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="Mm4-dV-dx3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Statistics" id="xpG-eP-zIM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fh4-1o-VBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1353" y="1111"/>
+        </scene>
+    </scenes>
+</document>

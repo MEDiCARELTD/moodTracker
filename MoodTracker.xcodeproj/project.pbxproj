@@ -1,0 +1,751 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		072973C91D664EF000987DF6 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072973C81D664EF000987DF6 /* Notifications.storyboard */; };
+		072973CB1D67409500987DF6 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072973CA1D67409500987DF6 /* NSDate.swift */; };
+		072973CD1D6745D900987DF6 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072973CC1D6745D900987DF6 /* Notifications.swift */; };
+		0738CE161D54BC040042BA76 /* AlarmTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738CE151D54BC040042BA76 /* AlarmTableController.swift */; };
+		0738CE1B1D56460F0042BA76 /* AlarmSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738CE1A1D56460F0042BA76 /* AlarmSettingsController.swift */; };
+		0738CE2D1D5746350042BA76 /* TestGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738CE2C1D5746340042BA76 /* TestGraph.swift */; };
+		0738CE301D579D570042BA76 /* GraphingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738CE2F1D579D570042BA76 /* GraphingTool.swift */; };
+		0772EA571D46152700094396 /* LogMoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0772EA561D46152700094396 /* LogMoodController.swift */; };
+		0776A45B1D419D880003BAB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776A45A1D419D880003BAB4 /* AppDelegate.swift */; };
+		0776A45D1D419D880003BAB4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776A45C1D419D880003BAB4 /* LoginController.swift */; };
+		0776A4621D419D880003BAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0776A4611D419D880003BAB4 /* Assets.xcassets */; };
+		0776A4651D419D880003BAB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0776A4631D419D880003BAB4 /* LaunchScreen.storyboard */; };
+		0776A46D1D419F700003BAB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0776A46C1D419F700003BAB4 /* GoogleService-Info.plist */; };
+		0779339F1D53680600C49F6B /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779339E1D53680600C49F6B /* DetailController.swift */; };
+		077D40001D62198C00CCC312 /* TipsForCopingWithStressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D3FFF1D62198C00CCC312 /* TipsForCopingWithStressController.swift */; };
+		077D40041D626C9D00CCC312 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D40031D626C9D00CCC312 /* DataObject.swift */; };
+		077D40061D631E8400CCC312 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D40051D631E8400CCC312 /* Body.swift */; };
+		077D400A1D65221300CCC312 /* LogMood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077D40091D65221300CCC312 /* LogMood.storyboard */; };
+		077D400C1D652BCB00CCC312 /* TipsForStress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077D400B1D652BCB00CCC312 /* TipsForStress.storyboard */; };
+		077D400E1D652C2800CCC312 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077D400D1D652C2800CCC312 /* Notes.storyboard */; };
+		077D40101D653A8200CCC312 /* EmergencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D400F1D653A8200CCC312 /* EmergencyController.swift */; };
+		078EB01C1D4A97B5004CE01E /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078EB01B1D4A97B5004CE01E /* RegisterController.swift */; };
+		078EB0261D4AB456004CE01E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078EB0251D4AB456004CE01E /* Login.storyboard */; };
+		078F7CC11D4766590054AAC7 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078F7CC01D4766590054AAC7 /* StatisticsController.swift */; };
+		0790E9131D43A6F800BE0E49 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0790E9121D43A6F800BE0E49 /* AccountController.swift */; };
+		079F225C1D58B8E30048EAE0 /* RedeemPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F225B1D58B8E30048EAE0 /* RedeemPassword.swift */; };
+		079F22601D58C2110048EAE0 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F225F1D58C2110048EAE0 /* ErrorHandler.swift */; };
+		079F22621D5A039D0048EAE0 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F22611D5A039D0048EAE0 /* Alarm.swift */; };
+		079F22671D5A546B0048EAE0 /* SearchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F22661D5A546B0048EAE0 /* SearchHandler.swift */; };
+		079F226D1D5CC9680048EAE0 /* DateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F226C1D5CC9680048EAE0 /* DateHandler.swift */; };
+		079F226F1D5E02DA0048EAE0 /* ShakeMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F226E1D5E02DA0048EAE0 /* ShakeMe.swift */; };
+		07C4DAD21D57B98800286427 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C4DAD11D57B98800286427 /* Statistics.storyboard */; };
+		07C9AF0E1D48A75C00B2AC4F /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF0D1D48A75C00B2AC4F /* NotesController.swift */; };
+		07C9AF121D48C01600B2AC4F /* MoodLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF111D48C01600B2AC4F /* MoodLog.swift */; };
+		07C9AF141D48C3A600B2AC4F /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF131D48C3A600B2AC4F /* MainMenuController.swift */; };
+		07E98D061D529974007F2F92 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E98D051D529974007F2F92 /* MainMenu.storyboard */; };
+		201A6D3DB01425C0248671A4 /* Pods_MoodTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2957E6E07AF70D3FF380F062 /* Pods_MoodTracker.framework */; };
+		66BC2BB91D6791D80095425B /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BA31D6791D80095425B /* IQNSArray+Sort.swift */; };
+		66BC2BBA1D6791D80095425B /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BA41D6791D80095425B /* IQUIScrollView+Additions.swift */; };
+		66BC2BBB1D6791D80095425B /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BA51D6791D80095425B /* IQUITextFieldView+Additions.swift */; };
+		66BC2BBC1D6791D80095425B /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BA61D6791D80095425B /* IQUIView+Hierarchy.swift */; };
+		66BC2BBD1D6791D80095425B /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BA71D6791D80095425B /* IQUIViewController+Additions.swift */; };
+		66BC2BBE1D6791D80095425B /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BA81D6791D80095425B /* IQUIWindow+Hierarchy.swift */; };
+		66BC2BBF1D6791D80095425B /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BAA1D6791D80095425B /* IQKeyboardManagerConstants.swift */; };
+		66BC2BC01D6791D80095425B /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BAB1D6791D80095425B /* IQKeyboardManagerConstantsInternal.swift */; };
+		66BC2BC11D6791D80095425B /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BAC1D6791D80095425B /* IQKeyboardManager.swift */; };
+		66BC2BC21D6791D80095425B /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BAE1D6791D80095425B /* IQKeyboardReturnKeyHandler.swift */; };
+		66BC2BC31D6791D80095425B /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BB01D6791D80095425B /* IQTextView.swift */; };
+		66BC2BC41D6791D80095425B /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BB21D6791D80095425B /* IQBarButtonItem.swift */; };
+		66BC2BC51D6791D80095425B /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BB31D6791D80095425B /* IQPreviousNextView.swift */; };
+		66BC2BC61D6791D80095425B /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BB41D6791D80095425B /* IQTitleBarButtonItem.swift */; };
+		66BC2BC71D6791D80095425B /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BB51D6791D80095425B /* IQToolbar.swift */; };
+		66BC2BC81D6791D80095425B /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2BB61D6791D80095425B /* IQUIView+IQKeyboardToolbar.swift */; };
+		66BC2BC91D6791D80095425B /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 66BC2BB81D6791D80095425B /* IQKeyboardManager.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		072973C81D664EF000987DF6 /* Notifications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
+		072973CA1D67409500987DF6 /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
+		072973CC1D6745D900987DF6 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		0738CE151D54BC040042BA76 /* AlarmTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTableController.swift; sourceTree = "<group>"; };
+		0738CE1A1D56460F0042BA76 /* AlarmSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSettingsController.swift; sourceTree = "<group>"; };
+		0738CE261D56580E0042BA76 /* MoodTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MoodTracker-Bridging-Header.h"; path = "MoodTracker/MoodTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		0738CE2C1D5746340042BA76 /* TestGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestGraph.swift; sourceTree = "<group>"; };
+		0738CE2F1D579D570042BA76 /* GraphingTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphingTool.swift; sourceTree = "<group>"; };
+		0772EA561D46152700094396 /* LogMoodController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMoodController.swift; sourceTree = "<group>"; };
+		0776A4571D419D880003BAB4 /* MoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0776A45A1D419D880003BAB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0776A45C1D419D880003BAB4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		0776A4611D419D880003BAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0776A4641D419D880003BAB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0776A4661D419D880003BAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0776A46C1D419F700003BAB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0779339E1D53680600C49F6B /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		077D3FFF1D62198C00CCC312 /* TipsForCopingWithStressController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsForCopingWithStressController.swift; sourceTree = "<group>"; };
+		077D40031D626C9D00CCC312 /* DataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
+		077D40051D631E8400CCC312 /* Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
+		077D40091D65221300CCC312 /* LogMood.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogMood.storyboard; sourceTree = "<group>"; };
+		077D400B1D652BCB00CCC312 /* TipsForStress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TipsForStress.storyboard; sourceTree = "<group>"; };
+		077D400D1D652C2800CCC312 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
+		077D400F1D653A8200CCC312 /* EmergencyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyController.swift; sourceTree = "<group>"; };
+		078EB01B1D4A97B5004CE01E /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		078EB0251D4AB456004CE01E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		078F7CC01D4766590054AAC7 /* StatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
+		0790E9121D43A6F800BE0E49 /* AccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		079F225B1D58B8E30048EAE0 /* RedeemPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedeemPassword.swift; sourceTree = "<group>"; };
+		079F225F1D58C2110048EAE0 /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		079F22611D5A039D0048EAE0 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		079F22661D5A546B0048EAE0 /* SearchHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHandler.swift; sourceTree = "<group>"; };
+		079F226C1D5CC9680048EAE0 /* DateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHandler.swift; sourceTree = "<group>"; };
+		079F226E1D5E02DA0048EAE0 /* ShakeMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeMe.swift; sourceTree = "<group>"; };
+		07C4DAD11D57B98800286427 /* Statistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
+		07C9AF0D1D48A75C00B2AC4F /* NotesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
+		07C9AF111D48C01600B2AC4F /* MoodLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodLog.swift; sourceTree = "<group>"; };
+		07C9AF131D48C3A600B2AC4F /* MainMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		07E98D051D529974007F2F92 /* MainMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
+		2957E6E07AF70D3FF380F062 /* Pods_MoodTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31F0C7F4899C096508DC7981 /* Pods-MoodTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodTracker/Pods-MoodTracker.release.xcconfig"; sourceTree = "<group>"; };
+		66BC2BA31D6791D80095425B /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		66BC2BA41D6791D80095425B /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		66BC2BA51D6791D80095425B /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		66BC2BA61D6791D80095425B /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		66BC2BA71D6791D80095425B /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		66BC2BA81D6791D80095425B /* IQUIWindow+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIWindow+Hierarchy.swift"; sourceTree = "<group>"; };
+		66BC2BAA1D6791D80095425B /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		66BC2BAB1D6791D80095425B /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		66BC2BAC1D6791D80095425B /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManager.swift; sourceTree = "<group>"; };
+		66BC2BAD1D6791D80095425B /* IQKeyboardManagerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerSwift.h; sourceTree = "<group>"; };
+		66BC2BAE1D6791D80095425B /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		66BC2BB01D6791D80095425B /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
+		66BC2BB21D6791D80095425B /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
+		66BC2BB31D6791D80095425B /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
+		66BC2BB41D6791D80095425B /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		66BC2BB51D6791D80095425B /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
+		66BC2BB61D6791D80095425B /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		66BC2BB81D6791D80095425B /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		85187722D23A78E1D65E906E /* Pods-MoodTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodTracker/Pods-MoodTracker.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0776A4541D419D880003BAB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				201A6D3DB01425C0248671A4 /* Pods_MoodTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0738CE191D5645DE0042BA76 /* NotificationController */ = {
+			isa = PBXGroup;
+			children = (
+				0738CE151D54BC040042BA76 /* AlarmTableController.swift */,
+				0738CE1A1D56460F0042BA76 /* AlarmSettingsController.swift */,
+				079F22611D5A039D0048EAE0 /* Alarm.swift */,
+				072973CC1D6745D900987DF6 /* Notifications.swift */,
+			);
+			name = NotificationController;
+			sourceTree = "<group>";
+		};
+		0738CE271D5678930042BA76 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				66BC2BA11D6791D80095425B /* IQKeyboardManagerSwift */,
+				079F225F1D58C2110048EAE0 /* ErrorHandler.swift */,
+				079F226C1D5CC9680048EAE0 /* DateHandler.swift */,
+				079F226E1D5E02DA0048EAE0 /* ShakeMe.swift */,
+				077F63851D5394CD00DE22A1 /* tester */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		0738CE2E1D579D2B0042BA76 /* StatisticsController */ = {
+			isa = PBXGroup;
+			children = (
+				078F7CC01D4766590054AAC7 /* StatisticsController.swift */,
+				0738CE2F1D579D570042BA76 /* GraphingTool.swift */,
+				0779339E1D53680600C49F6B /* DetailController.swift */,
+				07C9AF111D48C01600B2AC4F /* MoodLog.swift */,
+			);
+			name = StatisticsController;
+			sourceTree = "<group>";
+		};
+		0772EA581D4618C900094396 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				072973C81D664EF000987DF6 /* Notifications.storyboard */,
+				078EB0251D4AB456004CE01E /* Login.storyboard */,
+				0776A4631D419D880003BAB4 /* LaunchScreen.storyboard */,
+				07E98D051D529974007F2F92 /* MainMenu.storyboard */,
+				07C4DAD11D57B98800286427 /* Statistics.storyboard */,
+				077D40091D65221300CCC312 /* LogMood.storyboard */,
+				077D400B1D652BCB00CCC312 /* TipsForStress.storyboard */,
+				077D400D1D652C2800CCC312 /* Notes.storyboard */,
+			);
+			name = StoryBoards;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0772EA591D46B2C500094396 /* LoginController */ = {
+			isa = PBXGroup;
+			children = (
+				0776A45C1D419D880003BAB4 /* LoginController.swift */,
+				078EB01B1D4A97B5004CE01E /* RegisterController.swift */,
+				079F225B1D58B8E30048EAE0 /* RedeemPassword.swift */,
+			);
+			name = LoginController;
+			sourceTree = "<group>";
+		};
+		0776A44E1D419D880003BAB4 = {
+			isa = PBXGroup;
+			children = (
+				0776A46C1D419F700003BAB4 /* GoogleService-Info.plist */,
+				0776A4591D419D880003BAB4 /* MoodTracker */,
+				0776A4581D419D880003BAB4 /* Products */,
+				D8D84158EAACD374497D9AAC /* Pods */,
+				663C553F651F5C5EDFF64874 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0776A4581D419D880003BAB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0776A4571D419D880003BAB4 /* MoodTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0776A4591D419D880003BAB4 /* MoodTracker */ = {
+			isa = PBXGroup;
+			children = (
+				0776A45A1D419D880003BAB4 /* AppDelegate.swift */,
+				07C4DAD31D57BF1E00286427 /* Controllers */,
+				0738CE271D5678930042BA76 /* Utilities */,
+				0776A4611D419D880003BAB4 /* Assets.xcassets */,
+				0776A4661D419D880003BAB4 /* Info.plist */,
+				0772EA581D4618C900094396 /* StoryBoards */,
+				072973CA1D67409500987DF6 /* NSDate.swift */,
+			);
+			path = MoodTracker;
+			sourceTree = "<group>";
+		};
+		077D3FFE1D62196C00CCC312 /* TipsForCopingWithStressController */ = {
+			isa = PBXGroup;
+			children = (
+				077D3FFF1D62198C00CCC312 /* TipsForCopingWithStressController.swift */,
+				077D40051D631E8400CCC312 /* Body.swift */,
+				077D40031D626C9D00CCC312 /* DataObject.swift */,
+			);
+			name = TipsForCopingWithStressController;
+			sourceTree = "<group>";
+		};
+		077F63851D5394CD00DE22A1 /* tester */ = {
+			isa = PBXGroup;
+			children = (
+				0738CE2C1D5746340042BA76 /* TestGraph.swift */,
+			);
+			name = tester;
+			sourceTree = "<group>";
+		};
+		078F7CC21D47E2340054AAC7 /* menuController */ = {
+			isa = PBXGroup;
+			children = (
+				07C9AF131D48C3A600B2AC4F /* MainMenuController.swift */,
+				0790E9121D43A6F800BE0E49 /* AccountController.swift */,
+			);
+			name = menuController;
+			sourceTree = "<group>";
+		};
+		079F225A1D58AD880048EAE0 /* LogMoodController */ = {
+			isa = PBXGroup;
+			children = (
+				0772EA561D46152700094396 /* LogMoodController.swift */,
+				077D400F1D653A8200CCC312 /* EmergencyController.swift */,
+			);
+			name = LogMoodController;
+			sourceTree = "<group>";
+		};
+		079F22631D5A52030048EAE0 /* notesController */ = {
+			isa = PBXGroup;
+			children = (
+				079F22661D5A546B0048EAE0 /* SearchHandler.swift */,
+				07C9AF0D1D48A75C00B2AC4F /* NotesController.swift */,
+			);
+			name = notesController;
+			sourceTree = "<group>";
+		};
+		07C4DAD31D57BF1E00286427 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				077D3FFE1D62196C00CCC312 /* TipsForCopingWithStressController */,
+				079F22631D5A52030048EAE0 /* notesController */,
+				079F225A1D58AD880048EAE0 /* LogMoodController */,
+				0772EA591D46B2C500094396 /* LoginController */,
+				078F7CC21D47E2340054AAC7 /* menuController */,
+				0738CE191D5645DE0042BA76 /* NotificationController */,
+				0738CE2E1D579D2B0042BA76 /* StatisticsController */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		663C553F651F5C5EDFF64874 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0738CE261D56580E0042BA76 /* MoodTracker-Bridging-Header.h */,
+				2957E6E07AF70D3FF380F062 /* Pods_MoodTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66BC2BA11D6791D80095425B /* IQKeyboardManagerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				66BC2BA21D6791D80095425B /* Categories */,
+				66BC2BA91D6791D80095425B /* Constants */,
+				66BC2BAC1D6791D80095425B /* IQKeyboardManager.swift */,
+				66BC2BAD1D6791D80095425B /* IQKeyboardManagerSwift.h */,
+				66BC2BAE1D6791D80095425B /* IQKeyboardReturnKeyHandler.swift */,
+				66BC2BAF1D6791D80095425B /* IQTextView */,
+				66BC2BB11D6791D80095425B /* IQToolbar */,
+				66BC2BB71D6791D80095425B /* Resources */,
+			);
+			path = IQKeyboardManagerSwift;
+			sourceTree = "<group>";
+		};
+		66BC2BA21D6791D80095425B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				66BC2BA31D6791D80095425B /* IQNSArray+Sort.swift */,
+				66BC2BA41D6791D80095425B /* IQUIScrollView+Additions.swift */,
+				66BC2BA51D6791D80095425B /* IQUITextFieldView+Additions.swift */,
+				66BC2BA61D6791D80095425B /* IQUIView+Hierarchy.swift */,
+				66BC2BA71D6791D80095425B /* IQUIViewController+Additions.swift */,
+				66BC2BA81D6791D80095425B /* IQUIWindow+Hierarchy.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		66BC2BA91D6791D80095425B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				66BC2BAA1D6791D80095425B /* IQKeyboardManagerConstants.swift */,
+				66BC2BAB1D6791D80095425B /* IQKeyboardManagerConstantsInternal.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		66BC2BAF1D6791D80095425B /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				66BC2BB01D6791D80095425B /* IQTextView.swift */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		66BC2BB11D6791D80095425B /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				66BC2BB21D6791D80095425B /* IQBarButtonItem.swift */,
+				66BC2BB31D6791D80095425B /* IQPreviousNextView.swift */,
+				66BC2BB41D6791D80095425B /* IQTitleBarButtonItem.swift */,
+				66BC2BB51D6791D80095425B /* IQToolbar.swift */,
+				66BC2BB61D6791D80095425B /* IQUIView+IQKeyboardToolbar.swift */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		66BC2BB71D6791D80095425B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66BC2BB81D6791D80095425B /* IQKeyboardManager.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D8D84158EAACD374497D9AAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85187722D23A78E1D65E906E /* Pods-MoodTracker.debug.xcconfig */,
+				31F0C7F4899C096508DC7981 /* Pods-MoodTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0776A4561D419D880003BAB4 /* MoodTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0776A4691D419D880003BAB4 /* Build configuration list for PBXNativeTarget "MoodTracker" */;
+			buildPhases = (
+				E916D7D3E774FC19DE0A4A18 /* [CP] Check Pods Manifest.lock */,
+				0776A4531D419D880003BAB4 /* Sources */,
+				0776A4541D419D880003BAB4 /* Frameworks */,
+				0776A4551D419D880003BAB4 /* Resources */,
+				747EDA53E94C63D29B747E27 /* [CP] Embed Pods Frameworks */,
+				FFAB56DC228B2C10316D95C0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoodTracker;
+			productName = MoodTracker;
+			productReference = 0776A4571D419D880003BAB4 /* MoodTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0776A44F1D419D880003BAB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Daniel;
+				TargetAttributes = {
+					0776A4561D419D880003BAB4 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8UNVNQGMS3;
+					};
+				};
+			};
+			buildConfigurationList = 0776A4521D419D880003BAB4 /* Build configuration list for PBXProject "MoodTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0776A44E1D419D880003BAB4;
+			productRefGroup = 0776A4581D419D880003BAB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0776A4561D419D880003BAB4 /* MoodTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0776A4551D419D880003BAB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0776A4651D419D880003BAB4 /* LaunchScreen.storyboard in Resources */,
+				66BC2BC91D6791D80095425B /* IQKeyboardManager.bundle in Resources */,
+				072973C91D664EF000987DF6 /* Notifications.storyboard in Resources */,
+				078EB0261D4AB456004CE01E /* Login.storyboard in Resources */,
+				077D400E1D652C2800CCC312 /* Notes.storyboard in Resources */,
+				077D400A1D65221300CCC312 /* LogMood.storyboard in Resources */,
+				07E98D061D529974007F2F92 /* MainMenu.storyboard in Resources */,
+				0776A46D1D419F700003BAB4 /* GoogleService-Info.plist in Resources */,
+				07C4DAD21D57B98800286427 /* Statistics.storyboard in Resources */,
+				077D400C1D652BCB00CCC312 /* TipsForStress.storyboard in Resources */,
+				0776A4621D419D880003BAB4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		747EDA53E94C63D29B747E27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoodTracker/Pods-MoodTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E916D7D3E774FC19DE0A4A18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FFAB56DC228B2C10316D95C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoodTracker/Pods-MoodTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0776A4531D419D880003BAB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66BC2BC81D6791D80095425B /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				077D40041D626C9D00CCC312 /* DataObject.swift in Sources */,
+				66BC2BBF1D6791D80095425B /* IQKeyboardManagerConstants.swift in Sources */,
+				66BC2BC51D6791D80095425B /* IQPreviousNextView.swift in Sources */,
+				0790E9131D43A6F800BE0E49 /* AccountController.swift in Sources */,
+				0772EA571D46152700094396 /* LogMoodController.swift in Sources */,
+				0779339F1D53680600C49F6B /* DetailController.swift in Sources */,
+				0776A45D1D419D880003BAB4 /* LoginController.swift in Sources */,
+				66BC2BC71D6791D80095425B /* IQToolbar.swift in Sources */,
+				66BC2BC11D6791D80095425B /* IQKeyboardManager.swift in Sources */,
+				66BC2BBA1D6791D80095425B /* IQUIScrollView+Additions.swift in Sources */,
+				66BC2BC61D6791D80095425B /* IQTitleBarButtonItem.swift in Sources */,
+				077D40001D62198C00CCC312 /* TipsForCopingWithStressController.swift in Sources */,
+				07C9AF141D48C3A600B2AC4F /* MainMenuController.swift in Sources */,
+				0738CE1B1D56460F0042BA76 /* AlarmSettingsController.swift in Sources */,
+				079F22621D5A039D0048EAE0 /* Alarm.swift in Sources */,
+				66BC2BC31D6791D80095425B /* IQTextView.swift in Sources */,
+				078EB01C1D4A97B5004CE01E /* RegisterController.swift in Sources */,
+				079F226F1D5E02DA0048EAE0 /* ShakeMe.swift in Sources */,
+				077D40101D653A8200CCC312 /* EmergencyController.swift in Sources */,
+				0738CE161D54BC040042BA76 /* AlarmTableController.swift in Sources */,
+				07C9AF0E1D48A75C00B2AC4F /* NotesController.swift in Sources */,
+				66BC2BBE1D6791D80095425B /* IQUIWindow+Hierarchy.swift in Sources */,
+				072973CB1D67409500987DF6 /* NSDate.swift in Sources */,
+				0738CE2D1D5746350042BA76 /* TestGraph.swift in Sources */,
+				0738CE301D579D570042BA76 /* GraphingTool.swift in Sources */,
+				66BC2BC41D6791D80095425B /* IQBarButtonItem.swift in Sources */,
+				079F226D1D5CC9680048EAE0 /* DateHandler.swift in Sources */,
+				072973CD1D6745D900987DF6 /* Notifications.swift in Sources */,
+				0776A45B1D419D880003BAB4 /* AppDelegate.swift in Sources */,
+				078F7CC11D4766590054AAC7 /* StatisticsController.swift in Sources */,
+				66BC2BBD1D6791D80095425B /* IQUIViewController+Additions.swift in Sources */,
+				66BC2BC21D6791D80095425B /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				079F225C1D58B8E30048EAE0 /* RedeemPassword.swift in Sources */,
+				079F22601D58C2110048EAE0 /* ErrorHandler.swift in Sources */,
+				079F22671D5A546B0048EAE0 /* SearchHandler.swift in Sources */,
+				66BC2BBB1D6791D80095425B /* IQUITextFieldView+Additions.swift in Sources */,
+				07C9AF121D48C01600B2AC4F /* MoodLog.swift in Sources */,
+				077D40061D631E8400CCC312 /* Body.swift in Sources */,
+				66BC2BBC1D6791D80095425B /* IQUIView+Hierarchy.swift in Sources */,
+				66BC2BB91D6791D80095425B /* IQNSArray+Sort.swift in Sources */,
+				66BC2BC01D6791D80095425B /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0776A4631D419D880003BAB4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0776A4641D419D880003BAB4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = MoodTracker;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0776A4671D419D880003BAB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0776A4681D419D880003BAB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0776A46A1D419D880003BAB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85187722D23A78E1D65E906E /* Pods-MoodTracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Analytics/Sources",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAppUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAuthUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleParsingUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GooglePlaces\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSignIn\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
+				INFOPLIST_FILE = MoodTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.MoodTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b40889ee-0e46-4312-b7de-88e75340677b";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0776A46B1D419D880003BAB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31F0C7F4899C096508DC7981 /* Pods-MoodTracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Analytics/Sources",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAppUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAuthUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleParsingUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GooglePlaces\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSignIn\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
+				INFOPLIST_FILE = MoodTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.MoodTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b40889ee-0e46-4312-b7de-88e75340677b";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0776A4521D419D880003BAB4 /* Build configuration list for PBXProject "MoodTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0776A4671D419D880003BAB4 /* Debug */,
+				0776A4681D419D880003BAB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0776A4691D419D880003BAB4 /* Build configuration list for PBXNativeTarget "MoodTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0776A46A1D419D880003BAB4 /* Debug */,
+				0776A46B1D419D880003BAB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0776A44F1D419D880003BAB4 /* Project object */;
+}
