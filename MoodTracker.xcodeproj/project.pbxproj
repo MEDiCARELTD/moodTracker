@@ -38,6 +38,8 @@
 		079F22671D5A546B0048EAE0 /* SearchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F22661D5A546B0048EAE0 /* SearchHandler.swift */; };
 		079F226D1D5CC9680048EAE0 /* DateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F226C1D5CC9680048EAE0 /* DateHandler.swift */; };
 		079F226F1D5E02DA0048EAE0 /* ShakeMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F226E1D5E02DA0048EAE0 /* ShakeMe.swift */; };
+		07B90ED81D68D3A7004AC82A /* TipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B90ED71D68D3A7004AC82A /* TipCell.xib */; };
+		07B90EDA1D68DCF8004AC82A /* TipCellControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B90ED91D68DCF8004AC82A /* TipCellControlTableViewCell.swift */; };
 		07C4DAD21D57B98800286427 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C4DAD11D57B98800286427 /* Statistics.storyboard */; };
 		07C9AF0E1D48A75C00B2AC4F /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF0D1D48A75C00B2AC4F /* NotesController.swift */; };
 		07C9AF121D48C01600B2AC4F /* MoodLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF111D48C01600B2AC4F /* MoodLog.swift */; };
@@ -98,6 +100,8 @@
 		079F22661D5A546B0048EAE0 /* SearchHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHandler.swift; sourceTree = "<group>"; };
 		079F226C1D5CC9680048EAE0 /* DateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHandler.swift; sourceTree = "<group>"; };
 		079F226E1D5E02DA0048EAE0 /* ShakeMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeMe.swift; sourceTree = "<group>"; };
+		07B90ED71D68D3A7004AC82A /* TipCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipCell.xib; sourceTree = "<group>"; };
+		07B90ED91D68DCF8004AC82A /* TipCellControlTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCellControlTableViewCell.swift; sourceTree = "<group>"; };
 		07C4DAD11D57B98800286427 /* Statistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
 		07C9AF0D1D48A75C00B2AC4F /* NotesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
 		07C9AF111D48C01600B2AC4F /* MoodLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodLog.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 				07C4DAD11D57B98800286427 /* Statistics.storyboard */,
 				077D40091D65221300CCC312 /* LogMood.storyboard */,
 				077D400B1D652BCB00CCC312 /* TipsForStress.storyboard */,
+				07B90ED71D68D3A7004AC82A /* TipCell.xib */,
 				077D400D1D652C2800CCC312 /* Notes.storyboard */,
 			);
 			name = StoryBoards;
@@ -201,6 +206,7 @@
 		0776A44E1D419D880003BAB4 = {
 			isa = PBXGroup;
 			children = (
+				07B90ED91D68DCF8004AC82A /* TipCellControlTableViewCell.swift */,
 				0776A46C1D419F700003BAB4 /* GoogleService-Info.plist */,
 				0776A4591D419D880003BAB4 /* MoodTracker */,
 				0776A4581D419D880003BAB4 /* Products */,
@@ -440,6 +446,7 @@
 				072973C91D664EF000987DF6 /* Notifications.storyboard in Resources */,
 				078EB0261D4AB456004CE01E /* Login.storyboard in Resources */,
 				077D400E1D652C2800CCC312 /* Notes.storyboard in Resources */,
+				07B90ED81D68D3A7004AC82A /* TipCell.xib in Resources */,
 				077D400A1D65221300CCC312 /* LogMood.storyboard in Resources */,
 				07E98D061D529974007F2F92 /* MainMenu.storyboard in Resources */,
 				0776A46D1D419F700003BAB4 /* GoogleService-Info.plist in Resources */,
@@ -529,6 +536,7 @@
 				66BC2BBE1D6791D80095425B /* IQUIWindow+Hierarchy.swift in Sources */,
 				072973CB1D67409500987DF6 /* NSDate.swift in Sources */,
 				0738CE2D1D5746350042BA76 /* TestGraph.swift in Sources */,
+				07B90EDA1D68DCF8004AC82A /* TipCellControlTableViewCell.swift in Sources */,
 				0738CE301D579D570042BA76 /* GraphingTool.swift in Sources */,
 				66BC2BC41D6791D80095425B /* IQBarButtonItem.swift in Sources */,
 				079F226D1D5CC9680048EAE0 /* DateHandler.swift in Sources */,

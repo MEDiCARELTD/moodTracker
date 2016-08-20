@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import FirebaseStorage
 import Firebase
+
 import GoogleSignIn
 import GooglePlaces
 
@@ -33,7 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //Setting up Firebase
         FIRApp.configure()
+        let storage = FIRStorage.storage()
         FIRDatabase.database().persistenceEnabled = false
+        
+                
         
 //        UIApplication.sharedApplication().cancelAllLocalNotifications()
         // types are UIUserNotificationType values
