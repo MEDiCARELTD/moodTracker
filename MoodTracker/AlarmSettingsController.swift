@@ -40,12 +40,12 @@ class AlarmSettingsController: UITableViewController {
         
         dateFormatter.timeStyle = .ShortStyle
         let selectedDate = datePicker.date
-        let date = NSDate()
+        //let date = NSDate()
         let c = NSDateComponents()
         
-        c.year = date.year()
-        c.month = date.month()
-        c.day = date.day()
+//        c.year = date.year()
+//        c.month = date.month()
+//        c.day = date.day()
         c.hour = selectedDate.hour()
         c.minute = selectedDate.minute()
         c.second = 0
@@ -59,10 +59,10 @@ class AlarmSettingsController: UITableViewController {
         notification.alertAction = "swipe here"
         notification.fireDate = finalFireDate
         
-        var NSDate = ()
-        now = NSDate()
-        var daysToAdd = 1
-        var newDate1 = now.dateByAddingTimeInterval(60 * 60 * 24 * daysToAdd)
+        //var NSDate = ()
+       // now = NSDate()
+       // var daysToAdd = 1
+       // var newDate1 = now.dateByAddingTimeInterval(60 * 60 * 24 * daysToAdd)
 
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
