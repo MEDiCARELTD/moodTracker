@@ -53,9 +53,9 @@ class StatisticsController: UIViewController, BEMSimpleLineGraphDataSource, BEMS
         
         
         retrievedData = appDelegate.self.accountLogData
-        print(retrievedData)
         listForToday = graphingTool.getListOfLogsForToday(retrievedData)
         listForPastWeek = graphingTool.getListOfLogsForPastWeek(retrievedData)
+        listForPast3Months = graphingTool.getListOfLogsForPast3Months(retrievedData)
         listForAllTime = retrievedData
     }
     override func viewDidLoad() {

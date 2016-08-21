@@ -77,11 +77,10 @@ class GraphingTool {
         var listForPast3Months = [MoodLog]()
         
         let maxTimeInterval = finalElement.getTimeInterval()
-        let miniumTimeInterval = maxTimeInterval - 7.884e+6
+        let miniumTimeInterval = maxTimeInterval - 7884000
         
         for element in retrievedData {
-            print("checking")
-            if element.getTimeInterval() <= maxTimeInterval && element.getTimeInterval() > miniumTimeInterval {
+            if element.getTimeInterval() <= maxTimeInterval && element.getTimeInterval() >= miniumTimeInterval {
                 listForPast3Months.append(element)
             }
         }
