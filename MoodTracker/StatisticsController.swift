@@ -22,6 +22,7 @@ class StatisticsController: UIViewController, BEMSimpleLineGraphDataSource, BEMS
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    @IBOutlet var noDataLabel: UILabel!
     
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
