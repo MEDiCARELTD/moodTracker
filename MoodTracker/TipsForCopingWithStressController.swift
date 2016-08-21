@@ -27,9 +27,6 @@ class TipsForCopingWithStressController: UITableViewController{
     
     override func viewDidLoad() {
         
-        let storageRef = storage.referenceForURL("gs://moodtracker-5c84a.appspot.com/")
-        
-        imageRef = storageRef.child("images/")
         
        // body.createAndSyncTipsForStressArray()
         
@@ -83,10 +80,12 @@ class TipsForCopingWithStressController: UITableViewController{
         cell.title.text = element.title
         cell.info.text = element.info
         
-        let path  = imageRef.child(element.image)
-        //let localURL: NSURL! = NSURL(string: imageRef.child(<#T##path: String##String#>))
+        let storageRef = storage.referenceForURL("gs://moodtracker-5c84a.appspot.com/")
+        imageRef = storageRef.child(String(format: "images/%@", element.image))
 
-        let data = NSData(contentsOfURL: localURL) //make sure your image in this url does exist, otherwise unwrap in a if let check
+       // let path  = imageRef.child(element.image)
+        //let localURL: NSURL! = NSURL(string: imageRef.child(path: String))
+
         
         imageRef.dataWithMaxSize(1 * 1024 * 1024) { (data, error) -> Void in
             if (error != nil) {
@@ -94,7 +93,8 @@ class TipsForCopingWithStressController: UITableViewController{
             } else {
                 // Data for "images/island.jpg" is returned
                 // ... let islandImage: UIImage! = UIImage(data: data!)
-                cell.cellImage.imageView?.image = UIImage(data:data!)
+                let image = UIImage(data: data!)
+                cell.cellImage.setImage(image, forState: .Normal)
             }
         }
 
