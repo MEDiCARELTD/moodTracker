@@ -13,7 +13,7 @@ class AlarmSettingsController: UITableViewController {
     
     @IBOutlet weak var note: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-   
+    
     
     let dateFormatter = NSDateFormatter()
     var alarmID: String!
@@ -30,65 +30,64 @@ class AlarmSettingsController: UITableViewController {
     
     override func viewDidLoad() {
         //set datepicker timezone
-        
+        note.text = " Log your mood"
     }
-   
+    
     
     @IBAction func save(sender: AnyObject) {
         
         
+        let nowDate = selectedTime
+        let daysToAdd = 1
+        let fireDate = nowDate.dateByAddingTimeInterval( 70) //(60 * 60 * 24 * 1)
         
-        dateFormatter.timeStyle = .ShortStyle
-        let selectedDate = datePicker.date
-        //let date = NSDate()
-        let c = NSDateComponents()
         
-//        c.year = date.year()
-//        c.month = date.month()
-//        c.day = date.day()
-        c.hour = selectedDate.hour()
-        c.minute = selectedDate.minute()
-        c.second = 0
-        
-        let finalFireDate = NSCalendar(identifier: NSCalendarIdentifierGregorian)?.dateFromComponents(c)
-
-        let notification = UILocalNotification()
-        notification.repeatInterval = NSCalendarUnit.Minute
+        var notification = UILocalNotification()
+        notification.fireDate = NSDate(timeIntervalSinceNow:60)
+        let dict:NSDictionary = ["title": "timeToLogMood" ,"UUID":NSUUID().UUIDString]
+        notification.userInfo = dict as! [String : String]
         notification.alertTitle = "Time to Log Mood"
         notification.alertBody = note.text
         notification.alertAction = "swipe here"
-        notification.fireDate = finalFireDate
+        notification.timeZone = NSTimeZone.defaultTimeZone()
+        //notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        notification.repeatInterval = NSCalendarUnit.Minute
+        notification.soundName = UILocalNotificationDefaultSoundName
         
-        //var NSDate = ()
-       // now = NSDate()
-       // var daysToAdd = 1
-       // var newDate1 = now.dateByAddingTimeInterval(60 * 60 * 24 * daysToAdd)
-
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
         print((UIApplication.sharedApplication().scheduledLocalNotifications))
         
-       // self.dismissViewControllerAnimated(true, completion: {})
-        
     }
-    
-
-    @IBAction func datePicker(sender: AnyObject) {
-       // datePicker.locale = NSLocale(localeIdentifier: "en_GB_POSIX")
-        selectedTime = datePicker.date
+        //Working copy//////////////
+        //        var localNotfication = UILocalNotification()
+        //        localNotfication.fireDate = NSDate(timeIntervalSinceNow:60)
+        //        localNotfication.alertBody = "Hello"
+        //        localNotfication.timeZone = NSTimeZone.defaultTimeZone()
+        //        localNotfication.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        //
+        //        UIApplication.sharedApplication().scheduleLocalNotification(localNotfication)
+        //
+        //        print(UIApplication.sharedApplication().scheduledLocalNotifications)
+        //
+        //    }
         
-        print("date Picker: \(selectedTime)")
+        @IBAction func datePicker(sender: AnyObject) {
+            // datePicker.locale = NSLocale(localeIdentifier: "en_GB_POSIX")
+            selectedTime = datePicker.date
+            
+            print("\n\ndate Picker: \(selectedTime)")
+            
+        }
         
-    }
-    
-    
-    @IBAction func clearNotifications(sender: AnyObject) {
-        UIApplication.sharedApplication().cancelAllLocalNotifications()
-        print((UIApplication.sharedApplication().scheduledLocalNotifications))
-    }
-    
-    
-    
+        
+        @IBAction func clearNotifications(sender: AnyObject) {
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+            print((UIApplication.sharedApplication().scheduledLocalNotifications))
+        }
+        
+        
+        
 }
 

@@ -156,7 +156,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tr-Kp-Sym">
-                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <rect key="frame" x="8" y="83" width="584" height="44"/>
                                                     <state key="normal" title="Clear all notifications"/>
                                                     <connections>
                                                         <action selector="clearNotifications:" destination="XiJ-uT-pSS" eventType="touchUpInside" id="6mH-ft-RiB"/>
@@ -199,7 +199,7 @@
                     <navigationItem key="navigationItem" title="Alarm settings" id="dvm-J1-PQ7">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="gcq-0D-E2G">
                             <connections>
-                                <action selector="save:" destination="XiJ-uT-pSS" id="vG5-zI-S9M"/>
+                                <action selector="save:" destination="XiJ-uT-pSS" id="I4D-PT-Hvj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

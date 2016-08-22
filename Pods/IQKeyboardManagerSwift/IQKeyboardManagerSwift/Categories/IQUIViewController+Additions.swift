@@ -1,5 +1,5 @@
 //
-//  IQKeyboardManagerSwift.h
+//  IQUIViewController+Additions.swift
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -21,14 +21,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-
-//! Project version number for IQKeyboardManagerSwift.
-FOUNDATION_EXPORT double IQKeyboardManagerSwiftVersionNumber;
-
-//! Project version string for IQKeyboardManagerSwift.
-FOUNDATION_EXPORT const unsigned char IQKeyboardManagerSwiftVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <IQKeyboardManagerSwift/PublicHeader.h>
+import Foundation
+import UIKit
 
 
+private var kIQLayoutGuideConstraint = "kIQLayoutGuideConstraint"
+
+
+public extension UIViewController {
+
+    /**
+    To set customized distance from keyboard for textField/textView. Can't be less than zero
+    */
+    @IBOutlet public var IQLayoutGuideConstraint: NSLayoutConstraint? {
+        get {
+            
+            return objc_getAssociatedObject(self, &kIQLayoutGuideConstraint) as? NSLayoutConstraint
+        }
+
+        set(newValue) {
+            objc_setAssociatedObject(self, &kIQLayoutGuideConstraint, newValue,objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}

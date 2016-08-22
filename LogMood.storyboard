@@ -256,9 +256,6 @@
                             <constraint firstItem="9wP-kM-QPR" firstAttribute="leading" secondItem="h10-IS-y4e" secondAttribute="leadingMargin" constant="-20" id="xnj-WT-6J8"/>
                             <constraint firstItem="4FW-9P-QSP" firstAttribute="leading" secondItem="h10-IS-y4e" secondAttribute="leadingMargin" constant="68" id="yzX-xf-HRC"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="S0O-a0-GsF" appends="YES" id="lIL-Lp-l3y"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Log Mood" id="azW-dD-qfy">
                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="CUB-W7-zbY">
@@ -275,11 +272,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0s-H3-uyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="S0O-a0-GsF">
-                    <connections>
-                        <action selector="dismissKeyboard:" destination="PY4-pi-rHt" id="kxW-XP-jlX"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="532" y="-302"/>
         </scene>

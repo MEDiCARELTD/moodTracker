@@ -80,8 +80,7 @@ class TipsForCopingWithStressController: UITableViewController{
         let storageRef = storage.referenceForURL("gs://moodtracker-5c84a.appspot.com/")
         imageRef = storageRef.child(String(format: "images/%@", element.image))
         
-        // let path  = imageRef.child(element.image)
-        //let localURL: NSURL! = NSURL(string: imageRef.child(path: String))
+        
         
         
         imageRef.dataWithMaxSize(1 * 1024 * 1024) { (data, error) -> Void in

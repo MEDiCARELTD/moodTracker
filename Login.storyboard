@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yDE-hR-AP0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yDE-hR-AP0">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -143,9 +143,6 @@
                             <constraint firstItem="IiN-XF-XRo" firstAttribute="leading" secondItem="0sH-Yb-IRa" secondAttribute="leadingMargin" constant="103" id="dV2-VA-uec"/>
                             <constraint firstItem="s4V-BY-40a" firstAttribute="trailing" secondItem="0sH-Yb-IRa" secondAttribute="trailingMargin" id="fS0-69-4lb"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="cmV-UA-1Er" appends="YES" id="eTO-UX-3ic"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="VTZ-1q-Ver"/>
                     <connections>
@@ -155,11 +152,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wdn-Cp-9mU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="cmV-UA-1Er">
-                    <connections>
-                        <action selector="dismissKeyboard:" destination="DNz-l3-2Rd" id="HjU-tH-1VI"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1821" y="807"/>
         </scene>
@@ -261,9 +253,6 @@
                             <constraint firstItem="Ueh-lY-Qgk" firstAttribute="top" secondItem="MrD-2Q-M28" secondAttribute="bottom" constant="17" id="rUU-MG-Ysb"/>
                             <constraint firstItem="i5N-VY-Hhe" firstAttribute="leading" secondItem="D0m-Na-eWp" secondAttribute="leadingMargin" constant="67" id="tt5-mf-ivM"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="587-Sn-yZb" appends="YES" id="9vN-FX-rYf"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="zsV-ah-vik"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -273,11 +262,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n75-fi-h63" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="587-Sn-yZb">
-                    <connections>
-                        <action selector="dismissKeyboard:" destination="lXX-3v-aGd" id="99G-pl-whn"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1529" y="1729"/>
         </scene>
@@ -385,9 +369,6 @@
                             <constraint firstItem="C6e-oW-bGK" firstAttribute="leading" secondItem="nfM-rM-zYd" secondAttribute="leadingMargin" id="yTz-o9-TSj"/>
                             <constraint firstItem="GyL-H8-6D1" firstAttribute="top" secondItem="gxf-3t-9dh" secondAttribute="bottom" constant="8" symbolic="YES" id="zPw-D7-Nxl"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="IMQ-ax-iu8" appends="YES" id="EzE-WJ-lyN"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="eVv-51-1rz"/>
                     <connections>
@@ -398,11 +379,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfk-yY-Mct" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="IMQ-ax-iu8">
-                    <connections>
-                        <action selector="dismissKeyboard:" destination="Ex8-MI-g9E" id="pW6-Ak-gjG"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2464" y="807"/>
         </scene>

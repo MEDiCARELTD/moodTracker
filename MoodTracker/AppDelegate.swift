@@ -13,6 +13,7 @@ import Firebase
 import GoogleSignIn
 import GooglePlaces
 
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,10 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let samaritainsROI = "tel://116123"
     
     
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         GMSPlacesClient.provideAPIKey("AIzaSyDM_DRJ80C-cwx-x_6URnJCBVTmEkM7qlU")
+
+        IQKeyboardManager.sharedManager().enable = true
 
         //Setting up Firebase
         FIRApp.configure()
@@ -40,16 +44,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
                 
         
-//        UIApplication.sharedApplication().cancelAllLocalNotifications()
         // types are UIUserNotificationType values
 //        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
         
         
         //SHANNONS ATTEMPT!
         
-        let notificationSettings = UIUserNotificationSettings(forTypes: [.Badge, .Sound, .Alert], categories: nil)
-        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories:nil))
         
+        //application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
         
         
         
@@ -57,6 +60,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
+    
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        //NSNotificationCenter.defaultCenter().postNotificationName("Showwhenopen", object: self)
+        application.applicationIconBadgeNumber = 0
+    }
+    
     
     func application(application: UIApplication,
                      openURL url: NSURL, options: [String: AnyObject]) -> Bool {

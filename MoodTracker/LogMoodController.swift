@@ -78,9 +78,7 @@ class LogMoodController: UIViewController {
     let appearance = SCLAlertView.SCLAppearance(
         showCloseButton: false
     )
-    @IBAction func dismissKeyboard(sender: AnyObject){
-        noteTextView.resignFirstResponder()
-    }
+ 
     
     
     @IBAction func logMood(sender: AnyObject)

@@ -26,13 +26,7 @@ class RegisterController: UIViewController {
     //Database References
     var RootRef: FIRDatabaseReference!
     var errorHandler = ErrorHandler()
-    /*@IBAction func dismissKeyboard(sender: AnyObject){
-        email.resignFirstResponder()
-        password.resignFirstResponder()
-        confirmPassword.resignFirstResponder()
-        
-    }*/
-    
+  
     // Initialize SCLAlertView using custom Appearance
     let appearance = SCLAlertView.SCLAppearance(
         showCloseButton: false

@@ -56,7 +56,7 @@ class Notifications : UIViewController {
         
    
         
-              dateFormatter.timeStyle = .ShortStyle
+        dateFormatter.timeStyle = .ShortStyle
        
   
         

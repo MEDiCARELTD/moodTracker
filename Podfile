@@ -16,6 +16,7 @@ pod 'GooglePlaces'
 
 pod 'UITextField+Shake', '~> 1.1'
 pod 'SCLAlertView'
+pod 'IQKeyboardManagerSwift'
 
 pod 'BEMSimpleLineGraph'
 

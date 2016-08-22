@@ -12,7 +12,7 @@ import Firebase
 class Alarm {
     var note = ""
     var time = ""
-    let notification = UILocalNotification()
+   
     
     init(note: String, time: String){
         
@@ -24,8 +24,5 @@ class Alarm {
     init (){
         
     }
-    @IBAction func dismissKeyboard(sender: AnyObject){
         
-    }
-    
 }

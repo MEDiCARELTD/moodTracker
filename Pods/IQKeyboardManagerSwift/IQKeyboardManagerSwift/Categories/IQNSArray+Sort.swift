@@ -1,5 +1,5 @@
 //
-//  IQUIViewController+Additions.swift
+//  IQNSArray+Sort.swift
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -21,25 +21,53 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+import Foundation
 import UIKit
 
-
-private var kIQLayoutGuideConstraint = "kIQLayoutGuideConstraint"
-
-
-public extension UIViewController {
-
+/**
+UIView.subviews sorting category.
+*/
+internal extension Array {
+    
+    ///--------------
+    /// MARK: Sorting
+    ///--------------
+    
     /**
-    To set customized distance from keyboard for textField/textView. Can't be less than zero
+    Returns the array by sorting the UIView's by their tag property.
     */
-    @IBOutlet public var IQLayoutGuideConstraint: NSLayoutConstraint? {
-        get {
+    internal func sortedArrayByTag() -> [Element] {
+        
+        return sort({ (obj1 : Element, obj2 : Element) -> Bool in
             
-            return objc_getAssociatedObject(self, &kIQLayoutGuideConstraint) as? NSLayoutConstraint
-        }
-
-        set(newValue) {
-            objc_setAssociatedObject(self, &kIQLayoutGuideConstraint, newValue,objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
+            let view1 = obj1 as! UIView
+            let view2 = obj2 as! UIView
+            
+            return (view1.tag < view2.tag)
+        })
+    }
+    
+    /**
+    Returns the array by sorting the UIView's by their tag property.
+    */
+    internal func sortedArrayByPosition() -> [Element] {
+        
+        return sort({ (obj1 : Element, obj2 : Element) -> Bool in
+            
+            let view1 = obj1 as! UIView
+            let view2 = obj2 as! UIView
+            
+            let x1 = CGRectGetMinX(view1.frame)
+            let y1 = CGRectGetMinY(view1.frame)
+            let x2 = CGRectGetMinX(view2.frame)
+            let y2 = CGRectGetMinY(view2.frame)
+            
+            if y1 != y2 {
+                return y1 < y2
+            } else {
+                return x1 < x2
+            }
+        })
     }
 }
+

@@ -15,9 +15,13 @@ class AlarmTableController: UITableViewController {
     var userAlarms: [Alarm] = []
     
     
-    override func viewDidLoad() {
-        
+    override func viewWillAppear(animated: Bool) {
+        print("\n\n\n")
+        print((UIApplication.sharedApplication().scheduledLocalNotifications)?.count)
+
     }
+    override func viewDidLoad() {
+            }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userAlarms.count

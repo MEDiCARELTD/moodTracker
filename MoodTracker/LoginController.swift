@@ -56,12 +56,7 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate 
         
         
     }
-    
-    @IBAction func dismissKeyboard(sender: AnyObject){
-        email.resignFirstResponder()
-        password.resignFirstResponder()
-        
-    }
+  
 
     /// Sign in with email and password
     @IBAction func createAccount(){

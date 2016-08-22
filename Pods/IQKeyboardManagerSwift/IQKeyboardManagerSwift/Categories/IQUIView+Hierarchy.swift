@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 
+import Foundation
 import UIKit
 
 private var kIQIsAskingCanBecomeFirstResponder = "kIQIsAskingCanBecomeFirstResponder"
@@ -39,11 +40,16 @@ public extension UIView {
     Returns YES if IQKeyboardManager asking for `canBecomeFirstResponder. Useful when doing custom work in `textFieldShouldBeginEditing:` delegate.
     */
     public var isAskingCanBecomeFirstResponder: Bool {
-        
-        if let aValue = objc_getAssociatedObject(self, &kIQIsAskingCanBecomeFirstResponder) as? Bool {
-            return aValue
-        } else {
-            return false
+        get {
+            
+            if let aValue = objc_getAssociatedObject(self, &kIQIsAskingCanBecomeFirstResponder) as? Bool {
+                return aValue
+            } else {
+                return false
+            }
+        }
+        set(newValue) {
+            objc_setAssociatedObject(self, &kIQIsAskingCanBecomeFirstResponder, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 
@@ -168,7 +174,10 @@ public extension UIView {
         
         //subviews are returning in opposite order. So I sorted it according the frames 'y'.
         
-        let subViews = subviews.sort({ (view1 : UIView, view2 : UIView) -> Bool in
+        let subViews = subviews.sort({ (obj1 : AnyObject, obj2 : AnyObject) -> Bool in
+            
+            let view1 = obj1 as! UIView
+            let view2 = obj2 as! UIView
             
             let x1 = CGRectGetMinX(view1.frame)
             let y1 = CGRectGetMinY(view1.frame)
@@ -203,7 +212,7 @@ public extension UIView {
     
     private func _IQcanBecomeFirstResponder() -> Bool {
         
-        objc_setAssociatedObject(self, &kIQIsAskingCanBecomeFirstResponder, true, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        isAskingCanBecomeFirstResponder = true
         
         var _IQcanBecomeFirstResponder = (canBecomeFirstResponder() == true && userInteractionEnabled == true && hidden == false && alpha != 0.0 && isAlertViewTextField() == false && isSearchBarTextField() == false) as Bool
 
@@ -216,7 +225,7 @@ public extension UIView {
             }
         }
 
-        objc_setAssociatedObject(self, &kIQIsAskingCanBecomeFirstResponder, false, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        isAskingCanBecomeFirstResponder = false
 
         return _IQcanBecomeFirstResponder
     }

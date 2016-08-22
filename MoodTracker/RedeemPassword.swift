@@ -57,12 +57,7 @@ class RedeemPassword: UIViewController {
             }
         
     }
-    @IBAction func dismissKeyboard(sender: AnyObject){
-        
-        email.resignFirstResponder()
-        confirmEmail.resignFirstResponder()
-    
-    }
+   
     
     override func viewDidLoad() {
          alert = SCLAlertView(appearance: appearance) 
