@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		072973C91D664EF000987DF6 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072973C81D664EF000987DF6 /* Notifications.storyboard */; };
 		072973CB1D67409500987DF6 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072973CA1D67409500987DF6 /* NSDate.swift */; };
-		072973CD1D6745D900987DF6 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072973CC1D6745D900987DF6 /* Notifications.swift */; };
 		0738CE161D54BC040042BA76 /* AlarmTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738CE151D54BC040042BA76 /* AlarmTableController.swift */; };
 		0738CE1B1D56460F0042BA76 /* AlarmSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738CE1A1D56460F0042BA76 /* AlarmSettingsController.swift */; };
 		0738CE2D1D5746350042BA76 /* TestGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738CE2C1D5746340042BA76 /* TestGraph.swift */; };
@@ -51,7 +50,6 @@
 /* Begin PBXFileReference section */
 		072973C81D664EF000987DF6 /* Notifications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		072973CA1D67409500987DF6 /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
-		072973CC1D6745D900987DF6 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		0738CE151D54BC040042BA76 /* AlarmTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTableController.swift; sourceTree = "<group>"; };
 		0738CE1A1D56460F0042BA76 /* AlarmSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSettingsController.swift; sourceTree = "<group>"; };
 		0738CE261D56580E0042BA76 /* MoodTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MoodTracker-Bridging-Header.h"; path = "MoodTracker/MoodTracker-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				0738CE151D54BC040042BA76 /* AlarmTableController.swift */,
 				0738CE1A1D56460F0042BA76 /* AlarmSettingsController.swift */,
 				079F22611D5A039D0048EAE0 /* Alarm.swift */,
-				072973CC1D6745D900987DF6 /* Notifications.swift */,
 			);
 			name = NotificationController;
 			sourceTree = "<group>";
@@ -428,7 +425,6 @@
 				07B90EDA1D68DCF8004AC82A /* TipCellControlTableViewCell.swift in Sources */,
 				0738CE301D579D570042BA76 /* GraphingTool.swift in Sources */,
 				079F226D1D5CC9680048EAE0 /* DateHandler.swift in Sources */,
-				072973CD1D6745D900987DF6 /* Notifications.swift in Sources */,
 				0776A45B1D419D880003BAB4 /* AppDelegate.swift in Sources */,
 				078F7CC11D4766590054AAC7 /* StatisticsController.swift in Sources */,
 				079F225C1D58B8E30048EAE0 /* RedeemPassword.swift in Sources */,
@@ -545,8 +541,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: master.dli@hotmail.co.uk (REF2QTNTXL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: master.dli@hotmail.co.uk (REF2QTNTXL)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Analytics/Sources",
@@ -586,8 +582,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: master.dli@hotmail.co.uk (REF2QTNTXL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: master.dli@hotmail.co.uk (REF2QTNTXL)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Analytics/Sources",

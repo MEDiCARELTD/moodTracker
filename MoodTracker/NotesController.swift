@@ -142,7 +142,7 @@ class NotesController: UITableViewController {
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         moodLog = retrievedData[indexPath.row]
-        self.performSegueWithIdentifier("NoteToGraph", sender: nil)
+//        self.performSegueWithIdentifier("NoteToGraph", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

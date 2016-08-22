@@ -12,19 +12,30 @@ import UIKit
 
 class AlarmTableController: UITableViewController {
     
-    var userAlarms: [Alarm] = []
+    let app:UIApplication = UIApplication.sharedApplication()
+    var listOfEvents = [UILocalNotification]()
+    
     
     
     override func viewWillAppear(animated: Bool) {
-        print("\n\n\n")
-        print((UIApplication.sharedApplication().scheduledLocalNotifications)?.count)
-
+        
+        print("\n\n\n \((UIApplication.sharedApplication().scheduledLocalNotifications)?.count))")
+        
+        for oneEvent in app.scheduledLocalNotifications! {
+            let notification = oneEvent as UILocalNotification
+            listOfEvents.append(notification)
+        }
+        
+        tableView.reloadData()
     }
+    
+    
     override func viewDidLoad() {
-            }
+        
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userAlarms.count
+        return listOfEvents.count
     }
     
     
@@ -32,26 +43,45 @@ class AlarmTableController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! NotificationCell
         
-        let alarm = userAlarms[indexPath.row]
+        let alarm = listOfEvents[indexPath.row]
         
-        cell.time.text = "Time: \(alarm.time)"
-        cell.note.text = alarm.note
+        
+        cell.time.text = "Time: \(alarm.fireDate!.toShortTimeString())"
+        cell.note.text = alarm.alertBody
         
         
         return cell
         
     }
     
+   
+    
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         
-        if editingStyle == .Delete {
+        if editingStyle == .Delete
+        {
+            
+            listOfEvents.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            
+            for alarm in listOfEvents{
+                
+                let notificationToBeDeleted = (listOfEvents[indexPath.row].userInfo as! [String: AnyObject])["UUID"] as! String
+                let notificaitonInList = (alarm.userInfo! as! [String:AnyObject])["UUID"]! as! String
+                
+                if notificationToBeDeleted == notificaitonInList  {
+                    
+                    print(notificationToBeDeleted)
+                    print( notificaitonInList)
+                    app.cancelLocalNotification(alarm)
+                    print("notification cancelled")
+                }
+            }
             
         }
         
-        userAlarms.removeAtIndex(indexPath.row)
-        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        print("\n\n scheduled notifications: \(UIApplication.sharedApplication().scheduledLocalNotifications?.count)")
         
         
     }
@@ -62,10 +92,10 @@ class AlarmTableController: UITableViewController {
 class NotificationCell: UITableViewCell {
     
     
-    @IBOutlet weak var time: UILabel!
+    @IBOutlet var note: UILabel!
+    @IBOutlet var time: UILabel!
     
-    @IBOutlet weak var note: UITextView!
-  
+    
     
 }
 

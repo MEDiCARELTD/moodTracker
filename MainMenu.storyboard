@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -187,11 +186,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lc-Zj-mYn">
-                                <rect key="frame" x="163" y="78" width="275" height="85"/>
+                                <rect key="frame" x="163" y="72" width="275" height="69"/>
                                 <color key="backgroundColor" red="0.56903970699999995" green="0.82002552790000005" blue="0.86201584509999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="Gov-N2-6mg"/>
-                                    <constraint firstAttribute="width" constant="275" id="yU6-Gu-fDA"/>
+                                    <constraint firstAttribute="width" constant="275" id="Shs-6f-Zhu"/>
+                                    <constraint firstAttribute="height" constant="69" id="gSO-Px-o0T"/>
                                 </constraints>
                                 <state key="normal" title="Log Mood"/>
                                 <userDefinedRuntimeAttributes>
@@ -205,10 +204,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvK-yF-L4E">
-                                <rect key="frame" x="163" y="179" width="275" height="85"/>
+                                <rect key="frame" x="163" y="149" width="275" height="70"/>
                                 <color key="backgroundColor" red="0.56903970699999995" green="0.82002552790000005" blue="0.86201584509999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="9oY-3U-j5T"/>
+                                    <constraint firstAttribute="height" constant="70" id="tBd-jn-aDH"/>
                                 </constraints>
                                 <state key="normal" title="Tips"/>
                                 <userDefinedRuntimeAttributes>
@@ -222,10 +221,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCp-43-PLm">
-                                <rect key="frame" x="163" y="281" width="275" height="85"/>
+                                <rect key="frame" x="163" y="227" width="275" height="69"/>
                                 <color key="backgroundColor" red="0.56903970699999995" green="0.82002552790000005" blue="0.86201584509999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="ed0-fI-fTs"/>
+                                    <constraint firstAttribute="height" constant="69" id="pxS-qD-V3c"/>
                                 </constraints>
                                 <state key="normal" title="Alarms"/>
                                 <userDefinedRuntimeAttributes>
@@ -238,11 +237,43 @@
                                     <segue destination="hdM-gS-p1C" kind="show" id="oC9-3j-bMG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf5-IJ-JSt">
-                                <rect key="frame" x="163" y="388" width="275" height="85"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2U3-wl-Atl">
+                                <rect key="frame" x="163" y="381" width="275" height="70"/>
                                 <color key="backgroundColor" red="0.56903970699999995" green="0.82002552790000005" blue="0.86201584509999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="3F7-an-Ufx"/>
+                                    <constraint firstAttribute="height" constant="70" id="QWb-We-O6F"/>
+                                </constraints>
+                                <state key="normal" title="Statistics"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="DBA-qj-lF4" kind="show" id="teg-Xn-cEo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHB-Xc-gf6">
+                                <rect key="frame" x="163" y="304" width="275" height="69"/>
+                                <color key="backgroundColor" red="0.56903970699999995" green="0.82002552790000005" blue="0.86201584509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="GZS-ac-uES"/>
+                                </constraints>
+                                <state key="normal" title="notes"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="v3H-ZU-wyg" kind="show" id="s21-CL-pIX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf5-IJ-JSt">
+                                <rect key="frame" x="163" y="459" width="275" height="69"/>
+                                <color key="backgroundColor" red="0.56903970699999995" green="0.82002552790000005" blue="0.86201584509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="O4M-XR-LlO"/>
                                 </constraints>
                                 <state key="normal" title="Settings"/>
                                 <userDefinedRuntimeAttributes>
@@ -255,39 +286,26 @@
                                     <segue destination="eJA-WS-d7Y" kind="show" id="eKg-MH-3l1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2U3-wl-Atl">
-                                <rect key="frame" x="163" y="495" width="275" height="85"/>
-                                <color key="backgroundColor" red="0.56903970699999995" green="0.82002552790000005" blue="0.86201584509999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="2U3-wl-Atl" secondAttribute="height" multiplier="55:17" id="1yu-c4-IrL"/>
-                                </constraints>
-                                <state key="normal" title="Statistics"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="DBA-qj-lF4" kind="show" id="teg-Xn-cEo"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2U3-wl-Atl" firstAttribute="top" secondItem="jf5-IJ-JSt" secondAttribute="bottom" constant="22" id="CKi-Dd-4Aq"/>
-                            <constraint firstItem="TCp-43-PLm" firstAttribute="leading" secondItem="jf5-IJ-JSt" secondAttribute="leading" id="Mwv-rw-C9k"/>
-                            <constraint firstItem="TCp-43-PLm" firstAttribute="top" secondItem="jvK-yF-L4E" secondAttribute="bottom" constant="17" id="Odi-bb-bab"/>
-                            <constraint firstItem="9Lc-Zj-mYn" firstAttribute="trailing" secondItem="jvK-yF-L4E" secondAttribute="trailing" id="RP2-gT-dmD"/>
-                            <constraint firstItem="jf5-IJ-JSt" firstAttribute="leading" secondItem="2U3-wl-Atl" secondAttribute="leading" id="ZWE-h6-kIW"/>
-                            <constraint firstItem="jf5-IJ-JSt" firstAttribute="trailing" secondItem="2U3-wl-Atl" secondAttribute="trailing" id="aCy-Zf-gWp"/>
-                            <constraint firstItem="TCp-43-PLm" firstAttribute="trailing" secondItem="jf5-IJ-JSt" secondAttribute="trailing" id="bty-JV-dvq"/>
-                            <constraint firstItem="9Lc-Zj-mYn" firstAttribute="top" secondItem="6ut-qs-Uxm" secondAttribute="bottom" constant="14" id="eBT-tI-FCB"/>
-                            <constraint firstItem="jvK-yF-L4E" firstAttribute="trailing" secondItem="TCp-43-PLm" secondAttribute="trailing" id="ea5-9R-p3z"/>
-                            <constraint firstItem="jvK-yF-L4E" firstAttribute="leading" secondItem="TCp-43-PLm" secondAttribute="leading" id="mHX-sQ-pbs"/>
-                            <constraint firstItem="jvK-yF-L4E" firstAttribute="top" secondItem="9Lc-Zj-mYn" secondAttribute="bottom" constant="16" id="pOu-NR-vBG"/>
-                            <constraint firstItem="9Lc-Zj-mYn" firstAttribute="leading" secondItem="jvK-yF-L4E" secondAttribute="leading" id="rwH-zL-5b2"/>
-                            <constraint firstItem="9Lc-Zj-mYn" firstAttribute="centerX" secondItem="ecz-H7-WG6" secondAttribute="centerX" id="t2P-fb-mDN"/>
-                            <constraint firstItem="jf5-IJ-JSt" firstAttribute="top" secondItem="TCp-43-PLm" secondAttribute="bottom" constant="22" id="xgq-OV-7nH"/>
+                            <constraint firstItem="TCp-43-PLm" firstAttribute="trailing" secondItem="FHB-Xc-gf6" secondAttribute="trailing" id="21h-fF-rTh"/>
+                            <constraint firstItem="2U3-wl-Atl" firstAttribute="trailing" secondItem="jf5-IJ-JSt" secondAttribute="trailing" id="4Jh-Gb-KJ0"/>
+                            <constraint firstItem="jvK-yF-L4E" firstAttribute="trailing" secondItem="TCp-43-PLm" secondAttribute="trailing" id="4tg-7a-yQi"/>
+                            <constraint firstItem="9Lc-Zj-mYn" firstAttribute="leading" secondItem="jvK-yF-L4E" secondAttribute="leading" id="5c2-SF-2Qi"/>
+                            <constraint firstItem="9Lc-Zj-mYn" firstAttribute="trailing" secondItem="jvK-yF-L4E" secondAttribute="trailing" id="95c-6T-Z4g"/>
+                            <constraint firstItem="TCp-43-PLm" firstAttribute="leading" secondItem="FHB-Xc-gf6" secondAttribute="leading" id="S7b-bz-Y9w"/>
+                            <constraint firstItem="2U3-wl-Atl" firstAttribute="leading" secondItem="jf5-IJ-JSt" secondAttribute="leading" id="UAN-B5-PaX"/>
+                            <constraint firstItem="jvK-yF-L4E" firstAttribute="leading" secondItem="TCp-43-PLm" secondAttribute="leading" id="byb-sG-yNV"/>
+                            <constraint firstItem="FHB-Xc-gf6" firstAttribute="leading" secondItem="2U3-wl-Atl" secondAttribute="leading" id="c3T-RI-j0R"/>
+                            <constraint firstItem="9Lc-Zj-mYn" firstAttribute="top" secondItem="6ut-qs-Uxm" secondAttribute="bottom" constant="8" symbolic="YES" id="fb3-eE-H7L"/>
+                            <constraint firstItem="jvK-yF-L4E" firstAttribute="top" secondItem="9Lc-Zj-mYn" secondAttribute="bottom" constant="8" symbolic="YES" id="gdU-dX-l8A"/>
+                            <constraint firstItem="9Lc-Zj-mYn" firstAttribute="centerX" secondItem="ecz-H7-WG6" secondAttribute="centerX" id="rB6-iq-eBb"/>
+                            <constraint firstItem="FHB-Xc-gf6" firstAttribute="trailing" secondItem="2U3-wl-Atl" secondAttribute="trailing" id="uGl-Pn-B5z"/>
+                            <constraint firstItem="FHB-Xc-gf6" firstAttribute="top" secondItem="TCp-43-PLm" secondAttribute="bottom" constant="8" symbolic="YES" id="uOs-kt-eXe"/>
+                            <constraint firstItem="2U3-wl-Atl" firstAttribute="top" secondItem="FHB-Xc-gf6" secondAttribute="bottom" constant="8" symbolic="YES" id="v4V-VG-jb8"/>
+                            <constraint firstItem="jf5-IJ-JSt" firstAttribute="top" secondItem="2U3-wl-Atl" secondAttribute="bottom" constant="8" symbolic="YES" id="xAR-5t-B7c"/>
+                            <constraint firstItem="TCp-43-PLm" firstAttribute="top" secondItem="jvK-yF-L4E" secondAttribute="bottom" constant="8" symbolic="YES" id="zJi-yI-uGN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="bjq-jH-Rec"/>
@@ -314,6 +332,14 @@
             </objects>
             <point key="canvasLocation" x="5204.5" y="458"/>
         </scene>
+        <!--Notes-->
+        <scene sceneID="49i-qm-bLz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notes" id="v3H-ZU-wyg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Og-qq-TcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5204" y="653"/>
+        </scene>
         <!--Notifications-->
         <scene sceneID="D4o-PA-JwK">
             <objects>
@@ -322,7 +348,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJg-OO-kvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5204" y="771"/>
+            <point key="canvasLocation" x="5208" y="786"/>
         </scene>
         <!--LogMood-->
         <scene sceneID="TLr-Pk-Yyg">
