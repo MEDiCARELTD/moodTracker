@@ -15,7 +15,7 @@ class TipsForCopingWithStressController: UITableViewController{
     
     let storage = FIRStorage.storage()
     var imageRef = FIRStorageReference()
-
+    
     
     let body = Body()
     lazy var rootRef = FIRDatabase.database().reference()
@@ -27,9 +27,6 @@ class TipsForCopingWithStressController: UITableViewController{
     
     override func viewDidLoad() {
         
-        
-       // body.createAndSyncTipsForStressArray()
-        
         let tipsForStressRef = rootRef.child("tipsForStress")
         
         var title =  String()
@@ -39,7 +36,7 @@ class TipsForCopingWithStressController: UITableViewController{
         var key = String()
         
         tableView.registerNib(UINib(nibName: "TipCell", bundle: nil), forCellReuseIdentifier: "tipCell")
-
+        
         tipsForStressRef.observeEventType(.ChildAdded, withBlock: { snapshot in
             
             let tipsForStressKey = snapshot.key
@@ -48,7 +45,7 @@ class TipsForCopingWithStressController: UITableViewController{
             
             tipsForStressRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
                 
-               // print(snapshot.value!)
+                // print(snapshot.value!)
                 title = snapshot.value?.objectForKey("title") as! String
                 imageName = snapshot.value?.objectForKey("image") as! String
                 info = snapshot.value?.objectForKey("info") as! String
@@ -57,7 +54,7 @@ class TipsForCopingWithStressController: UITableViewController{
                 
                 
                 self.whatToDisplay.append(DataObject(title: title, image: imageName, info: info, link: link, key: key))
-               self.tableView.reloadData()
+                self.tableView.reloadData()
                 
                 
             })
@@ -82,10 +79,10 @@ class TipsForCopingWithStressController: UITableViewController{
         
         let storageRef = storage.referenceForURL("gs://moodtracker-5c84a.appspot.com/")
         imageRef = storageRef.child(String(format: "images/%@", element.image))
-
-       // let path  = imageRef.child(element.image)
+        
+        // let path  = imageRef.child(element.image)
         //let localURL: NSURL! = NSURL(string: imageRef.child(path: String))
-
+        
         
         imageRef.dataWithMaxSize(1 * 1024 * 1024) { (data, error) -> Void in
             if (error != nil) {
@@ -97,26 +94,16 @@ class TipsForCopingWithStressController: UITableViewController{
                 cell.cellImage.setImage(image, forState: .Normal)
             }
         }
-
+        
         return cell
         
     }
-  
+    
     func pressed(sender: UIButton!) {
-   //    UIApplication.sharedApplication().openURL(NSURL(string: link)!)
-    //}
+        UIApplication.sharedApplication().openURL(NSURL(string: link)!)
+    }
     
 }
-class TipCell: UITableViewCell {
-    
-    
-   // @IBOutlet weak var title: UILabel!
-    
-   // @IBOutlet weak var info: UITextView!
-   // @IBOutlet weak var buttonIcon: UIButton!
-    //@IBOutlet weak var link: UITextView!
-    
-}
-}
+
 
 

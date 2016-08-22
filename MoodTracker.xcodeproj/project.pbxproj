@@ -156,6 +156,7 @@
 		0738CE271D5678930042BA76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				072973CA1D67409500987DF6 /* NSDate.swift */,
 				66BC2BA11D6791D80095425B /* IQKeyboardManagerSwift */,
 				079F225F1D58C2110048EAE0 /* ErrorHandler.swift */,
 				079F226C1D5CC9680048EAE0 /* DateHandler.swift */,
@@ -232,7 +233,6 @@
 				0776A4611D419D880003BAB4 /* Assets.xcassets */,
 				0776A4661D419D880003BAB4 /* Info.plist */,
 				0772EA581D4618C900094396 /* StoryBoards */,
-				072973CA1D67409500987DF6 /* NSDate.swift */,
 			);
 			path = MoodTracker;
 			sourceTree = "<group>";

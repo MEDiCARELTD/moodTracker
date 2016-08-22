@@ -24,5 +24,8 @@ class Alarm {
     init (){
         
     }
+    @IBAction func dismissKeyboard(sender: AnyObject){
+        
+    }
     
 }

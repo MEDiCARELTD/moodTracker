@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
+import SCLAlertView
 
 class AccountController: UIViewController {
     
@@ -17,7 +18,7 @@ class AccountController: UIViewController {
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var password: UILabel!
     
-   
+    
     
     //REferences our data base
     var rootRef: FIRDatabaseReference!
@@ -25,9 +26,20 @@ class AccountController: UIViewController {
     var retrievedData: [MoodLog] = []
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
+    
+    // Initialize SCLAlertView using custom Appearance
+    let appearance = SCLAlertView.SCLAppearance(
+        showCloseButton: false
+    )
+    var clearData = SCLAlertView()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-               
+        
+        clearData = SCLAlertView(appearance: appearance)
+        
+        
         retrievedData = appDelegate.self.accountLogData
         rootRef = FIRDatabase.database().reference()
         rootRef.child("users")
@@ -44,32 +56,43 @@ class AccountController: UIViewController {
         })
         
     }
+    
     @IBAction func clearData(sender: AnyObject) {
-        
-        print("clear Data")
-        rootRef.child("users/\(userID)/logs").removeValue()
-        
-        let moodRef = rootRef.child("moodLogs")
-                        for element in retrievedData {
-            moodRef.child(element.logKey).removeValue()
-        }
-        appDelegate.self.accountLogData.removeAll()
-        
-        
-        let alarmRef = rootRef.child("users/\(userID)/alarmLogs")
-        
-        alarmRef.observeEventType(.ChildAdded,withBlock:{ snapshot in
-            print(snapshot.key)
+        clearData.addButton("Continue", action: {
+            action in
             
-            self.rootRef.child("alarms\(snapshot.key)").removeValue()
-            self.rootRef.child("users/\(self.userID)/alarmLogs\(snapshot.key)").removeValue()
+            print("clear Data")
+            self.rootRef.child("users/\(self.userID)/logs").removeValue()
             
+            let moodRef = self.rootRef.child("moodLogs")
+            for element in self.retrievedData {
+                moodRef.child(element.logKey).removeValue()
+            }
+            self.appDelegate.self.accountLogData.removeAll()
+            
+            
+            let alarmRef = self.rootRef.child("users/\(self.userID)/alarmLogs")
+            
+            alarmRef.observeEventType(.ChildAdded,withBlock:{ snapshot in
+                print(snapshot.key)
+                
+                self.rootRef.child("alarms\(snapshot.key)").removeValue()
+                self.rootRef.child("users/\(self.userID)/alarmLogs\(snapshot.key)").removeValue()
+                
+            })
+        })
+        clearData.addButton("Cancel", action: { action in
+            return
         })
         
-
+        self.clearData.showWarning("Attention", subTitle: "All data will be lost permanently ")
+        clearData.applicationFinishedRestoringState()
+        
+        
+        
         
     }
-
+    
     
     
     @IBAction func Logout(sender: AnyObject){

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XIw-O9-jGn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XIw-O9-jGn">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -23,8 +23,7 @@
                                 <rect key="frame" x="0.0" y="180" width="600" height="46"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="TJD-hu-OO5"/>
-                                    <constraint firstAttribute="width" constant="600" id="cbl-Um-4IJ"/>
+                                    <constraint firstAttribute="height" constant="46" id="L3a-Vu-yTO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,37 +33,20 @@
                                 <rect key="frame" x="0.0" y="316" width="600" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="KlY-02-MgY"/>
-                                    <constraint firstAttribute="width" constant="600" id="bRL-Jl-vgl"/>
+                                    <constraint firstAttribute="height" constant="32" id="hBX-LI-3xx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Clear data ">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.01026766514" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="clearData:" destination="eJA-WS-d7Y" eventType="touchUpInside" id="UPZ-fd-wYF"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Clearing data will remove all your records from local firebase servers. This cannot be undone." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58S-g6-PGb">
-                                <rect key="frame" x="0.0" y="239" width="600" height="69"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="irs-wN-AyJ"/>
-                                    <constraint firstAttribute="width" constant="600" id="wb5-je-UGT"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbp-Fc-jgg">
-                                <rect key="frame" x="0.0" y="375" width="600" height="105"/>
+                                <rect key="frame" x="20" y="375" width="560" height="105"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="Dui-Dr-C0o"/>
-                                    <constraint firstAttribute="height" constant="105" id="rei-w8-n3k"/>
-                                </constraints>
                                 <string key="text">By signing out you do not lose your data since it is backed up automatically to the cloud. To get data back just sign in again using your email and password </string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -74,8 +56,7 @@
                                 <rect key="frame" x="0.0" y="525" width="600" height="55"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="H7j-aN-VNe"/>
-                                    <constraint firstAttribute="height" constant="55" id="h3u-jT-oOQ"/>
+                                    <constraint firstAttribute="height" constant="55" id="RDr-t2-AId"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign out">
@@ -91,8 +72,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="2Nt-az-wbN"/>
                                     <constraint firstAttribute="width" constant="800" id="Ons-id-OGj"/>
-                                    <constraint firstAttribute="height" constant="58" id="m7r-nO-jOv"/>
-                                    <constraint firstAttribute="width" constant="600" id="o3h-K5-L2w"/>
+                                    <constraint firstAttribute="height" constant="58" id="y72-A0-kjb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,34 +93,43 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clearing data will remove all your records from local firebase servers. This cannot be undone." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFW-m3-J6z">
+                                <rect key="frame" x="20" y="234" width="560" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="cZe-hd-dez"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.16546276960989353" green="0.4621883375552816" blue="0.84214767156862746" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="APn-mG-uuk" firstAttribute="leading" secondItem="dFg-cq-xlK" secondAttribute="leadingMargin" constant="-20" id="1JI-5V-o9C"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="APn-mG-uuk" secondAttribute="trailing" constant="-20" id="4XK-Bi-HJ8"/>
-                            <constraint firstItem="58S-g6-PGb" firstAttribute="leading" secondItem="dFg-cq-xlK" secondAttribute="leadingMargin" constant="-20" id="5ix-uo-Kbl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Xi-9F-CSW" secondAttribute="trailing" constant="-20" id="DTB-F3-XsG"/>
-                            <constraint firstItem="J0i-Sk-bNP" firstAttribute="top" secondItem="kXz-Cu-AzB" secondAttribute="bottom" constant="252" id="Djg-3r-TGn"/>
-                            <constraint firstItem="dps-Br-z3c" firstAttribute="top" secondItem="kXz-Cu-AzB" secondAttribute="bottom" constant="116" id="Ebz-p4-PRX"/>
-                            <constraint firstItem="Tbp-Fc-jgg" firstAttribute="leading" secondItem="dFg-cq-xlK" secondAttribute="leadingMargin" constant="-20" id="Eeg-Id-HY5"/>
-                            <constraint firstItem="N5v-Iv-SQp" firstAttribute="top" secondItem="9Xi-9F-CSW" secondAttribute="bottom" constant="20" id="Fh8-Y5-JfF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dps-Br-z3c" secondAttribute="trailing" constant="-20" id="KX2-d7-Hu1"/>
+                            <constraint firstItem="J0i-Sk-bNP" firstAttribute="trailing" secondItem="9Xi-9F-CSW" secondAttribute="trailing" id="0bh-lr-hq9"/>
+                            <constraint firstItem="APn-mG-uuk" firstAttribute="leading" secondItem="dps-Br-z3c" secondAttribute="leading" id="1Xc-HS-GIp"/>
+                            <constraint firstItem="APn-mG-uuk" firstAttribute="top" secondItem="kXz-Cu-AzB" secondAttribute="bottom" constant="34" id="1ly-92-qTd"/>
+                            <constraint firstItem="J0i-Sk-bNP" firstAttribute="top" secondItem="aFW-m3-J6z" secondAttribute="bottom" constant="8" symbolic="YES" id="AxE-vE-CUo"/>
+                            <constraint firstItem="aFW-m3-J6z" firstAttribute="top" secondItem="dps-Br-z3c" secondAttribute="bottom" constant="8" symbolic="YES" id="DjZ-Rn-7Ir"/>
+                            <constraint firstItem="APn-mG-uuk" firstAttribute="leading" secondItem="dFg-cq-xlK" secondAttribute="leading" id="EEz-lq-wPE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="APn-mG-uuk" secondAttribute="trailing" constant="-20" id="Q4Y-su-dYT"/>
-                            <constraint firstItem="Tbp-Fc-jgg" firstAttribute="top" secondItem="kXz-Cu-AzB" secondAttribute="bottom" constant="311" id="S9u-rf-tqR"/>
-                            <constraint firstItem="9Xi-9F-CSW" firstAttribute="top" secondItem="kXz-Cu-AzB" secondAttribute="bottom" constant="461" id="Sue-gc-ToN"/>
                             <constraint firstItem="APn-mG-uuk" firstAttribute="top" secondItem="kXz-Cu-AzB" secondAttribute="bottom" constant="34" id="T9N-XI-fjj"/>
                             <constraint firstItem="APn-mG-uuk" firstAttribute="leading" secondItem="dFg-cq-xlK" secondAttribute="leadingMargin" constant="49" id="TLx-cZ-KWI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="APn-mG-uuk" secondAttribute="trailing" constant="49" id="Tb0-wa-xMd"/>
-                            <constraint firstItem="9Xi-9F-CSW" firstAttribute="leading" secondItem="dFg-cq-xlK" secondAttribute="leadingMargin" constant="-20" id="WT0-8r-d0v"/>
-                            <constraint firstItem="58S-g6-PGb" firstAttribute="top" secondItem="kXz-Cu-AzB" secondAttribute="bottom" constant="175" id="bGC-o8-0dP"/>
+                            <constraint firstItem="aFW-m3-J6z" firstAttribute="leading" secondItem="dFg-cq-xlK" secondAttribute="leadingMargin" id="WNd-Kg-yCD"/>
+                            <constraint firstItem="aFW-m3-J6z" firstAttribute="trailing" secondItem="Tbp-Fc-jgg" secondAttribute="trailing" id="ZZN-Iu-Ept"/>
+                            <constraint firstAttribute="bottom" secondItem="9Xi-9F-CSW" secondAttribute="bottom" constant="20" symbolic="YES" id="bYa-gy-jsD"/>
+                            <constraint firstAttribute="trailing" secondItem="APn-mG-uuk" secondAttribute="trailing" id="ccj-5f-JLy"/>
+                            <constraint firstItem="aFW-m3-J6z" firstAttribute="leading" secondItem="Tbp-Fc-jgg" secondAttribute="leading" id="dkB-3o-IFk"/>
                             <constraint firstItem="APn-mG-uuk" firstAttribute="leading" secondItem="dFg-cq-xlK" secondAttribute="leadingMargin" constant="-20" id="e3u-86-oDT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="58S-g6-PGb" secondAttribute="trailing" constant="-20" id="f1P-Ie-qAs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Tbp-Fc-jgg" secondAttribute="trailing" constant="-20" id="guT-LH-tG5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="J0i-Sk-bNP" secondAttribute="trailing" constant="-20" id="mh1-az-MYu"/>
-                            <constraint firstItem="APn-mG-uuk" firstAttribute="top" secondItem="kXz-Cu-AzB" secondAttribute="bottom" constant="34" id="oPL-cu-Hqd"/>
-                            <constraint firstItem="J0i-Sk-bNP" firstAttribute="leading" secondItem="dFg-cq-xlK" secondAttribute="leadingMargin" constant="-20" id="rZp-DQ-2SC"/>
-                            <constraint firstItem="dps-Br-z3c" firstAttribute="leading" secondItem="dFg-cq-xlK" secondAttribute="leadingMargin" constant="-20" id="vOb-SA-M5y"/>
+                            <constraint firstItem="Tbp-Fc-jgg" firstAttribute="top" secondItem="J0i-Sk-bNP" secondAttribute="bottom" constant="27" id="ep6-E0-br0"/>
+                            <constraint firstItem="J0i-Sk-bNP" firstAttribute="leading" secondItem="9Xi-9F-CSW" secondAttribute="leading" id="fsA-aV-Sa9"/>
+                            <constraint firstItem="dps-Br-z3c" firstAttribute="leading" secondItem="J0i-Sk-bNP" secondAttribute="leading" id="mvg-QX-Y94"/>
+                            <constraint firstItem="APn-mG-uuk" firstAttribute="trailing" secondItem="dps-Br-z3c" secondAttribute="trailing" id="pzt-Tj-3Mx"/>
+                            <constraint firstItem="9Xi-9F-CSW" firstAttribute="top" secondItem="Tbp-Fc-jgg" secondAttribute="bottom" constant="45" id="st4-ao-H4V"/>
+                            <constraint firstItem="aFW-m3-J6z" firstAttribute="centerX" secondItem="J0i-Sk-bNP" secondAttribute="centerX" id="uwN-tS-U9p"/>
                             <constraint firstItem="APn-mG-uuk" firstAttribute="top" secondItem="kXz-Cu-AzB" secondAttribute="bottom" constant="34" id="xfq-zd-fZ1"/>
+                            <constraint firstItem="dps-Br-z3c" firstAttribute="top" secondItem="APn-mG-uuk" secondAttribute="bottom" constant="24" id="yGO-NZ-m83"/>
+                            <constraint firstItem="dps-Br-z3c" firstAttribute="trailing" secondItem="J0i-Sk-bNP" secondAttribute="trailing" id="zXd-9d-YfJ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
