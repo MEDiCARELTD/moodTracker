@@ -17,7 +17,8 @@ class NotesController: UITableViewController {
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     var retrievedData: [MoodLog] = []
-    var filteredData = [MoodLog] ()
+
+        var filteredData = [MoodLog] ()
     
     var moodLog = MoodLog()
 
@@ -29,12 +30,14 @@ class NotesController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         retrievedData = appDelegate.self.accountLogData
+         retrievedData = retrievedData.reverse()
         navigationItem.rightBarButtonItem = editButtonItem()
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+        
         
         
     }
@@ -167,8 +170,8 @@ extension NotesController: UISearchResultsUpdating{
 class CustomCell: UITableViewCell {
     
     
+    @IBOutlet var note: UILabel!
     @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var note: UITextView!
     @IBOutlet weak var moodIcon: UIImageView!
     @IBOutlet weak var score: UILabel!
     

@@ -19,7 +19,6 @@
 		0776A4621D419D880003BAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0776A4611D419D880003BAB4 /* Assets.xcassets */; };
 		0776A4651D419D880003BAB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0776A4631D419D880003BAB4 /* LaunchScreen.storyboard */; };
 		0776A46D1D419F700003BAB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0776A46C1D419F700003BAB4 /* GoogleService-Info.plist */; };
-		0779339F1D53680600C49F6B /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779339E1D53680600C49F6B /* DetailController.swift */; };
 		077D40001D62198C00CCC312 /* TipsForCopingWithStressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D3FFF1D62198C00CCC312 /* TipsForCopingWithStressController.swift */; };
 		077D40041D626C9D00CCC312 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D40031D626C9D00CCC312 /* DataObject.swift */; };
 		077D40061D631E8400CCC312 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D40051D631E8400CCC312 /* Body.swift */; };
@@ -63,7 +62,6 @@
 		0776A4641D419D880003BAB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0776A4661D419D880003BAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0776A46C1D419F700003BAB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0779339E1D53680600C49F6B /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		077D3FFF1D62198C00CCC312 /* TipsForCopingWithStressController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsForCopingWithStressController.swift; sourceTree = "<group>"; };
 		077D40031D626C9D00CCC312 /* DataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
 		077D40051D631E8400CCC312 /* Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 			children = (
 				078F7CC01D4766590054AAC7 /* StatisticsController.swift */,
 				0738CE2F1D579D570042BA76 /* GraphingTool.swift */,
-				0779339E1D53680600C49F6B /* DetailController.swift */,
 				07C9AF111D48C01600B2AC4F /* MoodLog.swift */,
 			);
 			name = StatisticsController;
@@ -409,7 +406,6 @@
 				077D40041D626C9D00CCC312 /* DataObject.swift in Sources */,
 				0790E9131D43A6F800BE0E49 /* AccountController.swift in Sources */,
 				0772EA571D46152700094396 /* LogMoodController.swift in Sources */,
-				0779339F1D53680600C49F6B /* DetailController.swift in Sources */,
 				0776A45D1D419D880003BAB4 /* LoginController.swift in Sources */,
 				077D40001D62198C00CCC312 /* TipsForCopingWithStressController.swift in Sources */,
 				07C9AF141D48C3A600B2AC4F /* MainMenuController.swift in Sources */,
