@@ -20,13 +20,16 @@ class AlarmTableController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         
         print("\n\n\n \((UIApplication.sharedApplication().scheduledLocalNotifications)?.count))")
-        
-        for oneEvent in app.scheduledLocalNotifications! {
-            let notification = oneEvent as UILocalNotification
+       listOfEvents.removeAll()
+        for event in app.scheduledLocalNotifications! {
+            let notification = event as UILocalNotification
             listOfEvents.append(notification)
         }
         
-        tableView.reloadData()
+       
+    }
+    override func viewDidAppear(animated: Bool) {
+         tableView.reloadData()
     }
     
     
@@ -45,10 +48,9 @@ class AlarmTableController: UITableViewController {
         
         let alarm = listOfEvents[indexPath.row]
         
-        
+        print(alarm.fireDate)
         cell.time.text = "Time: \(alarm.fireDate!.toShortTimeString())"
         cell.note.text = alarm.alertBody
-        
         
         return cell
         

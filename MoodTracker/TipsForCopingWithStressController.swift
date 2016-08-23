@@ -27,6 +27,9 @@ class TipsForCopingWithStressController: UITableViewController{
     
     override func viewDidLoad() {
         
+        
+        // body.createAndSyncTipsForStressArray()
+        
         let tipsForStressRef = rootRef.child("tipsForStress")
         
         var title =  String()
@@ -80,7 +83,8 @@ class TipsForCopingWithStressController: UITableViewController{
         let storageRef = storage.referenceForURL("gs://moodtracker-5c84a.appspot.com/")
         imageRef = storageRef.child(String(format: "images/%@", element.image))
         
-        
+        // let path  = imageRef.child(element.image)
+        //let localURL: NSURL! = NSURL(string: imageRef.child(path: String))
         
         
         imageRef.dataWithMaxSize(1 * 1024 * 1024) { (data, error) -> Void in
@@ -99,10 +103,19 @@ class TipsForCopingWithStressController: UITableViewController{
     }
     
     func pressed(sender: UIButton!) {
-        UIApplication.sharedApplication().openURL(NSURL(string: link)!)
+        //    UIApplication.sharedApplication().openURL(NSURL(string: link)!)
+        //}
+        
     }
-    
+    class TipCell: UITableViewCell {
+        
+        
+        // @IBOutlet weak var title: UILabel!
+        
+        // @IBOutlet weak var info: UITextView!
+        // @IBOutlet weak var buttonIcon: UIButton!
+        //@IBOutlet weak var link: UITextView!
+        
+    }
 }
-
-
 

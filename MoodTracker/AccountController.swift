@@ -58,6 +58,7 @@ class AccountController: UIViewController {
     }
     
     @IBAction func clearData(sender: AnyObject) {
+        
         clearData.addButton("Continue", action: {
             action in
             
@@ -85,9 +86,9 @@ class AccountController: UIViewController {
             return
         })
         
-        self.clearData.showWarning("Attention", subTitle: "All data will be lost permanently ")
-        clearData.applicationFinishedRestoringState()
         
+        self.clearData.showWarning("Attention", subTitle: "All data will be lost permanently ")
+      
         
         
         

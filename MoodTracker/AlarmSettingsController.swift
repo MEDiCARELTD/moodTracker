@@ -29,38 +29,43 @@ class AlarmSettingsController: UITableViewController {
     
     
     override func viewDidLoad() {
-        //set datepicker timezone
-        note.text = " Log your mood"
+                note.text = " Log your mood"
     }
     
     
     @IBAction func save(sender: AnyObject) {
         
+        print("datePicker: \(self.datePicker.date.toShortTimeString())")
+        let intervalBetweenNowAndDatePicker = self.datePicker.date.timeIntervalSinceNow
+        var fireDate: NSDate
+        
+        if intervalBetweenNowAndDatePicker < 0 {
+            let addDayInterval =  Double(60*60*24)
+            fireDate = (NSDate().dateByAddingTimeInterval((intervalBetweenNowAndDatePicker * -1) + addDayInterval ))
+            
+        } else {
+            fireDate = (NSDate().dateByAddingTimeInterval(intervalBetweenNowAndDatePicker))
+        }
+        
+        print("fireDate \(fireDate)")
+        
+        let notification = UILocalNotification()
+        notification.fireDate = fireDate
+        let dict:NSDictionary = ["uid": "timeToLogMood" ,"UUID":NSUUID().UUIDString]
+        notification.userInfo = dict as! [String : String]
+        notification.alertTitle = "Time to Log Mood"
+        notification.alertBody = self.note.text
+        notification.alertAction = "swipe here"
+        notification.timeZone = NSTimeZone.defaultTimeZone()
+        notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        notification.repeatInterval = NSCalendarUnit.Day
+        notification.soundName = UILocalNotificationDefaultSoundName
+        
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        
+        print(UIApplication.sharedApplication().scheduledLocalNotifications!.count)
                 dismissViewControllerAnimated(true, completion: {
-                    
-                    print("timeStamp: \(self.datePicker.date)")
-                    let nowDate = self.datePicker.date
-                    let fireDate = nowDate.dateByAddingTimeInterval( nowDate.timeIntervalSinceReferenceDate + 60.0)
-                    
-                    
-                    let notification = UILocalNotification()
-                    notification.fireDate = fireDate
-                    let dict:NSDictionary = ["uid": "timeToLogMood" ,"UUID":NSUUID().UUIDString]
-                    notification.userInfo = dict as! [String : String]
-                    notification.alertTitle = "Time to Log Mood"
-                    notification.alertBody = self.note.text
-                    notification.alertAction = "swipe here"
-                    notification.timeZone = NSTimeZone.defaultTimeZone()
-                    notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
-                    notification.repeatInterval = NSCalendarUnit.Day
-                    notification.soundName = UILocalNotificationDefaultSoundName
-                    
-                    
-                    UIApplication.sharedApplication().scheduleLocalNotification(notification)
-                    
-                    print(UIApplication.sharedApplication().scheduledLocalNotifications!.count)
-                    
-
         })
         
     }
@@ -71,7 +76,7 @@ class AlarmSettingsController: UITableViewController {
         })
     }
     
-        
+    
         @IBAction func clearNotifications(sender: AnyObject) {
             UIApplication.sharedApplication().cancelAllLocalNotifications()
             print((UIApplication.sharedApplication().scheduledLocalNotifications))

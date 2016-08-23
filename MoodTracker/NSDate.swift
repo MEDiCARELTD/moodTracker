@@ -71,12 +71,14 @@ extension NSDate
     {
         //Get Short Time String
         let formatter = NSDateFormatter()
+        formatter.locale =  NSLocale.currentLocale()
         formatter.timeStyle = .ShortStyle
         let timeString = formatter.stringFromDate(self)
         
         //Return Short Time String
         return timeString
     }
+    
     
     
     func isBetweeen(date date1: NSDate, andDate date2: NSDate) -> Bool {
