@@ -31,13 +31,12 @@ class AccountController: UIViewController {
     let appearance = SCLAlertView.SCLAppearance(
         showCloseButton: false
     )
-    var clearData = SCLAlertView()
+   // var clearData = SCLAlertView()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        clearData = SCLAlertView(appearance: appearance)
         
         
         retrievedData = appDelegate.self.accountLogData
@@ -59,6 +58,8 @@ class AccountController: UIViewController {
     
     @IBAction func clearData(sender: AnyObject) {
         
+        var clearData = SCLAlertView(appearance: appearance)
+
         clearData.addButton("Continue", action: {
             action in
             
@@ -87,7 +88,7 @@ class AccountController: UIViewController {
         })
         
         
-        self.clearData.showWarning("Attention", subTitle: "All data will be lost permanently ")
+        clearData.showWarning("Attention", subTitle: "All data will be lost permanently ")
       
         
         
