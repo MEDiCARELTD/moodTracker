@@ -10,31 +10,19 @@ import UIKit
 import BEMSimpleLineGraph
 import FirebaseDatabase
 
-class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource, BEMSimpleLineGraphDelegate{
+class StatisticsController: UIViewController, BEMSimpleLineGraphDataSource, BEMSimpleLineGraphDelegate{
+    
+    @IBOutlet weak var graph: BEMSimpleLineGraphView!
     
     @IBOutlet var tapGesture: UITapGestureRecognizer!
-    @IBOutlet var graph: BEMSimpleLineGraphView!
     
-    //Stats
+    @IBOutlet weak var goToNotes: UIButton!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    // Stats Section
-    @IBOutlet var totalNumberOfLogs: UILabel!
-    
-    // Notes Section
-    @IBOutlet var moodScore: UILabel!
-    @IBOutlet var dateToday: UILabel!
-    @IBOutlet var averageMoodToday: UILabel!
-    @IBOutlet var numberOfLogsToday: UILabel!
-    @IBOutlet var notesToday: UITextView!
-
-    // Date Range Section
-    @IBOutlet var date1: UITextField!
-    
-    @IBOutlet var date2: UITextField!
-    
-
-   
+    @IBOutlet var noDataLabel: UILabel!
     
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -50,15 +38,11 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
     var dateText = String()
     var segmentedIndex = 2
     var indexInFocus = MoodLog()
-    
+   
     var aMoodLog: MoodLog = MoodLog()
-    var totalScore = 0
-    
-    var moodLogsSameDay = [MoodLog]()
     
     override func viewWillAppear(animated: Bool) {
-        
-        print(retrievedData)
+
         
         //        //test Months
         //        let test = TestGraph()
@@ -75,10 +59,14 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
         listForPast3Months = graphingTool.getListOfLogsForPast3Months(retrievedData)
         listForAllTime = retrievedData
     }
-
     override func viewDidLoad() {
-        print("Statistics Controller")
    
+        
+       
+        
+        print("Main Menu: Loading in notes")
+        
+        dateLabel.text = dateText
         self.segmentedControl.selectedSegmentIndex = 2
         
         ////////////////////////////////// Properties for graph //////////////////////////////////
@@ -88,7 +76,7 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
         graph.delegate = self
         graph.enableYAxisLabel = true
         self.view!.addSubview(graph)
-        
+      
         
         
         // Enable and disable various graph properties and axis displays
@@ -100,77 +88,58 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
         self.graph.enableReferenceXAxisLines = true
         self.graph.enableReferenceYAxisLines = true
         self.graph.enableReferenceAxisFrame = true
-        
-        
+       
+                
         // Dash the y reference lines
         self.graph.lineDashPatternForReferenceYAxisLines = [2, 2]
         
         // Show the y axis values with this format string
         self.graph.formatStringForValues = "%.1f"
+        
+        if dateText == "" {
+        self.goToNotes.enabled = false;
+        
             
         }
-        
-//        var datePicker = UIDatePicker()
-//        datePicker.date = NSDate()
-//        datePicker.addTarget(self, action: #selector(self.updateTextField), forControlEvents: .ValueChanged)
-//        
-//        self.date1.inputView = datePicker!
-//        self.date2.inputView = datePicker!
-//        
-
-  
+    
+    }
+    
     @IBAction func segmentedController(sender: AnyObject) {
-        print("segmented touched")
+        
         graph.reloadGraph()
     }
     
-
+    
     func lineGraph(graph: BEMSimpleLineGraphView, didTouchGraphWithClosestIndex index: Int) {
         
+        self.goToNotes.enabled = true;
 
-        
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             indexInFocus = listForToday[index]
-            setNoteDetails(listForToday[index])
-            
+            dateLabel.text = listForToday[index].getDateAndTime()
+        
         case 1:
             indexInFocus = listForPastWeek[index]
-                       setNoteDetails(listForToday[index])
+            dateLabel.text = listForPastWeek[index].getDateAndTime()
         case 2:
             indexInFocus = listForPast3Months[index]
-            setNoteDetails(listForToday[index])
+            dateLabel.text = listForPast3Months[index].getDateAndTime()
         case 3:
             indexInFocus = listForAllTime[index]
-            setNoteDetails(listForToday[index])
+            dateLabel.text = listForAllTime[index].getDateAndTime()
         default:
             indexInFocus = retrievedData[index]
+            dateLabel.text = retrievedData[index].getDateAndTime()
             
         }
     }
     
-    func setNoteDetails(moodLog: MoodLog){
-        
-        for element: MoodLog in retrievedData{
-            
-            
-            if element.getDate() ==  moodLog.getDate(){
-                moodLogsSameDay.append(element)
-            }
-        }
-        var totalScore = 0
-        for element in moodLogsSameDay{
-            totalScore += element.moodScore
-            print( totalScore)
-            
-        }
-        
-        moodScore.text = "Mood Score: \(moodLog.moodScore)"
-        dateToday.text = moodLog.getFullDateAndTime()
-        averageMoodToday.text = "Average mood that day: \(String(totalScore / moodLogsSameDay.count))"
-        numberOfLogsToday.text =  "Mood logs that day: \(moodLogsSameDay.count)"
+    
+    @IBAction func goToNotes(sender: AnyObject) {
+        self.performSegueWithIdentifier("DetailView", sender: nil)
     }
-
+    
     
     
     func numberOfPointsInLineGraph(graph: BEMSimpleLineGraphView) -> Int {
@@ -215,10 +184,10 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
         switch segmentedControl.selectedSegmentIndex{
         case 0:
             return CGFloat(listForToday[index].moodScore)
-            
+        
         case 1:
             return  CGFloat(listForPastWeek[index].moodScore)
-            
+
         case 2:
             return CGFloat(listForPast3Months[index].moodScore)
             
@@ -237,9 +206,18 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
         
     }
     
-
     
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+        
+        // Create a new variable to store the instance of PlayerTableViewController
+        let destinationVieController = (segue.destinationViewController as! DetailController)
+        destinationVieController.moodLog = indexInFocus
+        
+    }
+   
     
     
     

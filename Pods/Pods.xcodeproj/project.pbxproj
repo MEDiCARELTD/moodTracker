@@ -105,7 +105,6 @@
 		3B799D5878AFBE0CE9CEAD37C2F9B4C7 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		3C9854452B704969D40D932335DEE0FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4140DDF24C39610DF687CD197F280294 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		449DB47525FB5A41391A16175B235F0A /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = Frameworks/FirebaseStorage.framework; sourceTree = "<group>"; };
 		44E995B101F1473FAFAD9DBD1B2AC5E0 /* UITextField+Shake-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake-umbrella.h"; sourceTree = "<group>"; };
 		49C97A950D8CA3F5FC3D3827F736EE21 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
 		4A195B8F583F8E9A78F1BEBAA07E1194 /* Pods-MoodTracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MoodTracker-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -132,6 +131,7 @@
 		7FBA968718B08EA7DE8CE3275118924D /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		812424746244DD4C8BE1CBB078A7A8D0 /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
 		8AE40BC98BE16935CF4FA1D92DB15AB8 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		8C1D3EB934CE3FF1994F62ECB2F87ABA /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = Frameworks/frameworks/FirebaseStorage.framework; sourceTree = "<group>"; };
 		90248E70C6ED24D1E778C90396BA7B5F /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94A162B345BB705F7205C978C352AF72 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -250,14 +250,6 @@
 				0F2331BAF78D4EDDCD400CF6388C7978 /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		0F0FBD0923FFE4F99ADD00E541DB3645 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				449DB47525FB5A41391A16175B235F0A /* FirebaseStorage.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
@@ -403,7 +395,7 @@
 		5BB59B0CFF6378F9EAD29ED95AB5EB54 /* FirebaseStorage */ = {
 			isa = PBXGroup;
 			children = (
-				0F0FBD0923FFE4F99ADD00E541DB3645 /* Frameworks */,
+				EE5C9EB53D633981657C0F4E5FF4AC1A /* Frameworks */,
 			);
 			path = FirebaseStorage;
 			sourceTree = "<group>";
@@ -659,6 +651,14 @@
 				99DD9A2B623D7297AB5162D9CED89939 /* GooglePlaces.bundle */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		EE5C9EB53D633981657C0F4E5FF4AC1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C1D3EB934CE3FF1994F62ECB2F87ABA /* FirebaseStorage.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EFFCD0F98F9D4F84F6FFADCC8744A885 /* Support Files */ = {
