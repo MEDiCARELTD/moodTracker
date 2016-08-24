@@ -172,16 +172,13 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="tSt-2J-lMy">
                                         <rect key="frame" x="0.0" y="467" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="tSt-2J-lMy" id="Yea-pj-cEF">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tSt-2J-lMy" id="Yea-pj-cEF">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xi-9F-CSW">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xi-9F-CSW">
                                                     <rect key="frame" x="17" y="5" width="552" height="43"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="55" id="RDr-t2-AId"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="Sign out">
                                                         <color key="titleColor" red="0.93725490199999995" green="0.22352941179999999" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -192,10 +189,10 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="9Xi-9F-CSW" firstAttribute="leading" secondItem="Yea-pj-cEF" secondAttribute="leadingMargin" constant="9" id="VW5-LP-5bS"/>
-                                                <constraint firstItem="9Xi-9F-CSW" firstAttribute="top" secondItem="Yea-pj-cEF" secondAttribute="topMargin" constant="-3" id="ahg-i0-UPe"/>
-                                                <constraint firstItem="9Xi-9F-CSW" firstAttribute="centerY" secondItem="Yea-pj-cEF" secondAttribute="centerY" id="dWF-kh-8Jv"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="9Xi-9F-CSW" secondAttribute="trailing" constant="23" id="yxc-fi-1RI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="9Xi-9F-CSW" secondAttribute="bottom" constant="-7" id="F1F-nO-n8d"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9Xi-9F-CSW" secondAttribute="trailing" constant="23" id="IYq-lb-U8s"/>
+                                                <constraint firstItem="9Xi-9F-CSW" firstAttribute="top" secondItem="Yea-pj-cEF" secondAttribute="topMargin" constant="-3" id="OlT-RD-G9J"/>
+                                                <constraint firstItem="9Xi-9F-CSW" firstAttribute="leading" secondItem="Yea-pj-cEF" secondAttribute="leadingMargin" constant="9" id="kaY-z9-s8Q"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
