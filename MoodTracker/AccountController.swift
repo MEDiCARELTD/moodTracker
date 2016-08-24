@@ -12,7 +12,7 @@ import FirebaseDatabase
 import FirebaseAuth
 import SCLAlertView
 
-class AccountController: UIViewController {
+class AccountController: UITableViewController {
     
     
     @IBOutlet weak var email: UILabel!
@@ -120,5 +120,3 @@ class AccountController: UIViewController {
     
     
 }
-
-

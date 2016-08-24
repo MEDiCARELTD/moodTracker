@@ -13,6 +13,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'GoogleSignIn'
 pod 'GooglePlaces'
+
 pod 'UITextField+Shake', '~> 1.1'
 pod 'SCLAlertView'
 pod 'IQKeyboardManagerSwift'

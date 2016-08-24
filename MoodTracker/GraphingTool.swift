@@ -70,7 +70,7 @@ class GraphingTool {
         if retrievedData.count <= 0 {
             return [MoodLog]()
         }
-       
+        
         let maxIndex = retrievedData.count - 1
         let finalElement = retrievedData[maxIndex]
         
@@ -89,7 +89,31 @@ class GraphingTool {
         
         
     }
-
+    
+    func getlistOfLogsBetweenTwoDates(retrievedData: [MoodLog],date1: NSDate, date2: NSDate) -> [MoodLog]{
+        
+        var listCustomRange = [MoodLog]()
+        
+        let interval1 = date1.timeIntervalSinceReferenceDate
+        let interval2 = date2.timeIntervalSinceReferenceDate
+        
+        if interval1 - interval2 < 0{
+            for element in retrievedData{
+                if element.getTimeInterval() < interval2 && element.getTimeInterval() > interval1{
+                    listCustomRange.append(element)
+                }
+            }
+        }else {
+            
+            for element in retrievedData{
+                if element.getTimeInterval() < interval1 && element.getTimeInterval() > interval2{
+                    listCustomRange.append(element)
+                }
+            }
+        }
+        return listCustomRange
+    }
+    
     
 }
 

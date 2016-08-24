@@ -55,7 +55,7 @@ class MoodLog{
     }
     func getFullDateAndTime() -> String {
         let date = NSDate(timeIntervalSinceReferenceDate: dateTaken)
-        dateFormatter.dateFormat = "dd - EEEE - MMMM - yyyy HH:mm"
+        dateFormatter.dateFormat = "dd - EEEE - MMMM  yyyy HH:mm"
         return dateFormatter.stringFromDate(date)
     }
     func getMonth() -> String{

@@ -39,11 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //Setting up Firebase
         FIRApp.configure()
-        let storage = FIRStorage.storage()
-        FIRDatabase.database().persistenceEnabled = false
+        FIRStorage.storage()
+        FIRDatabase.database().persistenceEnabled = true
         
                 
-   
+        
         // types are UIUserNotificationType values
 //        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
         

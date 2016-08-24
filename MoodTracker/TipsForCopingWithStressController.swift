@@ -26,9 +26,9 @@ class TipsForCopingWithStressController: UITableViewController{
     
     
     override func viewDidLoad() {
+        print("tips for coping with sterss")
         
         
-        // body.createAndSyncTipsForStressArray()
         
         let tipsForStressRef = rootRef.child("tipsForStress")
         
@@ -67,10 +67,13 @@ class TipsForCopingWithStressController: UITableViewController{
         
     }
     
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return whatToDisplay.count
     }
+    
     var link = ""
+    
     override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let element = whatToDisplay[indexPath.row]
@@ -82,9 +85,6 @@ class TipsForCopingWithStressController: UITableViewController{
         
         let storageRef = storage.referenceForURL("gs://moodtracker-5c84a.appspot.com/")
         imageRef = storageRef.child(String(format: "images/%@", element.image))
-        
-        // let path  = imageRef.child(element.image)
-        //let localURL: NSURL! = NSURL(string: imageRef.child(path: String))
         
         
         imageRef.dataWithMaxSize(1 * 1024 * 1024) { (data, error) -> Void in
@@ -102,20 +102,13 @@ class TipsForCopingWithStressController: UITableViewController{
         
     }
     
-    func pressed(sender: UIButton!) {
-        //    UIApplication.sharedApplication().openURL(NSURL(string: link)!)
-        //}
+    
+    func pressed(sender: UITableViewCell!) {
         
+            UIApplication.sharedApplication().openURL(NSURL(string: link)!)
+        }
+    
     }
-    class TipCell: UITableViewCell {
-        
-        
-        // @IBOutlet weak var title: UILabel!
-        
-        // @IBOutlet weak var info: UITextView!
-        // @IBOutlet weak var buttonIcon: UIButton!
-        //@IBOutlet weak var link: UITextView!
-        
-    }
-}
+
+
 

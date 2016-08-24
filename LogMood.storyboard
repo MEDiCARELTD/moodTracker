@@ -20,101 +20,60 @@
                 <viewControllerPlaceholder storyboardName="MainMenu" id="OPB-U3-R2y" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYY-GW-Sug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2161.5" y="-280"/>
+            <point key="canvasLocation" x="2973.5" y="-280"/>
         </scene>
         <!--Emergency Controller-->
         <scene sceneID="Pby-17-eVF">
             <objects>
                 <tableViewController storyboardIdentifier="EmergencyContacts" id="ozC-1c-bNq" customClass="EmergencyController" customModule="MoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Og5-Xx-yo0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle="Header Title" id="VKg-mf-jwb">
+                            <tableViewSection headerTitle="Press picture to call " id="VKg-mf-jwb">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="213" id="VLK-to-svk">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="213"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="cfQ-8G-bt7">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
-<<<<<<< HEAD
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cfQ-8G-bt7" id="1sb-JV-LgP">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Below are two contacts where you can press the picture to call and speak with someone. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtW-jd-FWW">
+                                                    <rect key="frame" x="49" y="8" width="525" height="107"/>
+                                                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="XtW-jd-FWW" firstAttribute="top" secondItem="1sb-JV-LgP" secondAttribute="topMargin" id="TZm-qQ-lzC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XtW-jd-FWW" secondAttribute="trailing" constant="18" id="jBq-oU-2lr"/>
+                                                <constraint firstItem="XtW-jd-FWW" firstAttribute="leading" secondItem="1sb-JV-LgP" secondAttribute="leadingMargin" constant="41" id="rsj-7T-hPD"/>
+                                                <constraint firstItem="XtW-jd-FWW" firstAttribute="centerY" secondItem="1sb-JV-LgP" secondAttribute="centerY" id="vhW-5q-OOy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="309" id="ocS-h6-14B">
+                                        <rect key="frame" x="0.0" y="217" width="600" height="309"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ocS-h6-14B" id="68Z-JA-iVo">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="308"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ans-w0-Yzf">
-=======
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VLK-to-svk" id="LE1-al-fU2">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="212.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-xw-YPK">
->>>>>>> parent of 7fe57e6... Major changes to the ui Still need to do constraints
                                                     <rect key="frame" x="61" y="0.0" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8f-dn-BGz">
-                                                    <rect key="frame" x="8" y="15" width="156" height="95"/>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnZ-z2-g6Z">
+                                                    <rect key="frame" x="171" y="16" width="259" height="154"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="156" id="chY-pd-wJL"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="lifeline"/>
-                                                    <connections>
-                                                        <action selector="callLifeline:" destination="ozC-1c-bNq" eventType="touchUpInside" id="ld3-AK-HFt"/>
-                                                    </connections>
-                                                </button>
-<<<<<<< HEAD
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bng-SC-IlP">
-                                                    <rect key="frame" x="8" y="178" width="584" height="110"/>
-=======
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAN-JU-FT0">
-                                                    <rect key="frame" x="172" y="15" width="375" height="127"/>
->>>>>>> parent of 7fe57e6... Major changes to the ui Still need to do constraints
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <string key="text">People living in Northern Ireland can call Lifeline on 0808 808 8000. Deaf and hard of hearing Textphone users can call Lifeline on 18001 0808 808 8000. Calls to Lifeline are free to people living in Northern Ireland who are calling from UK landlines and mobiles.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
-                                                </textView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="q8f-dn-BGz" firstAttribute="top" secondItem="dAN-JU-FT0" secondAttribute="top" id="7b8-a7-52n"/>
-                                                <constraint firstItem="dAN-JU-FT0" firstAttribute="leading" secondItem="q8f-dn-BGz" secondAttribute="trailing" constant="8" symbolic="YES" id="G8D-5P-RbH"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="q8f-dn-BGz" secondAttribute="bottom" constant="94" id="I0D-vI-D7y"/>
-                                                <constraint firstItem="cwc-xw-YPK" firstAttribute="leading" secondItem="LE1-al-fU2" secondAttribute="leadingMargin" constant="53" id="Qge-Ax-EJz"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="dAN-JU-FT0" secondAttribute="bottom" constant="62" id="V89-eR-yyh"/>
-                                                <constraint firstItem="cwc-xw-YPK" firstAttribute="top" secondItem="LE1-al-fU2" secondAttribute="top" id="WVw-dJ-P2P"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="dAN-JU-FT0" secondAttribute="trailing" constant="45" id="eDL-RS-pU2"/>
-                                                <constraint firstItem="q8f-dn-BGz" firstAttribute="leading" secondItem="LE1-al-fU2" secondAttribute="leadingMargin" id="w2B-Ra-cim"/>
-                                                <constraint firstItem="q8f-dn-BGz" firstAttribute="top" secondItem="LE1-al-fU2" secondAttribute="topMargin" constant="7" id="zso-vm-8HM"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="213" id="ocS-h6-14B">
-                                        <rect key="frame" x="0.0" y="305" width="600" height="213"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ocS-h6-14B" id="68Z-JA-iVo">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="212.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ans-w0-Yzf">
-                                                    <rect key="frame" x="61" y="0.0" width="0.0" height="0.0"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bng-SC-IlP">
-                                                    <rect key="frame" x="200" y="25" width="336" height="179"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <string key="text">Talk to us any time you like, in your own way, and off the record – about whatever’s getting to you. You don’t have to be suicidal.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
-                                                </textView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnZ-z2-g6Z">
-                                                    <rect key="frame" x="8" y="25" width="166" height="106"/>
-                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="259" id="UxC-O8-zh8"/>
                                                         <constraint firstAttribute="width" constant="166" id="loF-nN-0l6"/>
                                                     </constraints>
                                                     <state key="normal" title="Button" image="samaritans"/>
@@ -122,17 +81,88 @@
                                                         <action selector="callSamaritans:" destination="ozC-1c-bNq" eventType="touchUpInside" id="irD-Io-0Mb"/>
                                                     </connections>
                                                 </button>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bng-SC-IlP">
+                                                    <rect key="frame" x="8" y="178" width="584" height="110"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="110" id="LeE-zd-eTr"/>
+                                                    </constraints>
+                                                    <string key="text">Talk to us any time you like, in your own way, and off the record – about whatever’s getting to you. You don’t have to be suicidal.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="cnZ-z2-g6Z" firstAttribute="leading" secondItem="68Z-JA-iVo" secondAttribute="leadingMargin" id="4A3-oT-9ol"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bng-SC-IlP" secondAttribute="trailing" constant="56" id="8uZ-9N-pgC"/>
+                                                <constraint firstItem="bng-SC-IlP" firstAttribute="top" secondItem="cnZ-z2-g6Z" secondAttribute="bottom" constant="8" symbolic="YES" id="BFg-Nf-LxV"/>
                                                 <constraint firstItem="Ans-w0-Yzf" firstAttribute="leading" secondItem="68Z-JA-iVo" secondAttribute="leadingMargin" constant="53" id="GhM-T7-jgf"/>
                                                 <constraint firstItem="Ans-w0-Yzf" firstAttribute="top" secondItem="68Z-JA-iVo" secondAttribute="top" id="GmB-h3-vMZ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bng-SC-IlP" secondAttribute="bottom" constant="12" id="Uwn-AX-vsF"/>
                                                 <constraint firstItem="bng-SC-IlP" firstAttribute="bottom" secondItem="68Z-JA-iVo" secondAttribute="bottomMargin" id="YLA-F2-R76"/>
                                                 <constraint firstItem="cnZ-z2-g6Z" firstAttribute="top" secondItem="bng-SC-IlP" secondAttribute="top" id="aWE-ah-jYs"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="cnZ-z2-g6Z" secondAttribute="bottom" constant="73" id="dPH-m9-erB"/>
+                                                <constraint firstItem="cnZ-z2-g6Z" firstAttribute="top" secondItem="68Z-JA-iVo" secondAttribute="topMargin" constant="8" id="fPG-PU-wtp"/>
                                                 <constraint firstItem="bng-SC-IlP" firstAttribute="leading" secondItem="cnZ-z2-g6Z" secondAttribute="trailing" constant="26" id="pDF-DG-6r0"/>
+                                                <constraint firstItem="bng-SC-IlP" firstAttribute="trailing" secondItem="68Z-JA-iVo" secondAttribute="trailingMargin" id="s4L-Iz-4T1"/>
+                                                <constraint firstItem="cnZ-z2-g6Z" firstAttribute="centerX" secondItem="bng-SC-IlP" secondAttribute="centerX" id="tqD-m1-IOo"/>
+                                                <constraint firstItem="bng-SC-IlP" firstAttribute="leading" secondItem="68Z-JA-iVo" secondAttribute="leadingMargin" id="vkL-9f-x7z"/>
                                                 <constraint firstItem="cnZ-z2-g6Z" firstAttribute="top" secondItem="68Z-JA-iVo" secondAttribute="topMargin" constant="17" id="wcI-Xl-fDk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="297" id="VLK-to-svk">
+                                        <rect key="frame" x="0.0" y="526" width="600" height="297"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VLK-to-svk" id="LE1-al-fU2">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="296"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-xw-YPK">
+                                                    <rect key="frame" x="61" y="0.0" width="0.0" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb3-bj-YmI">
+                                                    <rect key="frame" x="8" y="172" width="584" height="116"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="116" id="zcW-Ra-42f"/>
+                                                    </constraints>
+                                                    <string key="text">People living in Northern Ireland can call Lifeline on 0808 808 8000. Deaf and hard of hearing Textphone users can call Lifeline on 18001 0808 808 8000. Calls to Lifeline are free to people living in Northern Ireland who are calling from UK landlines and mobiles.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8f-dn-BGz">
+                                                    <rect key="frame" x="173" y="18" width="254" height="156"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="156" id="JfG-gD-B7E"/>
+                                                        <constraint firstAttribute="width" constant="156" id="chY-pd-wJL"/>
+                                                        <constraint firstAttribute="width" constant="254" id="cro-px-Li2"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="lifeline"/>
+                                                    <connections>
+                                                        <action selector="callLifeline:" destination="ozC-1c-bNq" eventType="touchUpInside" id="ld3-AK-HFt"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bb3-bj-YmI" firstAttribute="top" secondItem="LE1-al-fU2" secondAttribute="topMargin" id="1ui-hk-IHw"/>
+                                                <constraint firstItem="bb3-bj-YmI" firstAttribute="leading" secondItem="q8f-dn-BGz" secondAttribute="trailing" constant="8" symbolic="YES" id="4ix-8d-nZc"/>
+                                                <constraint firstItem="bb3-bj-YmI" firstAttribute="bottom" secondItem="LE1-al-fU2" secondAttribute="bottomMargin" id="6og-dk-q7P"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="q8f-dn-BGz" secondAttribute="bottom" constant="94" id="I0D-vI-D7y"/>
+                                                <constraint firstItem="q8f-dn-BGz" firstAttribute="centerX" secondItem="bb3-bj-YmI" secondAttribute="centerX" id="ISY-WO-orE"/>
+                                                <constraint firstItem="cwc-xw-YPK" firstAttribute="leading" secondItem="LE1-al-fU2" secondAttribute="leadingMargin" constant="53" id="Qge-Ax-EJz"/>
+                                                <constraint firstItem="bb3-bj-YmI" firstAttribute="leading" secondItem="LE1-al-fU2" secondAttribute="leadingMargin" id="R9p-vO-6Ti"/>
+                                                <constraint firstItem="q8f-dn-BGz" firstAttribute="top" secondItem="LE1-al-fU2" secondAttribute="topMargin" constant="10" id="Vma-hi-JLG"/>
+                                                <constraint firstItem="cwc-xw-YPK" firstAttribute="top" secondItem="LE1-al-fU2" secondAttribute="top" id="WVw-dJ-P2P"/>
+                                                <constraint firstItem="bb3-bj-YmI" firstAttribute="centerY" secondItem="LE1-al-fU2" secondAttribute="centerY" id="YOK-BS-6ol"/>
+                                                <constraint firstItem="bb3-bj-YmI" firstAttribute="trailing" secondItem="LE1-al-fU2" secondAttribute="trailingMargin" id="bhz-iX-tXf"/>
+                                                <constraint firstItem="bb3-bj-YmI" firstAttribute="trailing" secondItem="LE1-al-fU2" secondAttribute="trailingMargin" id="cpJ-dj-Cxf"/>
+                                                <constraint firstItem="q8f-dn-BGz" firstAttribute="leading" secondItem="LE1-al-fU2" secondAttribute="leadingMargin" id="w2B-Ra-cim"/>
+                                                <constraint firstItem="q8f-dn-BGz" firstAttribute="top" secondItem="LE1-al-fU2" secondAttribute="topMargin" constant="7" id="zso-vm-8HM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -150,10 +180,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1000"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tW3-yg-kdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289" y="-280"/>
+            <point key="canvasLocation" x="2101" y="-280"/>
         </scene>
         <!--Log Mood-->
         <scene sceneID="TIC-1W-ECX">
@@ -209,7 +241,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="logMood:" destination="PY4-pi-rHt" eventType="touchUpInside" id="rsC-Y0-WGN"/>
-                                    <segue destination="ozC-1c-bNq" kind="show" id="1Uh-iC-h0F"/>
+                                    <segue destination="YNT-lA-bpg" kind="show" id="1Uh-iC-h0F"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wP-kM-QPR">
@@ -293,6 +325,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eiu-63-WUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-376" y="-302"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wP2-LF-D8z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YNT-lA-bpg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8gs-zd-p12">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ozC-1c-bNq" kind="relationship" relationship="rootViewController" id="BXy-OH-RqH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haR-JE-lqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1289" y="-280"/>
         </scene>
     </scenes>
     <resources>
