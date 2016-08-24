@@ -11,6 +11,7 @@ import FirebaseDatabase
 import FirebaseAuth
 
 class DataObject{
+    
     lazy var rootRef = FIRDatabase.database().reference()
     var userID: String = (FIRAuth.auth()?.currentUser?.uid)!
     var TipsForStressID: String!

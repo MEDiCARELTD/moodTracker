@@ -13,6 +13,12 @@ import SCLAlertView
 
 class LogMoodController: UIViewController {
     
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var userAlarms = [Alarm]()
+    var retrievedData: [MoodLog] = []
+    var aMoodLog: MoodLog = MoodLog()
+
+    
     lazy var rootRef = FIRDatabase.database().reference()
     var userID: String = (FIRAuth.auth()?.currentUser?.uid)!
     var logID: String!
@@ -118,6 +124,7 @@ class LogMoodController: UIViewController {
     //// Override functions /////
     override func viewDidLoad(){
     
+    
         self.navigationController?.navigationBar.barTintColor = UIColor(red:0.19, green:0.53, blue:0.96, alpha:1.0)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
@@ -129,6 +136,10 @@ class LogMoodController: UIViewController {
         super.viewDidLoad()
         print(rootRef)
         
+        var dateTaken:NSTimeInterval!
+        var moodScore: Int!
+        
+
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LogMoodController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LogMoodController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
@@ -137,6 +148,56 @@ class LogMoodController: UIViewController {
         // setting up the textView
         noteTextView.text = "Type some text here to remember how you mood is. Try to rememer what happened before and why this made you feel this way."
         noteTextView.textColor = UIColor.lightGrayColor()
+        
+        
+        
+        
+        
+        
+        rootRef = FIRDatabase.database().reference()
+        rootRef.child("Users")
+        
+        let userID: String = (FIRAuth.auth()?.currentUser?.uid)!
+        
+        let userRef = rootRef.child("users/\(userID)/logs")
+        
+        
+        //        //test Months
+        //        let test = TestGraph()
+        //        test.logMoodOverMonths(rootRef,userID: userID)
+        
+        //                // test over three Months
+        //                let test = TestGraph()
+        //                test.logMoodOver3Months(rootRef, userID: userID)
+        
+        
+        userRef.observeEventType(.ChildAdded,withBlock:{ snapshot in
+            
+            // For each key in the snapshot, which will be the mood logs id
+            var logKey = snapshot.key
+            
+            //Send another request to firebase to get the details of that mood log
+            let moodRef = self.rootRef.child("moodLogs/\(logKey)")
+            moodRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+                
+                dateTaken = Double((snapshot.value!.objectForKey("dateTaken")!) as! String)
+                moodScore = snapshot.value!.objectForKey("moodScore")! as! Int
+                self.notes = snapshot.value!.objectForKey("notes")! as! String
+                logKey = snapshot.value!.objectForKey("logKey")! as! String
+                
+                self.aMoodLog = MoodLog(dateTaken: dateTaken!, moodScore: moodScore!, note: self.notes!, logKey: logKey)
+                self.retrievedData.append(self.aMoodLog)
+                self.appDelegate.self.accountLogData = self.retrievedData
+                
+                //snapshot will be the mood log object
+                // so do something with that in here like storing them in arrays
+            })
+        })
+        
+        
+        rootRef.child("users/\(userID)/email").setValue(FIRAuth.auth()?.currentUser?.email)
+        
+        self.appDelegate.self.userAlarms  = self.userAlarms
     }
     
     
