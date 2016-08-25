@@ -145,20 +145,17 @@ class NotesController: UITableViewController {
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         moodLog = retrievedData[indexPath.row]
-//        self.performSegueWithIdentifier("NoteToGraph", sender: nil)
+       self.tabBarController?.selectedIndex = 3
+        
+        
+        
+            let destinationVewController = self.tabBarController?.viewControllers![3] as! StatisticsController
+        
+        destinationVewController.indexInFocus = moodLog
+        destinationVewController.setNoteDetails(moodLog)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "NoteToGraph"{
-            
-            let destinationVewController = segue.destinationViewController as! StatisticsController
-            
-            destinationVewController.indexInFocus = moodLog
-            print(moodLog.getDateAndTime())
-            destinationVewController.dateText = moodLog.getDateAndTime()
-            
-        }
-    }
+  
 }
 
 extension NotesController: UISearchResultsUpdating{

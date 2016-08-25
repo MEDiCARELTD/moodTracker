@@ -35,7 +35,6 @@
 		079F22621D5A039D0048EAE0 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F22611D5A039D0048EAE0 /* Alarm.swift */; };
 		079F226D1D5CC9680048EAE0 /* DateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F226C1D5CC9680048EAE0 /* DateHandler.swift */; };
 		079F226F1D5E02DA0048EAE0 /* ShakeMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079F226E1D5E02DA0048EAE0 /* ShakeMe.swift */; };
-		07B90ED81D68D3A7004AC82A /* TipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B90ED71D68D3A7004AC82A /* TipCell.xib */; };
 		07B90EDA1D68DCF8004AC82A /* TipCellControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B90ED91D68DCF8004AC82A /* TipCellControlTableViewCell.swift */; };
 		07C4DAD21D57B98800286427 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C4DAD11D57B98800286427 /* Statistics.storyboard */; };
 		07C9AF0E1D48A75C00B2AC4F /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF0D1D48A75C00B2AC4F /* NotesController.swift */; };
@@ -278,7 +277,6 @@
 		079F22611D5A039D0048EAE0 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		079F226C1D5CC9680048EAE0 /* DateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHandler.swift; sourceTree = "<group>"; };
 		079F226E1D5E02DA0048EAE0 /* ShakeMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeMe.swift; sourceTree = "<group>"; };
-		07B90ED71D68D3A7004AC82A /* TipCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipCell.xib; sourceTree = "<group>"; };
 		07B90ED91D68DCF8004AC82A /* TipCellControlTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCellControlTableViewCell.swift; sourceTree = "<group>"; };
 		07C4DAD11D57B98800286427 /* Statistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
 		07C9AF0D1D48A75C00B2AC4F /* NotesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
@@ -546,7 +544,6 @@
 				07C4DAD11D57B98800286427 /* Statistics.storyboard */,
 				077D40091D65221300CCC312 /* LogMood.storyboard */,
 				077D400B1D652BCB00CCC312 /* TipsForStress.storyboard */,
-				07B90ED71D68D3A7004AC82A /* TipCell.xib */,
 				077D400D1D652C2800CCC312 /* Notes.storyboard */,
 			);
 			name = StoryBoards;
@@ -1027,7 +1024,6 @@
 				662F5C561D6E4E86007A4F85 /* list-fat-7.png in Resources */,
 				078EB0261D4AB456004CE01E /* Login.storyboard in Resources */,
 				077D400E1D652C2800CCC312 /* Notes.storyboard in Resources */,
-				07B90ED81D68D3A7004AC82A /* TipCell.xib in Resources */,
 				662F5C381D6E4E86007A4F85 /* folder-7.png in Resources */,
 				662F5C711D6E4E86007A4F85 /* paper-map-7.png in Resources */,
 				662F5C651D6E4E86007A4F85 /* number-2-7.png in Resources */,

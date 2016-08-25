@@ -12,7 +12,7 @@ class EmergencyController: UITableViewController{
     
     
     @IBAction func callLifeline(sender: AnyObject) {
-        
+        print("Lifeline Pressed")
         let phoneNumber = "08088088000"
         
         if let phoneCallURL = NSURL(string: "tel:\(phoneNumber)") {
@@ -27,6 +27,8 @@ class EmergencyController: UITableViewController{
         }
     }
     @IBAction func callSamaritans(sender: AnyObject) {
+        print("Samaritans Pressed")
+        
         let phoneNumber = "116123"
         
         if let phoneCallURL = NSURL(string: "tel:\(phoneNumber)") {
@@ -39,5 +41,11 @@ class EmergencyController: UITableViewController{
                 
             }
         }
+    }
+    
+    
+    @IBAction func donePressed(sender: AnyObject) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

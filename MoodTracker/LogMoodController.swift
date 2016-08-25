@@ -112,9 +112,10 @@ class LogMoodController: UIViewController {
         
         if score > 3 {
             self.alert.showSuccess("Mood Logged!", subTitle: " ",duration: 2)
-            self.dismissViewControllerAnimated(true, completion: nil)
+            
         }else{
             self.alert.showWarning("Your mood is low", subTitle: "Do you want to talk to someone?", duration: 2)
+            performSegueWithIdentifier("EmergencyID", sender: nil)
             
         }
         

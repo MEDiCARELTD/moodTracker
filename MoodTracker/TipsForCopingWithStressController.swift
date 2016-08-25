@@ -12,6 +12,9 @@ import FirebaseAuth
 import FirebaseStorage
 
 class TipsForCopingWithStressController: UITableViewController{
+   
+    
+   
     
     let storage = FIRStorage.storage()
     var imageRef = FIRStorageReference()
@@ -38,7 +41,6 @@ class TipsForCopingWithStressController: UITableViewController{
         var link = String()
         var key = String()
         
-        tableView.registerNib(UINib(nibName: "TipCell", bundle: nil), forCellReuseIdentifier: "tipCell")
         
         tipsForStressRef.observeEventType(.ChildAdded, withBlock: { snapshot in
             
@@ -78,7 +80,7 @@ class TipsForCopingWithStressController: UITableViewController{
         
         let element = whatToDisplay[indexPath.row]
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("tipCell", forIndexPath: indexPath) as! TipCellControlTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("tipCell", forIndexPath: indexPath) as! TipCell
         
         cell.title.text = element.title
         cell.info.text = element.info
@@ -94,7 +96,7 @@ class TipsForCopingWithStressController: UITableViewController{
                 // Data for "images/island.jpg" is returned
                 // ... let islandImage: UIImage! = UIImage(data: data!)
                 let image = UIImage(data: data!)
-                cell.cellImage.setImage(image, forState: .Normal)
+                cell.cellImage.image = image
             }
         }
         
@@ -109,6 +111,13 @@ class TipsForCopingWithStressController: UITableViewController{
         }
     
     }
+
+class TipCell: UITableViewCell{
+    @IBOutlet var cellImage: UIImageView!
+    
+    @IBOutlet var title: UILabel!
+    @IBOutlet var info: UILabel!
+}
 
 
 

@@ -31,17 +31,17 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate 
     let appearance = SCLAlertView.SCLAppearance(
         showCloseButton: false
     )
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
         
         if FIRAuth.auth()?.currentUser != nil {
             
             print("User already signed in")
             self.performSegueWithIdentifier("MainMenu", sender: nil)
             
-            
-        }else{
+        }
+    }
+        override func viewDidLoad() {
+            super.viewDidLoad()
             
             alert = SCLAlertView(appearance: appearance)
             
@@ -54,93 +54,86 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate 
         
         
         
-        
-    }
-  
-
-    /// Sign in with email and password
-    @IBAction func createAccount(){
-        print("attempting to log in with email and password")
-        
-        FIRAuth.auth()?.signInWithEmail(email.text!, password: password.text!, completion: {
+        /// Sign in with email and password
+        @IBAction func createAccount(){
+            print("attempting to log in with email and password")
+            
+            FIRAuth.auth()?.signInWithEmail(email.text!, password: password.text!, completion: {
+                
+                
+                user,error  in
+                
+                self.shakeMe.shakeMeIfEmpty(self.password)
+                self.shakeMe.shakeMeIfEmpty(self.email)
+                if error != nil{
+                    self.errorHandler.searchError(error!)
+                }
+                else {
+                    self.alert.showSuccess("Success!", subTitle: "You have successfully logged in ",duration: 2)
+                    self.performSegueWithIdentifier("MainMenu", sender: nil)
+                }
+                
+            })
             
             
-            user,error  in
             
-            self.shakeMe.shakeMeIfEmpty(self.password)
-            self.shakeMe.shakeMeIfEmpty(self.email)
-            if error != nil{
-                self.errorHandler.searchError(error!)
-            }
-            else {
-                self.alert.showSuccess("Success!", subTitle: "You have successfully logged in ",duration: 2)
-                self.performSegueWithIdentifier("MainMenu", sender: nil)
-            }
-    
-        })
-        
-        
-        
-    }
-    
-    
-    // Sign in with google
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!)  {
-        print("google sign in button pressed")
-        
-        if let error = error {
-            print(error.localizedDescription)
-           
         }
-        let authentication = user.authentication
-        let credential = FIRGoogleAuthProvider.credentialWithIDToken(authentication.idToken, accessToken: authentication.accessToken)
         
-        FIRAuth.auth()?.signInWithCredential(credential, completion: {(user, error) in
+        
+        // Sign in with google
+        func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!)  {
+            print("google sign in button pressed")
             
-            if error != nil{
-                self.errorHandler.searchError(error!)
-            }
-            else{
-            
-            self.alert.showSuccess("Congratulations", subTitle: "You have made a Firebase account!",duration: 2)
-            
-            let userEmail: String = self.email.text!
-            print("User Created")
-            self.RootRef.child("users").child(user!.uid).setValue(["email": userEmail])
-            
-            print("user logged in with google account")
-            
-            
-            self.performSegueWithIdentifier("MainMenu", sender: nil)
+            if let error = error {
+                print(error.localizedDescription)
                 
             }
+            let authentication = user.authentication
+            let credential = FIRGoogleAuthProvider.credentialWithIDToken(authentication.idToken, accessToken: authentication.accessToken)
             
-        })
+            FIRAuth.auth()?.signInWithCredential(credential, completion: {(user, error) in
+                
+                if error != nil{
+                    self.errorHandler.searchError(error!)
+                }
+                else{
+                    
+                    self.alert.showSuccess("Congratulations", subTitle: "You have made a Firebase account!",duration: 2)
+                    
+                    let userEmail: String = self.email.text!
+                    print("User Created")
+                    self.RootRef.child("users").child(user!.uid).setValue(["email": userEmail])
+                    
+                    print("user logged in with google account")
+                    
+                    
+                    self.performSegueWithIdentifier("MainMenu", sender: nil)
+                    
+                }
+                
+            })
+            
+            
+        }
         
         
+        
+        @IBAction func googleSignIn(sender: AnyObject) {
+            print("Google sign in pressed")
+        }
+        
+        
+        //////////////// Override functions //////////////////
+        
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
+        
+        
+        
+        
+        
     }
- 
     
-    
-    @IBAction func googleSignIn(sender: AnyObject) {
-        print("Google sign in pressed")
-    }
-    
-    
-    //////////////// Override functions //////////////////
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
- 
-   
-    
-    
-    
-    
-    
-    
-}
 
