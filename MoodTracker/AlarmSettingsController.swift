@@ -30,6 +30,12 @@ class AlarmSettingsController: UITableViewController {
     
     override func viewDidLoad() {
                 note.text = " Log your mood"
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.19, green:0.53, blue:0.96, alpha:1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.19, green:0.53, blue:0.96, alpha:1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
     }
     
     
@@ -57,7 +63,6 @@ class AlarmSettingsController: UITableViewController {
         notification.alertBody = self.note.text
         notification.alertAction = "swipe here"
         notification.timeZone = NSTimeZone.defaultTimeZone()
-        notification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
         notification.repeatInterval = NSCalendarUnit.Day
         notification.soundName = UILocalNotificationDefaultSoundName
         

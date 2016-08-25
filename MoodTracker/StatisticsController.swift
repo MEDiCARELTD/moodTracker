@@ -66,13 +66,14 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
     
     
     @IBAction func datePicker1(sender: AnyObject) {
+        
         listForCustomRange = graphingTool.getlistOfLogsBetweenTwoDates(retrievedData, date1: date1.date, date2: date2.date)
-            graph.reloadGraph()
+        graph.reloadGraph()
     }
     
     @IBAction func datePicker2(sender: AnyObject) {
         listForCustomRange = graphingTool.getlistOfLogsBetweenTwoDates(retrievedData, date1: date1.date, date2: date2.date)
-            graph.reloadGraph()
+        graph.reloadGraph()
     }
     @IBAction func backToTop(sender: AnyObject) {
         tableView!.scrollToRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 0), atScrollPosition: .Top, animated: true)
@@ -82,12 +83,26 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
     override func viewDidLoad() {
         print("Statistics Controller")
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.19, green:0.53, blue:0.96, alpha:1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.19, green:0.53, blue:0.96, alpha:1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
+        
+        
+        
+        goToNoteDetail.enabled = false
+        goToNoteDetail.hidden = true
+        
+        
         retrievedData = appDelegate.self.accountLogData
         listForToday = graphingTool.getListOfLogsForToday(retrievedData)
         listForPastWeek = graphingTool.getListOfLogsForPastWeek(retrievedData)
         listForPast3Months = graphingTool.getListOfLogsForPast3Months(retrievedData)
         
-       
+        
+        
         print("\n\nCustom Range \(listForCustomRange)")
         
         listForAllTime = retrievedData
@@ -124,10 +139,16 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
         logsAllTime.text = "Mood Logs Of All Time: \(retrievedData.count)"
         
     }
-  
+    
     
     @IBAction func segmentedController(sender: AnyObject) {
         print("segmented touched")
+        print("list for past week: \(listForPastWeek.count)")
+        print("list for past 3 months: \(listForPast3Months.count)")
+        print("list for all time: \(retrievedData.count)")
+        print("list for today: \(listForToday.count)")
+        
+        
         graph.reloadGraph()
     }
     
@@ -162,10 +183,13 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
         
     }
     
+    @IBOutlet var goToNoteDetail: UIButton!
+    
     func lineGraph(graph: BEMSimpleLineGraphView, didReleaseTouchFromGraphWithClosestIndex index: CGFloat) {
- 
-        tableView!.scrollToRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 3), atScrollPosition: .Top, animated: true)
-
+        
+        goToNoteDetail.enabled = true
+        goToNoteDetail.hidden = false
+        
     }
     func lineGraph(graph: BEMSimpleLineGraphView, didTouchGraphWithClosestIndex index: Int) {
         
@@ -178,7 +202,7 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
             
         case 1:
             indexInFocus = listForPastWeek[indexRound]
-            setNoteDetails(listForToday[indexRound])
+            setNoteDetails(listForPastWeek[indexRound])
         case 2:
             indexInFocus = listForPast3Months[indexRound]
             setNoteDetails(listForPast3Months[indexRound])
@@ -193,7 +217,7 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
             indexInFocus = retrievedData[indexRound]
             
         }
-
+        
     }
     
     
@@ -230,60 +254,65 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
         
         
     }
-
-
-func lineGraph(graph: BEMSimpleLineGraphView, labelOnXAxisForIndex index: Int) -> String{
     
-    switch segmentedControl.selectedSegmentIndex
-    {
-    case 0:
-        return listForToday[index].getTime()
-    case 1:
-        return listForPastWeek[index].getDay()
-    case 2:
-        return listForPast3Months[index].getMonth()
-    case 3:
-        return listForAllTime[index].getMonth()
-    case 4:
-        return listForCustomRange[index].getMonth()
-    default:
-        print("Crash")
-        return retrievedData[index].getDay()
+    
+    func lineGraph(graph: BEMSimpleLineGraphView, labelOnXAxisForIndex index: Int) -> String{
+        
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            return listForToday[index].getTime()
+        case 1:
+            return listForPastWeek[index].getDay()
+        case 2:
+            return listForPast3Months[index].getMonth()
+        case 3:
+            return listForAllTime[index].getMonth()
+        case 4:
+            return listForCustomRange[index].getMonth()
+        default:
+            print("Crash")
+            return retrievedData[index].getDay()
+        }
+        
+        
+    }
+    
+    func lineGraph(graph: BEMSimpleLineGraphView, valueForPointAtIndex index: Int) -> CGFloat {
+        
+        
+        switch segmentedControl.selectedSegmentIndex{
+        case 0:
+            return CGFloat(listForToday[index].moodScore)
+            
+        case 1:
+            return  CGFloat(listForPastWeek[index].moodScore)
+            
+        case 2:
+            return CGFloat(listForPast3Months[index].moodScore)
+        case 4:
+            return CGFloat(listForCustomRange[index].moodScore)
+        default:
+            return CGFloat(retrievedData[index].moodScore)
+            
+        }
     }
     
     
-}
-
-func lineGraph(graph: BEMSimpleLineGraphView, valueForPointAtIndex index: Int) -> CGFloat {
     
-    
-    switch segmentedControl.selectedSegmentIndex{
-    case 0:
-        return CGFloat(listForToday[index].moodScore)
+    func numberOfGapsBetweenLabelsOnLineGraph(graph: BEMSimpleLineGraphView) -> Int {
         
-    case 1:
-        return  CGFloat(listForPastWeek[index].moodScore)
         
-    case 2:
-        return CGFloat(listForPast3Months[index].moodScore)
-    case 4:
-        return CGFloat(listForCustomRange[index].moodScore)
-    default:
-        return CGFloat(retrievedData[index].moodScore)
+        return 0
         
     }
-}
-
-
-
-func numberOfGapsBetweenLabelsOnLineGraph(graph: BEMSimpleLineGraphView) -> Int {
     
+    @IBAction func goToNoteDetail(sender: AnyObject) {
+        print("pressed go to note")
+        tableView!.scrollToRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 3), atScrollPosition: .Top, animated: true)
+        
+    }
     
-    return 0
-    
-}
-
-
     @IBAction func segmentedAction(sender: AnyObject) {
         
         for element in dateToday {
@@ -297,7 +326,7 @@ func numberOfGapsBetweenLabelsOnLineGraph(graph: BEMSimpleLineGraphView) -> Int 
             tableView!.scrollToRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 1), atScrollPosition: .Top, animated: true)
         }
     }
-
+    
 }
 
 

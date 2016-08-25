@@ -69,7 +69,7 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate 
                     self.errorHandler.searchError(error!)
                 }
                 else {
-                    self.alert.showSuccess("Success!", subTitle: "You have successfully logged in ",duration: 2)
+                    self.alert.showSuccess("Success!", subTitle: "You have successfully logged in ",duration: 3)
                     self.performSegueWithIdentifier("MainMenu", sender: nil)
                 }
                 
@@ -98,7 +98,7 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate 
                 }
                 else{
                     
-                    self.alert.showSuccess("Congratulations", subTitle: "You have made a Firebase account!",duration: 2)
+                    self.alert.showSuccess("Congratulations", subTitle: "You have made a Firebase account!",duration: 3)
                     
                     let userEmail: String = self.email.text!
                     print("User Created")

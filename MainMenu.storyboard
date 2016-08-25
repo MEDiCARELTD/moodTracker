@@ -94,20 +94,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Clearing data will remove all your records from local firebase servers. This cannot be undone." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFW-m3-J6z">
-                                                    <rect key="frame" x="20" y="8" width="560" height="49"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="74" id="cZe-hd-dez"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clearing data will remove all your records from local firebase servers. This cannot be undone." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUd-hZ-Xpf">
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aFW-m3-J6z" firstAttribute="centerX" secondItem="bTo-Gd-kTt" secondAttribute="centerX" id="1cJ-cM-UVb"/>
-                                                <constraint firstItem="aFW-m3-J6z" firstAttribute="leading" secondItem="bTo-Gd-kTt" secondAttribute="leadingMargin" constant="12" id="TAg-ZL-DXW"/>
-                                                <constraint firstItem="aFW-m3-J6z" firstAttribute="top" secondItem="bTo-Gd-kTt" secondAttribute="topMargin" id="v02-P8-BXc"/>
+                                                <constraint firstItem="qUd-hZ-Xpf" firstAttribute="bottom" secondItem="bTo-Gd-kTt" secondAttribute="bottomMargin" id="1nd-sv-Jzp"/>
+                                                <constraint firstItem="qUd-hZ-Xpf" firstAttribute="top" secondItem="bTo-Gd-kTt" secondAttribute="top" id="L4s-Lq-owc"/>
+                                                <constraint firstItem="qUd-hZ-Xpf" firstAttribute="leading" secondItem="bTo-Gd-kTt" secondAttribute="leadingMargin" id="VgA-SA-Pq8"/>
+                                                <constraint firstItem="qUd-hZ-Xpf" firstAttribute="trailing" secondItem="bTo-Gd-kTt" secondAttribute="trailingMargin" id="awu-dm-z67"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -135,6 +133,7 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="J0i-Sk-bNP" firstAttribute="top" secondItem="R6d-R2-ml1" secondAttribute="top" id="Pq3-mI-6jh"/>
                                                 <constraint firstItem="J0i-Sk-bNP" firstAttribute="centerX" secondItem="R6d-R2-ml1" secondAttribute="centerX" id="cR8-Mt-isx"/>
                                                 <constraint firstItem="J0i-Sk-bNP" firstAttribute="top" secondItem="R6d-R2-ml1" secondAttribute="top" id="nTl-sM-lzB"/>
                                                 <constraint firstItem="J0i-Sk-bNP" firstAttribute="leading" secondItem="R6d-R2-ml1" secondAttribute="leadingMargin" constant="-4" id="rpt-rO-nID"/>
@@ -152,20 +151,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbp-Fc-jgg">
-                                                    <rect key="frame" x="20" y="7" width="560" height="61"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8r-om-OKW">
+                                                    <rect key="frame" x="24" y="0.0" width="543" height="46"/>
                                                     <string key="text">By signing out you do not lose your data since it is backed up automatically to the cloud. To get data back just sign in again using your email and password. </string>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Tbp-Fc-jgg" firstAttribute="centerX" secondItem="QAM-y9-V1o" secondAttribute="centerX" id="1Xw-zJ-kfo"/>
-                                                <constraint firstItem="Tbp-Fc-jgg" firstAttribute="top" secondItem="QAM-y9-V1o" secondAttribute="topMargin" constant="12" id="8A0-ax-beh"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Tbp-Fc-jgg" secondAttribute="bottom" constant="-13" id="wi5-21-HtN"/>
-                                                <constraint firstItem="Tbp-Fc-jgg" firstAttribute="leading" secondItem="QAM-y9-V1o" secondAttribute="leadingMargin" constant="12" id="wyY-Kc-1ZY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="L8r-om-OKW" secondAttribute="trailing" constant="25" id="1Rb-94-7Hk"/>
+                                                <constraint firstItem="L8r-om-OKW" firstAttribute="leading" secondItem="QAM-y9-V1o" secondAttribute="leadingMargin" constant="16" id="7FG-qd-1IA"/>
+                                                <constraint firstItem="L8r-om-OKW" firstAttribute="top" secondItem="QAM-y9-V1o" secondAttribute="top" id="EQI-E3-CF1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="L8r-om-OKW" secondAttribute="bottom" constant="5" id="g77-AA-qyh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -204,11 +202,6 @@
                             <outlet property="delegate" destination="R8R-et-Ema" id="bb3-4p-sT4"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Account" image="man-7.png" id="HoQ-Ud-K1I" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="NGg-UZ-oil" id="HfY-ar-2ku"/>
-                        </connections>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Account" id="Zwo-ok-wCw"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -219,7 +212,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4q-et-nIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="NGg-UZ-oil" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="3727" y="1318"/>
+            <point key="canvasLocation" x="5360" y="804"/>
         </scene>
         <!--Login-->
         <scene sceneID="hYi-Kh-2vz">
@@ -227,7 +220,7 @@
                 <viewControllerPlaceholder storyboardName="Login" id="vOy-0C-fZo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbs-wR-VJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3727.5" y="1800"/>
+            <point key="canvasLocation" x="5360.5" y="1219"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="OIx-Nv-Ewh">
@@ -241,16 +234,16 @@
                     </tabBar>
                     <connections>
                         <segue destination="KJb-Pu-AQS" kind="relationship" relationship="viewControllers" id="VuV-DW-HPk"/>
-                        <segue destination="nvu-qV-CUq" kind="relationship" relationship="viewControllers" id="Zsf-yF-Cdw"/>
-                        <segue destination="wSV-I6-IOX" kind="relationship" relationship="viewControllers" id="xgf-XZ-Pt3"/>
-                        <segue destination="MvE-vF-XZo" kind="relationship" relationship="viewControllers" id="DSS-9s-Vvz"/>
-                        <segue destination="R8R-et-Ema" kind="relationship" relationship="viewControllers" id="WKa-6a-gEk"/>
-                        <segue destination="ElD-Bb-VbA" kind="relationship" relationship="viewControllers" id="S89-bl-w9w"/>
+                        <segue destination="fHK-XG-qpF" kind="relationship" relationship="viewControllers" id="Zsf-yF-Cdw"/>
+                        <segue destination="sCj-al-huY" kind="relationship" relationship="viewControllers" id="xgf-XZ-Pt3"/>
+                        <segue destination="BZr-jn-fgJ" kind="relationship" relationship="viewControllers" id="DSS-9s-Vvz"/>
+                        <segue destination="ohH-zp-FeS" kind="relationship" relationship="viewControllers" id="WKa-6a-gEk"/>
+                        <segue destination="BV7-Ap-hcl" kind="relationship" relationship="viewControllers" id="S89-bl-w9w"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Si-OM-O3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2733" y="43"/>
+            <point key="canvasLocation" x="2560" y="43"/>
         </scene>
         <!--Need To Talk to someone?-->
         <scene sceneID="j4K-q3-ZAx">
@@ -334,7 +327,9 @@ PRESS THE LOGO</string>
                                                 </textView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="yYh-mc-afc" firstAttribute="top" secondItem="xsg-BM-jMS" secondAttribute="topMargin" constant="8" id="1Jc-QY-608"/>
                                                 <constraint firstItem="Sts-OQ-jtg" firstAttribute="leading" secondItem="xsg-BM-jMS" secondAttribute="leadingMargin" constant="53" id="9V3-ef-6dX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nAJ-fD-afV" secondAttribute="bottom" constant="-1" id="Epy-tI-HTR"/>
                                                 <constraint firstItem="yYh-mc-afc" firstAttribute="top" secondItem="xsg-BM-jMS" secondAttribute="topMargin" constant="8" id="WlQ-Uz-b8Y"/>
                                                 <constraint firstItem="nAJ-fD-afV" firstAttribute="leading" secondItem="xsg-BM-jMS" secondAttribute="leadingMargin" id="XQM-zZ-nY0"/>
                                                 <constraint firstItem="yYh-mc-afc" firstAttribute="centerX" secondItem="nAJ-fD-afV" secondAttribute="centerX" id="cfx-Jf-Y40"/>
@@ -413,7 +408,7 @@ PRESS THE LOGO</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bp5-Iq-xRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5935" y="-483"/>
+            <point key="canvasLocation" x="5979" y="-483"/>
         </scene>
         <!--Log Mood-->
         <scene sceneID="Nys-W5-Otc">
@@ -605,6 +600,7 @@ PRESS THE LOGO</string>
                                     <constraints>
                                         <constraint firstItem="1ZO-4j-OPv" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leadingMargin" id="0nx-Zg-jH5"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="1ZO-4j-OPv" secondAttribute="bottom" constant="-0.5" id="7kl-Hz-3X5"/>
+                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="top" secondItem="z0v-lh-mIX" secondAttribute="topMargin" constant="33" id="Awd-tl-STd"/>
                                         <constraint firstItem="1ZO-4j-OPv" firstAttribute="top" secondItem="sBR-kp-3Ip" secondAttribute="top" id="BqQ-hC-pKv"/>
                                         <constraint firstItem="4hA-vA-R2A" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leading" id="CO8-rN-JYk"/>
                                         <constraint firstItem="4hA-vA-R2A" firstAttribute="top" secondItem="z0v-lh-mIX" secondAttribute="topMargin" id="Cfn-s2-DWe"/>
@@ -612,8 +608,10 @@ PRESS THE LOGO</string>
                                         <constraint firstItem="sBR-kp-3Ip" firstAttribute="leading" secondItem="1ZO-4j-OPv" secondAttribute="trailing" constant="43" id="Z8O-zZ-4za"/>
                                         <constraint firstItem="sBR-kp-3Ip" firstAttribute="top" secondItem="z0v-lh-mIX" secondAttribute="topMargin" constant="33" id="a9f-jJ-6gW"/>
                                         <constraint firstItem="sBR-kp-3Ip" firstAttribute="trailing" secondItem="z0v-lh-mIX" secondAttribute="trailingMargin" id="jXR-oC-qet"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1ZO-4j-OPv" secondAttribute="bottom" constant="-1" id="nPV-FD-zfr"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="sBR-kp-3Ip" secondAttribute="trailing" constant="21" id="odK-F7-css"/>
                                         <constraint firstItem="sBR-kp-3Ip" firstAttribute="leading" secondItem="1ZO-4j-OPv" secondAttribute="trailing" constant="8" symbolic="YES" id="pFa-k7-l4S"/>
+                                        <constraint firstItem="1ZO-4j-OPv" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leadingMargin" id="qRk-UR-ASU"/>
                                         <constraint firstItem="sBR-kp-3Ip" firstAttribute="centerY" secondItem="z0v-lh-mIX" secondAttribute="centerY" id="rm1-zK-fzn"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="sBR-kp-3Ip" secondAttribute="bottom" constant="-8.5" id="urk-Zc-Oxh"/>
                                     </constraints>
@@ -630,11 +628,6 @@ PRESS THE LOGO</string>
                             <outlet property="delegate" destination="nvu-qV-CUq" id="bmW-BC-zqa"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Tips" image="pushpin-7.png" id="OUd-jC-RuH" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="gwH-Mr-PN8" id="jSF-MQ-HbW"/>
-                        </connections>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Tips For Stress" id="IpS-4g-XIM"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -642,9 +635,9 @@ PRESS THE LOGO</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZY-On-W1n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="gwH-Mr-PN8" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="3736" y="43"/>
+            <point key="canvasLocation" x="4548" y="43"/>
         </scene>
-        <!--Notes-->
+        <!--Notes Controller-->
         <scene sceneID="vyv-1p-P4b">
             <objects>
                 <tableViewController id="wSV-I6-IOX" customClass="NotesController" customModule="MoodTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -654,7 +647,7 @@ PRESS THE LOGO</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="233" id="d7K-dO-gfA" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="233"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="233"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d7K-dO-gfA" id="YgO-Ew-zjj">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="232"/>
@@ -721,16 +714,11 @@ PRESS THE LOGO</string>
                             <outlet property="delegate" destination="wSV-I6-IOX" id="0DK-qP-tSd"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Notes" image="paper-piece-7.png" id="JrN-z5-lLb" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="4Gr-bc-rex" id="NhF-vE-7ao"/>
-                        </connections>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" id="495-cW-AO0"/>
                     <connections>
                         <outlet property="TableView" destination="uOH-jq-XFG" id="x8k-5u-h2X"/>
                         <outlet property="searchDisplayController" destination="mxw-9h-pOo" id="jUp-AD-LBy"/>
-                        <segue destination="MvE-vF-XZo" kind="show" identifier="NoteToGraph" id="W1A-wJ-7d7"/>
+                        <segue destination="BZr-jn-fgJ" kind="show" identifier="NoteToGraph" id="W1A-wJ-7d7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfu-vz-cp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -752,7 +740,7 @@ PRESS THE LOGO</string>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1413" y="830"/>
+            <point key="canvasLocation" x="1365" y="1640"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="skP-FD-2TI">
@@ -763,60 +751,41 @@ PRESS THE LOGO</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="6aP-tB-0e1">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="175"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="78"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of alarm notifications " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBG-r3-dSM">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBG-r3-dSM">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="78"/>
                                     <color key="backgroundColor" red="0.0" green="0.5722355402" blue="0.88120993589999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="DBq-3j-4vt"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <attributedString key="attributedText">
+                                        <fragment>
+                                            <string key="content">List of alarm notifications
+
+Alarms help you keep track of your mood</string>
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you keep using the app the more data the graph can show. This can help you beter track your mood over time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXK-re-Ns8">
-                                    <rect key="frame" x="21" y="52" width="542" height="56"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarms help you to keep track of mood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lw4-En-z3e">
-                                    <rect key="frame" x="89" y="116" width="437" height="40"/>
-                                    <color key="backgroundColor" red="0.0" green="0.5722355402" blue="0.88120993589999996" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="aB8-kO-VdB"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="15"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    </userDefinedRuntimeAttributes>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="CBG-r3-dSM" secondAttribute="bottom" constant="-11" id="33b-Hw-fTR"/>
-                                <constraint firstAttribute="trailing" secondItem="CBG-r3-dSM" secondAttribute="trailing" id="9Lu-oJ-ed3"/>
-                                <constraint firstItem="BXK-re-Ns8" firstAttribute="top" secondItem="CBG-r3-dSM" secondAttribute="bottom" constant="8" symbolic="YES" id="CyM-90-9mG"/>
-                                <constraint firstItem="BXK-re-Ns8" firstAttribute="leading" secondItem="6aP-tB-0e1" secondAttribute="leading" constant="21" id="JmH-2v-XSv"/>
-                                <constraint firstAttribute="trailing" secondItem="lw4-En-z3e" secondAttribute="trailing" constant="74" id="KN4-5j-Dhd"/>
-                                <constraint firstAttribute="trailing" secondItem="BXK-re-Ns8" secondAttribute="trailing" constant="37" id="OaQ-oo-Hgs"/>
-                                <constraint firstItem="lw4-En-z3e" firstAttribute="top" secondItem="BXK-re-Ns8" secondAttribute="bottom" constant="8" symbolic="YES" id="PHI-nL-rOr"/>
-                                <constraint firstItem="lw4-En-z3e" firstAttribute="leading" secondItem="6aP-tB-0e1" secondAttribute="leading" constant="89" id="iAs-oi-b56"/>
-                                <constraint firstAttribute="bottom" secondItem="lw4-En-z3e" secondAttribute="bottom" constant="19" id="iMR-5B-sxo"/>
-                                <constraint firstItem="CBG-r3-dSM" firstAttribute="top" secondItem="6aP-tB-0e1" secondAttribute="top" id="wY1-2d-xqe"/>
-                                <constraint firstItem="CBG-r3-dSM" firstAttribute="leading" secondItem="6aP-tB-0e1" secondAttribute="leading" id="xCT-Ne-U5Y"/>
+                                <constraint firstAttribute="bottom" secondItem="CBG-r3-dSM" secondAttribute="bottom" id="C8H-pq-vGq"/>
+                                <constraint firstItem="CBG-r3-dSM" firstAttribute="top" secondItem="6aP-tB-0e1" secondAttribute="top" id="PGl-MZ-gWY"/>
+                                <constraint firstItem="CBG-r3-dSM" firstAttribute="leading" secondItem="6aP-tB-0e1" secondAttribute="leading" id="hBV-GJ-r5X"/>
+                                <constraint firstAttribute="trailing" secondItem="CBG-r3-dSM" secondAttribute="trailing" id="n0A-u9-fAr"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="50" id="dQ2-Iw-0EQ" customClass="NotificationCell" customModule="MoodTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="203" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="106" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dQ2-Iw-0EQ" id="OBz-qw-3lb">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
@@ -871,7 +840,7 @@ PRESS THE LOGO</string>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="a" rowHeight="54" id="iFq-ff-nM5">
-                                <rect key="frame" x="0.0" y="253" width="600" height="54"/>
+                                <rect key="frame" x="0.0" y="156" width="600" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iFq-ff-nM5" id="XsE-T6-Mbi">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
@@ -880,7 +849,7 @@ PRESS THE LOGO</string>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e5R-DB-GXC">
-                                <rect key="frame" x="0.0" y="307" width="600" height="73"/>
+                                <rect key="frame" x="0.0" y="210" width="600" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e5R-DB-GXC" id="SIn-jX-ywb">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
@@ -893,11 +862,6 @@ PRESS THE LOGO</string>
                             <outlet property="delegate" destination="ElD-Bb-VbA" id="Qpt-C7-bAp"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Alarms" image="clock-7.png" id="iqR-GQ-OKw" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="ejI-fM-MqV" id="isv-Ug-eNj"/>
-                        </connections>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Alarms" id="8nP-wS-UoG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PWU-Xt-nM8">
                             <connections>
@@ -912,7 +876,7 @@ PRESS THE LOGO</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJc-nR-tA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="ejI-fM-MqV" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="2188" y="1620"/>
+            <point key="canvasLocation" x="3812" y="1620"/>
         </scene>
         <!--Alarm settings-->
         <scene sceneID="V3n-VD-SwN">
@@ -1129,7 +1093,7 @@ PRESS THE LOGO</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cC5-Vp-GUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2983" y="2152"/>
+            <point key="canvasLocation" x="3757" y="2540"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V56-Ac-P26">
@@ -1147,7 +1111,7 @@ PRESS THE LOGO</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYN-aJ-cHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2983" y="1142"/>
+            <point key="canvasLocation" x="4569" y="1620"/>
         </scene>
         <!--Statistics-->
         <scene sceneID="9vL-V2-Q1q">
@@ -1158,7 +1122,7 @@ PRESS THE LOGO</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleAspectFit" semanticContentAttribute="playback" id="zlR-Kq-yim" customClass="BEMSimpleLineGraphView">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="398"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="398"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <accessibility key="accessibilityConfiguration">
@@ -1206,7 +1170,7 @@ PRESS THE LOGO</string>
                             <tableViewSection headerTitle="Graph Of Mood Logs" id="e86-U3-WhI">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="45" id="tVn-Ev-teo" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="448" width="600" height="45"/>
+                                        <rect key="frame" x="0.0" y="512" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tVn-Ev-teo" id="xhK-0B-u4C">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -1243,19 +1207,38 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oeG-du-2dc">
-                                        <rect key="frame" x="0.0" y="493" width="600" height="45"/>
+                                        <rect key="frame" x="0.0" y="557" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oeG-du-2dc" id="Hnn-oz-dnZ">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-VN-gpU">
-                                                    <rect key="frame" x="8" y="8" width="584" height="25"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-VN-gpU">
+                                                    <rect key="frame" x="8" y="8" width="476" height="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ug-y2-aLr">
+                                                    <rect key="frame" x="535" y="5" width="45" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="xct-2m-zQl"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="rightArrow 2"/>
+                                                    <connections>
+                                                        <action selector="goToNoteDetail:" destination="MvE-vF-XZo" eventType="touchUpInside" id="aMN-53-VZs"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bT4-VN-gpU" firstAttribute="top" secondItem="Hnn-oz-dnZ" secondAttribute="topMargin" id="6PN-Mh-5H9"/>
+                                                <constraint firstItem="5ug-y2-aLr" firstAttribute="top" secondItem="Hnn-oz-dnZ" secondAttribute="topMargin" constant="-3" id="EEK-VT-zYf"/>
+                                                <constraint firstItem="bT4-VN-gpU" firstAttribute="leading" secondItem="Hnn-oz-dnZ" secondAttribute="leadingMargin" id="GZ6-Oj-Y8P"/>
+                                                <constraint firstItem="5ug-y2-aLr" firstAttribute="bottom" secondItem="Hnn-oz-dnZ" secondAttribute="bottomMargin" id="O5n-7F-9H9"/>
+                                                <constraint firstItem="5ug-y2-aLr" firstAttribute="leading" secondItem="bT4-VN-gpU" secondAttribute="trailing" constant="51" id="jwH-6W-g1H"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5ug-y2-aLr" secondAttribute="trailing" constant="12" id="qNx-kW-c4t"/>
+                                                <constraint firstItem="bT4-VN-gpU" firstAttribute="centerY" secondItem="5ug-y2-aLr" secondAttribute="centerY" id="yOW-dr-5sG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -1263,7 +1246,7 @@ PRESS THE LOGO</string>
                             <tableViewSection headerTitle="Date Range" id="aiU-ek-WjG">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="0.0" id="1nF-Qc-j7r" customClass="StatisticsHeaderCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="589" width="600" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="653" width="600" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1nF-Qc-j7r" id="u4v-g6-Wgq">
                                             <rect key="frame" x="0.0" y="-1" width="600" height="1"/>
@@ -1271,7 +1254,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vLN-uk-OYq">
-                                        <rect key="frame" x="0.0" y="589" width="600" height="45"/>
+                                        <rect key="frame" x="0.0" y="653" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vLN-uk-OYq" id="6Rx-Z8-TOG">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -1304,7 +1287,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="127" id="STE-ii-fJI">
-                                        <rect key="frame" x="0.0" y="634" width="600" height="127"/>
+                                        <rect key="frame" x="0.0" y="698" width="600" height="127"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="STE-ii-fJI" id="6Y0-0E-xvW">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
@@ -1326,23 +1309,27 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pMI-DN-ttG">
-                                        <rect key="frame" x="0.0" y="761" width="600" height="45"/>
+                                        <rect key="frame" x="0.0" y="825" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pMI-DN-ttG" id="pbh-VL-XdG">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OH-Bk-foT">
-                                                    <rect key="frame" x="268" y="12" width="53" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OH-Bk-foT">
+                                                    <rect key="frame" x="8" y="8" width="53" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9OH-Bk-foT" firstAttribute="top" secondItem="pbh-VL-XdG" secondAttribute="topMargin" id="6Ng-ka-RUp"/>
+                                                <constraint firstItem="9OH-Bk-foT" firstAttribute="leading" secondItem="pbh-VL-XdG" secondAttribute="leadingMargin" id="AmG-Wo-D62"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="189" id="O45-FN-8Y6" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="806" width="600" height="189"/>
+                                        <rect key="frame" x="0.0" y="870" width="600" height="189"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O45-FN-8Y6" id="cRC-Nh-wPm">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="188"/>
@@ -1367,23 +1354,27 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nDW-RQ-POn">
-                                        <rect key="frame" x="0.0" y="995" width="600" height="45"/>
+                                        <rect key="frame" x="0.0" y="1059" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDW-RQ-POn" id="sRX-hh-jtY">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4C-gK-Bu3">
-                                                    <rect key="frame" x="269" y="12" width="55" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4C-gK-Bu3">
+                                                    <rect key="frame" x="8" y="11" width="55" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d4C-gK-Bu3" firstAttribute="centerY" secondItem="sRX-hh-jtY" secondAttribute="centerY" id="ht4-Zf-LYb"/>
+                                                <constraint firstItem="d4C-gK-Bu3" firstAttribute="leading" secondItem="sRX-hh-jtY" secondAttribute="leadingMargin" id="mOg-5O-861"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="202" id="wUR-jj-XuO" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1040" width="600" height="202"/>
+                                        <rect key="frame" x="0.0" y="1104" width="600" height="202"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wUR-jj-XuO" id="fee-rY-Dg8">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="201"/>
@@ -1408,7 +1399,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XQd-3Y-oIh">
-                                        <rect key="frame" x="0.0" y="1242" width="600" height="45"/>
+                                        <rect key="frame" x="0.0" y="1306" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XQd-3Y-oIh" id="JUu-jW-pXn">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -1438,7 +1429,7 @@ PRESS THE LOGO</string>
                             <tableViewSection headerTitle="Stats" id="dob-cr-Feu">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="0.0" id="kGG-y2-Lrc" customClass="StatisticsHeaderCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1338" width="600" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="1402" width="600" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kGG-y2-Lrc" id="r5e-TK-DrX">
                                             <rect key="frame" x="0.0" y="-1" width="600" height="1"/>
@@ -1446,7 +1437,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rpd-92-Cfw">
-                                        <rect key="frame" x="0.0" y="1338" width="600" height="45"/>
+                                        <rect key="frame" x="0.0" y="1402" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="rpd-92-Cfw" id="snk-Bc-jdW">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -1472,7 +1463,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8hu-oc-H6B">
-                                        <rect key="frame" x="0.0" y="1383" width="600" height="45"/>
+                                        <rect key="frame" x="0.0" y="1447" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8hu-oc-H6B" id="mvH-Df-kg2">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -1498,7 +1489,7 @@ PRESS THE LOGO</string>
                             <tableViewSection headerTitle="Note" id="ely-Sg-onP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="0.0" id="u8C-vf-cPJ" customClass="StatisticsHeaderCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1479" width="600" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="1543" width="600" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u8C-vf-cPJ" id="S6J-h6-oWy">
                                             <rect key="frame" x="0.0" y="-1" width="600" height="1"/>
@@ -1506,7 +1497,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="wrA-Nd-SHe" customClass="DetailCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1479" width="600" height="57"/>
+                                        <rect key="frame" x="0.0" y="1543" width="600" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wrA-Nd-SHe" id="hQB-Mi-uXv">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
@@ -1533,7 +1524,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="42" id="7wc-YM-6eF" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1536" width="600" height="42"/>
+                                        <rect key="frame" x="0.0" y="1600" width="600" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="7wc-YM-6eF" id="jty-2y-9UD">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="41"/>
@@ -1561,7 +1552,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="44" id="Vct-xd-Twf" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1578" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="1642" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="Vct-xd-Twf" id="URQ-di-IDF">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -1590,7 +1581,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="43" id="cxw-l3-Xwd">
-                                        <rect key="frame" x="0.0" y="1622" width="600" height="43"/>
+                                        <rect key="frame" x="0.0" y="1686" width="600" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="cxw-l3-Xwd" id="wd8-2j-z9L">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="42"/>
@@ -1616,7 +1607,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="281" id="eTW-T8-0CC">
-                                        <rect key="frame" x="0.0" y="1665" width="600" height="281"/>
+                                        <rect key="frame" x="0.0" y="1729" width="600" height="281"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eTW-T8-0CC" id="mtJ-IH-OBo">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="280"/>
@@ -1652,7 +1643,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="yav-XJ-Ff5">
-                                        <rect key="frame" x="0.0" y="1946" width="600" height="60"/>
+                                        <rect key="frame" x="0.0" y="2010" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yav-XJ-Ff5" id="Xfm-bR-bTU">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
@@ -1683,7 +1674,7 @@ PRESS THE LOGO</string>
                             <tableViewSection headerTitle="Note" id="9bG-P8-amC">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="0.0" id="vEM-MQ-V0h" customClass="StatisticsHeaderCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2057" width="600" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="2121" width="600" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vEM-MQ-V0h" id="K96-b9-NxI">
                                             <rect key="frame" x="0.0" y="-1" width="600" height="1"/>
@@ -1691,7 +1682,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="tIz-DL-vhR" customClass="DetailCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2057" width="600" height="57"/>
+                                        <rect key="frame" x="0.0" y="2121" width="600" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tIz-DL-vhR" id="EXX-Vr-Pp6">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
@@ -1718,7 +1709,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="42" id="6nd-kX-FPW" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2114" width="600" height="42"/>
+                                        <rect key="frame" x="0.0" y="2178" width="600" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="6nd-kX-FPW" id="HGo-8B-1zZ">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="41"/>
@@ -1746,7 +1737,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="44" id="an8-Rb-vud" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2156" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="2220" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="an8-Rb-vud" id="JVy-wH-kks">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -1775,7 +1766,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="43" id="6iu-SL-5mm">
-                                        <rect key="frame" x="0.0" y="2200" width="600" height="43"/>
+                                        <rect key="frame" x="0.0" y="2264" width="600" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="6iu-SL-5mm" id="qnJ-5W-77n">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="42"/>
@@ -1801,7 +1792,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="281" id="45m-zZ-ydm">
-                                        <rect key="frame" x="0.0" y="2243" width="600" height="281"/>
+                                        <rect key="frame" x="0.0" y="2307" width="600" height="281"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="45m-zZ-ydm" id="Ikd-ZY-Giv">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="280"/>
@@ -1837,7 +1828,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="MK3-Ry-p6Y">
-                                        <rect key="frame" x="0.0" y="2524" width="600" height="60"/>
+                                        <rect key="frame" x="0.0" y="2588" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MK3-Ry-p6Y" id="4ZZ-mD-vog">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
@@ -1864,7 +1855,7 @@ PRESS THE LOGO</string>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XX6-Cc-MNe">
-                                        <rect key="frame" x="0.0" y="2584" width="600" height="45"/>
+                                        <rect key="frame" x="0.0" y="2648" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XX6-Cc-MNe" id="hvD-co-eyT">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -1876,7 +1867,7 @@ PRESS THE LOGO</string>
                             <tableViewSection headerTitle="Note" id="855-TM-iB2">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="0.0" id="xeZ-91-Sxf" customClass="StatisticsHeaderCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2680" width="600" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="2744" width="600" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xeZ-91-Sxf" id="orC-71-ks2">
                                             <rect key="frame" x="0.0" y="-1" width="600" height="1"/>
@@ -1884,7 +1875,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="9lO-tY-sQW" customClass="DetailCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2680" width="600" height="57"/>
+                                        <rect key="frame" x="0.0" y="2744" width="600" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="9lO-tY-sQW" id="daC-8i-Zby">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
@@ -1911,7 +1902,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="42" id="GVc-hq-WnN" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2737" width="600" height="42"/>
+                                        <rect key="frame" x="0.0" y="2801" width="600" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="GVc-hq-WnN" id="avU-Y1-1ph">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="41"/>
@@ -1939,7 +1930,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="44" id="uF4-Xj-lH4" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2779" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="2843" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="uF4-Xj-lH4" id="UDW-iK-R6w">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -1968,7 +1959,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="43" id="R5f-pB-FEe">
-                                        <rect key="frame" x="0.0" y="2823" width="600" height="43"/>
+                                        <rect key="frame" x="0.0" y="2887" width="600" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="R5f-pB-FEe" id="Eo0-Ln-bGC">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="42"/>
@@ -1994,7 +1985,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="281" id="Bhy-xz-YAa">
-                                        <rect key="frame" x="0.0" y="2866" width="600" height="281"/>
+                                        <rect key="frame" x="0.0" y="2930" width="600" height="281"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bhy-xz-YAa" id="e5O-Cy-hPe">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="280"/>
@@ -2030,7 +2021,7 @@ PRESS THE LOGO</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="359-W1-zZu">
-                                        <rect key="frame" x="0.0" y="3147" width="600" height="60"/>
+                                        <rect key="frame" x="0.0" y="3211" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="359-W1-zZu" id="WCs-hl-inF">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
@@ -2057,7 +2048,7 @@ PRESS THE LOGO</string>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Xks-LI-AGa">
-                                        <rect key="frame" x="0.0" y="3207" width="600" height="45"/>
+                                        <rect key="frame" x="0.0" y="3271" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xks-LI-AGa" id="WAq-wp-2JD">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -2072,16 +2063,14 @@ PRESS THE LOGO</string>
                             <outlet property="delegate" destination="MvE-vF-XZo" id="2Fe-NN-trD"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Statistics" image="pie-chart-7.png" id="rSD-GA-nOe" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="buG-pO-kSa" id="aow-hf-6Wp"/>
-                        </connections>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Statistics" id="8uh-TF-yPw"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="2000"/>
                     <connections>
                         <outlet property="averageMoodToday" destination="KbU-pB-5gl" id="zg4-v6-GkK"/>
                         <outlet property="date1" destination="j2B-Xy-TYP" id="Ebd-sS-uLj"/>
+                        <outlet property="date2" destination="Zrj-mr-tcW" id="Yp6-aM-kJe"/>
+                        <outlet property="goToNoteDetail" destination="5ug-y2-aLr" id="AhM-kM-hSD"/>
                         <outlet property="graph" destination="zlR-Kq-yim" id="Irj-n5-8QU"/>
                         <outlet property="logsAllTime" destination="PGn-tk-0MM" id="ns3-yZ-abl"/>
                         <outlet property="moodScore" destination="gW2-SR-TRL" id="aL8-Ud-3Bs"/>
@@ -2096,7 +2085,7 @@ PRESS THE LOGO</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccf-Xg-YDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="buG-pO-kSa" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="1413" y="2320"/>
+            <point key="canvasLocation" x="2225" y="2320"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dNH-CZ-Jdr">
@@ -2114,7 +2103,122 @@ PRESS THE LOGO</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3E-Vt-ZSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5123" y="-483"/>
+            <point key="canvasLocation" x="5177" y="-658"/>
+        </scene>
+        <!--Tips-->
+        <scene sceneID="PZQ-va-7GD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fHK-XG-qpF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tips" image="pushpin-7.png" id="OUd-jC-RuH" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="gwH-Mr-PN8" id="jSF-MQ-HbW"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xno-4Y-jj9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nvu-qV-CUq" kind="relationship" relationship="rootViewController" id="92C-pz-0k8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Rw-1B-XzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3736" y="43"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="cLj-96-fsz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ohH-zp-FeS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="man-7.png" id="HoQ-Ud-K1I" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="NGg-UZ-oil" id="HfY-ar-2ku"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W0o-Qa-LcL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R8R-et-Ema" kind="relationship" relationship="rootViewController" id="fMe-YO-nzB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6MW-fd-5f0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4548" y="804"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="UMV-A8-X4U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BZr-jn-fgJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Statistics" image="pie-chart-7.png" id="rSD-GA-nOe" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="buG-pO-kSa" id="aow-hf-6Wp"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uRG-Og-Wre">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MvE-vF-XZo" kind="relationship" relationship="rootViewController" id="NO5-tI-Yqe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="46D-GA-09Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413" y="2320"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="PDv-Cm-gek">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sCj-al-huY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notes" image="paper-piece-7.png" id="JrN-z5-lLb" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="4Gr-bc-rex" id="NhF-vE-7ao"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K3w-62-P8c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wSV-I6-IOX" kind="relationship" relationship="rootViewController" id="8hC-zn-tWU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDt-3Y-gel" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1365" y="832"/>
+        </scene>
+        <!--Alarms-->
+        <scene sceneID="pxj-Xj-49O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BV7-Ap-hcl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Alarms" image="clock-7.png" id="iqR-GQ-OKw" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="ejI-fM-MqV" id="isv-Ug-eNj"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qXC-NS-z8s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ElD-Bb-VbA" kind="relationship" relationship="rootViewController" id="4WV-fC-txe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAh-Dz-Kxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3000" y="1620"/>
         </scene>
     </scenes>
     <resources>
@@ -2126,10 +2230,11 @@ PRESS THE LOGO</string>
         <image name="pencil-7.png" width="30" height="30"/>
         <image name="pie-chart-7.png" width="30" height="30"/>
         <image name="pushpin-7.png" width="30" height="30"/>
+        <image name="rightArrow 2" width="512" height="512"/>
         <image name="samaritans" width="980" height="411"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W1A-wJ-7d7"/>
+        <segue reference="DSS-9s-Vvz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.19647714432516816" green="0.54882101222744684" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
