@@ -10,7 +10,7 @@
         <scene sceneID="WGP-iT-agw">
             <objects>
                 <tableViewController id="R8R-et-Ema" customClass="AccountController" customModule="MoodTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="uqd-em-mub">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="uqd-em-mub">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -418,7 +418,7 @@ PRESS THE LOGO</string>
                         <viewControllerLayoutGuide type="top" id="t60-JS-WSQ"/>
                         <viewControllerLayoutGuide type="bottom" id="ugG-2b-bSv"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="RPm-cy-NyJ">
+                    <view key="view" autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="RPm-cy-NyJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -580,7 +580,7 @@ PRESS THE LOGO</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hA-vA-R2A">
-                                            <rect key="frame" x="0.0" y="8" width="97" height="26"/>
+                                            <rect key="frame" x="0.0" y="8" width="592" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="26" id="E24-Ys-QC9"/>
                                                 <constraint firstAttribute="width" constant="97" id="pvv-wY-NQa"/>
@@ -599,20 +599,26 @@ PRESS THE LOGO</string>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="1ZO-4j-OPv" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leadingMargin" id="0nx-Zg-jH5"/>
+                                        <constraint firstItem="4hA-vA-R2A" firstAttribute="trailing" secondItem="z0v-lh-mIX" secondAttribute="trailingMargin" id="3HY-WT-Vyb"/>
+                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="top" secondItem="4hA-vA-R2A" secondAttribute="bottom" constant="7" id="7Ye-ZQ-GdK"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="1ZO-4j-OPv" secondAttribute="bottom" constant="-0.5" id="7kl-Hz-3X5"/>
                                         <constraint firstItem="sBR-kp-3Ip" firstAttribute="top" secondItem="z0v-lh-mIX" secondAttribute="topMargin" constant="33" id="Awd-tl-STd"/>
                                         <constraint firstItem="1ZO-4j-OPv" firstAttribute="top" secondItem="sBR-kp-3Ip" secondAttribute="top" id="BqQ-hC-pKv"/>
                                         <constraint firstItem="4hA-vA-R2A" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leading" id="CO8-rN-JYk"/>
                                         <constraint firstItem="4hA-vA-R2A" firstAttribute="top" secondItem="z0v-lh-mIX" secondAttribute="topMargin" id="Cfn-s2-DWe"/>
+                                        <constraint firstItem="4hA-vA-R2A" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leading" id="Iio-wG-CfV"/>
                                         <constraint firstItem="1ZO-4j-OPv" firstAttribute="top" secondItem="4hA-vA-R2A" secondAttribute="bottom" constant="8" symbolic="YES" id="L1X-C2-MqI"/>
                                         <constraint firstItem="sBR-kp-3Ip" firstAttribute="leading" secondItem="1ZO-4j-OPv" secondAttribute="trailing" constant="43" id="Z8O-zZ-4za"/>
                                         <constraint firstItem="sBR-kp-3Ip" firstAttribute="top" secondItem="z0v-lh-mIX" secondAttribute="topMargin" constant="33" id="a9f-jJ-6gW"/>
+                                        <constraint firstItem="1ZO-4j-OPv" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leadingMargin" id="hlW-nh-1fE"/>
                                         <constraint firstItem="sBR-kp-3Ip" firstAttribute="trailing" secondItem="z0v-lh-mIX" secondAttribute="trailingMargin" id="jXR-oC-qet"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1ZO-4j-OPv" secondAttribute="bottom" constant="-1" id="nD6-DN-2Le"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="1ZO-4j-OPv" secondAttribute="bottom" constant="-1" id="nPV-FD-zfr"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="sBR-kp-3Ip" secondAttribute="trailing" constant="21" id="odK-F7-css"/>
                                         <constraint firstItem="sBR-kp-3Ip" firstAttribute="leading" secondItem="1ZO-4j-OPv" secondAttribute="trailing" constant="8" symbolic="YES" id="pFa-k7-l4S"/>
                                         <constraint firstItem="1ZO-4j-OPv" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leadingMargin" id="qRk-UR-ASU"/>
                                         <constraint firstItem="sBR-kp-3Ip" firstAttribute="centerY" secondItem="z0v-lh-mIX" secondAttribute="centerY" id="rm1-zK-fzn"/>
+                                        <constraint firstItem="1ZO-4j-OPv" firstAttribute="top" secondItem="4hA-vA-R2A" secondAttribute="bottom" constant="8" symbolic="YES" id="tIZ-XT-Bcs"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="sBR-kp-3Ip" secondAttribute="bottom" constant="-8.5" id="urk-Zc-Oxh"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -637,17 +643,17 @@ PRESS THE LOGO</string>
             </objects>
             <point key="canvasLocation" x="4548" y="43"/>
         </scene>
-        <!--Notes Controller-->
+        <!--Notes-->
         <scene sceneID="vyv-1p-P4b">
             <objects>
                 <tableViewController id="wSV-I6-IOX" customClass="NotesController" customModule="MoodTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="233" sectionHeaderHeight="28" sectionFooterHeight="28" id="uOH-jq-XFG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="233" sectionHeaderHeight="28" sectionFooterHeight="28" id="uOH-jq-XFG">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="233" id="d7K-dO-gfA" customClass="CustomCell" customModule="MoodTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="233"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="233"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d7K-dO-gfA" id="YgO-Ew-zjj">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="232"/>
@@ -714,7 +720,8 @@ PRESS THE LOGO</string>
                             <outlet property="delegate" destination="wSV-I6-IOX" id="0DK-qP-tSd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="495-cW-AO0"/>
+                    <navigationItem key="navigationItem" title="Notes" id="495-cW-AO0"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="TableView" destination="uOH-jq-XFG" id="x8k-5u-h2X"/>
                         <outlet property="searchDisplayController" destination="mxw-9h-pOo" id="jUp-AD-LBy"/>
@@ -746,7 +753,7 @@ PRESS THE LOGO</string>
         <scene sceneID="skP-FD-2TI">
             <objects>
                 <tableViewController title="Notifications" id="ElD-Bb-VbA" customClass="AlarmTableController" customModule="MoodTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" id="60o-kt-ufk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" id="60o-kt-ufk">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -754,7 +761,7 @@ PRESS THE LOGO</string>
                             <rect key="frame" x="0.0" y="0.0" width="600" height="78"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBG-r3-dSM">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBG-r3-dSM">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="78"/>
                                     <color key="backgroundColor" red="0.0" green="0.5722355402" blue="0.88120993589999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
@@ -882,7 +889,7 @@ Alarms help you keep track of your mood</string>
         <scene sceneID="V3n-VD-SwN">
             <objects>
                 <tableViewController id="ctA-pQ-ewH" customClass="AlarmSettingsController" customModule="MoodTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bdc-UC-dUX">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bdc-UC-dUX">
                         <rect key="frame" x="0.0" y="64" width="600" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1117,7 +1124,7 @@ Alarms help you keep track of your mood</string>
         <scene sceneID="9vL-V2-Q1q">
             <objects>
                 <tableViewController id="MvE-vF-XZo" customClass="StatisticsController" customModule="MoodTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="45" sectionHeaderHeight="18" sectionFooterHeight="18" id="Bka-QP-G82">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="45" sectionHeaderHeight="18" sectionFooterHeight="18" id="Bka-QP-G82">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2234,7 +2241,7 @@ Alarms help you keep track of your mood</string>
         <image name="samaritans" width="980" height="411"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DSS-9s-Vvz"/>
+        <segue reference="W1A-wJ-7d7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.19647714432516816" green="0.54882101222744684" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

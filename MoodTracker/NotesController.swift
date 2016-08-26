@@ -29,15 +29,6 @@ class NotesController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.19, green:0.53, blue:0.96, alpha:1.0)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.19, green:0.53, blue:0.96, alpha:1.0)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
-        
-        
         retrievedData = appDelegate.self.accountLogData
          retrievedData = retrievedData.reverse()
         navigationItem.rightBarButtonItem = editButtonItem()
@@ -157,11 +148,6 @@ class NotesController: UITableViewController {
        self.tabBarController?.selectedIndex = 3
         
         
-        
-            let destinationVewController = self.tabBarController?.viewControllers![3] as! StatisticsController
-        
-        destinationVewController.indexInFocus = moodLog
-        destinationVewController.setNoteDetails(moodLog)
     }
     
   

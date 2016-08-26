@@ -163,13 +163,10 @@ class LogMoodController: UIViewController {
         let userRef = rootRef.child("users/\(userID)/logs")
         
         
-        //        //test Months
-        //        let test = TestGraph()
-        //        test.logMoodOverMonths(rootRef,userID: userID)
         
-        //                // test over three Months
-        //                let test = TestGraph()
-        //                test.logMoodOver3Months(rootRef, userID: userID)
+//                        // test over three Months
+//                        let test = TestGraph()
+//                        test.logMoodOver3Months(rootRef, userID: userID)
         
         
         userRef.observeEventType(.ChildAdded,withBlock:{ snapshot in

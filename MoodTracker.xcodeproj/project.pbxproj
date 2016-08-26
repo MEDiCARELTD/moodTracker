@@ -14,6 +14,7 @@
 		0738CE2D1D5746350042BA76 /* TestGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738CE2C1D5746340042BA76 /* TestGraph.swift */; };
 		0738CE301D579D570042BA76 /* GraphingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738CE2F1D579D570042BA76 /* GraphingTool.swift */; };
 		0772EA571D46152700094396 /* LogMoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0772EA561D46152700094396 /* LogMoodController.swift */; };
+		077458891D6FBF4200FDD291 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077458881D6FBF4200FDD291 /* MainMenu.storyboard */; };
 		0776A45B1D419D880003BAB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776A45A1D419D880003BAB4 /* AppDelegate.swift */; };
 		0776A45D1D419D880003BAB4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776A45C1D419D880003BAB4 /* LoginController.swift */; };
 		0776A4621D419D880003BAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0776A4611D419D880003BAB4 /* Assets.xcassets */; };
@@ -40,7 +41,6 @@
 		07C9AF0E1D48A75C00B2AC4F /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF0D1D48A75C00B2AC4F /* NotesController.swift */; };
 		07C9AF121D48C01600B2AC4F /* MoodLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF111D48C01600B2AC4F /* MoodLog.swift */; };
 		07C9AF141D48C3A600B2AC4F /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF131D48C3A600B2AC4F /* MainMenuController.swift */; };
-		07E98D061D529974007F2F92 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E98D051D529974007F2F92 /* MainMenu.storyboard */; };
 		662F5BE81D6E4E86007A4F85 /* iconbeast lite 200 - license.txt in Resources */ = {isa = PBXBuildFile; fileRef = 662F5B1E1D6E4E86007A4F85 /* iconbeast lite 200 - license.txt */; };
 		662F5BE91D6E4E86007A4F85 /* 24-around-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 662F5B201D6E4E86007A4F85 /* 24-around-7.png */; };
 		662F5BEA1D6E4E86007A4F85 /* 60-around-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 662F5B211D6E4E86007A4F85 /* 60-around-7.png */; };
@@ -254,6 +254,7 @@
 		0738CE2C1D5746340042BA76 /* TestGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestGraph.swift; sourceTree = "<group>"; };
 		0738CE2F1D579D570042BA76 /* GraphingTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphingTool.swift; sourceTree = "<group>"; };
 		0772EA561D46152700094396 /* LogMoodController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMoodController.swift; sourceTree = "<group>"; };
+		077458881D6FBF4200FDD291 /* MainMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
 		0776A4571D419D880003BAB4 /* MoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0776A45A1D419D880003BAB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0776A45C1D419D880003BAB4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -282,7 +283,6 @@
 		07C9AF0D1D48A75C00B2AC4F /* NotesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
 		07C9AF111D48C01600B2AC4F /* MoodLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodLog.swift; sourceTree = "<group>"; };
 		07C9AF131D48C3A600B2AC4F /* MainMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
-		07E98D051D529974007F2F92 /* MainMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
 		32FF4AD5B2D8A5436DB8B515 /* Pods_MoodTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3829DEB44F11DA1D8055EDCD /* Pods-MoodTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodTracker/Pods-MoodTracker.release.xcconfig"; sourceTree = "<group>"; };
 		662F5B1E1D6E4E86007A4F85 /* iconbeast lite 200 - license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iconbeast lite 200 - license.txt"; sourceTree = "<group>"; };
@@ -537,10 +537,10 @@
 		0772EA581D4618C900094396 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				077458881D6FBF4200FDD291 /* MainMenu.storyboard */,
 				072973C81D664EF000987DF6 /* Notifications.storyboard */,
 				078EB0251D4AB456004CE01E /* Login.storyboard */,
 				0776A4631D419D880003BAB4 /* LaunchScreen.storyboard */,
-				07E98D051D529974007F2F92 /* MainMenu.storyboard */,
 				07C4DAD11D57B98800286427 /* Statistics.storyboard */,
 				077D40091D65221300CCC312 /* LogMood.storyboard */,
 				077D400B1D652BCB00CCC312 /* TipsForStress.storyboard */,
@@ -1030,6 +1030,7 @@
 				662F5C8F1D6E4E86007A4F85 /* spanner-7.png in Resources */,
 				662F5C1A1D6E4E86007A4F85 /* connect-arrow-right-7.png in Resources */,
 				662F5C021D6E4E86007A4F85 /* calendar-7.png in Resources */,
+				077458891D6FBF4200FDD291 /* MainMenu.storyboard in Resources */,
 				662F5C701D6E4E86007A4F85 /* paper-clip-7.png in Resources */,
 				662F5C121D6E4E86007A4F85 /* cloud-upload-7.png in Resources */,
 				662F5C5A1D6E4E86007A4F85 /* man-7.png in Resources */,
@@ -1088,7 +1089,6 @@
 				662F5C0D1D6E4E86007A4F85 /* clock-7.png in Resources */,
 				662F5C331D6E4E86007A4F85 /* file-tick-7.png in Resources */,
 				662F5C971D6E4E86007A4F85 /* tag-plus-7.png in Resources */,
-				07E98D061D529974007F2F92 /* MainMenu.storyboard in Resources */,
 				662F5C271D6E4E86007A4F85 /* email-7.png in Resources */,
 				662F5C3A1D6E4E86007A4F85 /* folder-plus-7.png in Resources */,
 				662F5C6B1D6E4E86007A4F85 /* number-8-7.png in Resources */,

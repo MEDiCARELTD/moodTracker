@@ -39,14 +39,20 @@ class RegisterController: UIViewController {
     }
     
     @IBAction func register(sender: AnyObject) {
+        if self.shakeMe.shakeMeIfEmpty(self.email) {
+            return
+        }
+        if self.shakeMe.shakeMeIfEmpty(self.password){
+            return
+        }
+        if self.shakeMe.shakeMeIfEmpty(self.confirmPassword){
+            return
+        }
         
         FIRAuth.auth()?.createUserWithEmail(email.text!, password: password.text!, completion: {
             
             user,error in
             
-            self.shakeMe.shakeMeIfEmpty(self.email)
-            self.shakeMe.shakeMeIfEmpty(self.password)
-            self.shakeMe.shakeMeIfEmpty(self.confirmPassword)
             
             if self.password.text != self.confirmPassword.text{
                 

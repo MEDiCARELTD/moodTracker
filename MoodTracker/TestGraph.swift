@@ -112,7 +112,7 @@ class TestGraph{
     func logMoodOver3Months(rootRef:FIRDatabaseReference, userID: String){
         var counter = 1
         print("Logging Mood")
-        while counter < 150 {
+        while counter < 50 {
             print("log mood: /\(counter)")
             counter += 1
             let currentTimeInterval: Double = Double(NSDate().timeIntervalSinceReferenceDate)

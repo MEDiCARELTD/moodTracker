@@ -28,12 +28,19 @@ class RedeemPassword: UIViewController {
     @IBAction func sendRequest(sender: AnyObject) {
         
         
+        if self.shakeMe.shakeMeIfEmpty(self.email) {
+            return
+        }
+     
+        if self.shakeMe.shakeMeIfEmpty(self.confirmEmail){
+            return
+        }
+        
         if email.text == confirmEmail.text {
             
             FIRAuth.auth()?.sendPasswordResetWithEmail(email.text!, completion: { (error) in
             
-                self.shakeMe.shakeMeIfEmpty(self.confirmEmail)
-                self.shakeMe.shakeMeIfEmpty(self.email)
+               
                 
                 if self.email.text != self.confirmEmail.text{
                     self.alert.showError("Email", subTitle: "They do not match")

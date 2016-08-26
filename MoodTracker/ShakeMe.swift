@@ -23,7 +23,7 @@ class ShakeMe {
         tableCell.layer.addAnimation(animation, forKey: "position")
     }
     
-    func shakeMeIfEmpty(textField: UITextField){
+    func shakeMeIfEmpty(textField: UITextField)-> Bool{
         if textField.text == ""
         {
             animation.duration = 0.07
@@ -32,6 +32,10 @@ class ShakeMe {
             animation.fromValue = NSValue(CGPoint: CGPointMake(textField.center.x - 10, textField.center.y))
             animation.toValue = NSValue(CGPoint: CGPointMake(textField.center.x + 10, textField.center.y))
             textField.layer.addAnimation(animation, forKey: "position")
+            return true
+        }
+        else{
+            return false
         }
     }
     

@@ -58,13 +58,22 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate 
         @IBAction func createAccount(){
             print("attempting to log in with email and password")
             
+            if self.shakeMe.shakeMeIfEmpty(self.email) {
+                return
+            }
+            if self.shakeMe.shakeMeIfEmpty(self.password){
+                return
+            }
+          
+            
             FIRAuth.auth()?.signInWithEmail(email.text!, password: password.text!, completion: {
                 
                 
                 user,error  in
                 
-                self.shakeMe.shakeMeIfEmpty(self.password)
-                self.shakeMe.shakeMeIfEmpty(self.email)
+               
+                
+                
                 if error != nil{
                     self.errorHandler.searchError(error!)
                 }
