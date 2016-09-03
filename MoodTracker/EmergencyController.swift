@@ -18,8 +18,20 @@ class EmergencyController: UITableViewController{
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
         
+        
+        
+        
     }
-    @IBAction func callLifeline(sender: AnyObject) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath {
+        case 0:
+            callSamaritans()
+        default:
+            callLifeline()
+        }
+    }
+    
+    func callLifeline() {
         print("Lifeline Pressed")
         let phoneNumber = "08088088000"
         
@@ -34,11 +46,11 @@ class EmergencyController: UITableViewController{
             }
         }
     }
-    @IBAction func callSamaritans(sender: AnyObject) {
+   func callSamaritans() {
         print("Samaritans Pressed")
-        
+    
         let phoneNumber = "116123"
-        
+    
         if let phoneCallURL = NSURL(string: "tel:\(phoneNumber)") {
             let application = UIApplication.sharedApplication()
             if application.canOpenURL(phoneCallURL) {
@@ -50,6 +62,8 @@ class EmergencyController: UITableViewController{
             }
         }
     }
+    
+    
     
     
     @IBAction func donePressed(sender: AnyObject) {

@@ -14,7 +14,6 @@ class MainMenuController: UIViewController {
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var rootRef: FIRDatabaseReference!
     var userID: String = (FIRAuth.auth()?.currentUser?.uid)!
-    var userAlarms = [Alarm]()
     var retrievedData: [MoodLog] = []
     var aMoodLog: MoodLog = MoodLog()
     

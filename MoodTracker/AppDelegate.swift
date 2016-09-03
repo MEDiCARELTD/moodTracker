@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var accountLogData: [MoodLog]=[]
-    var userAlarms : [Alarm] = []
+    
         // Contact numbers
     let lifeline = "tel://08088088000";
     

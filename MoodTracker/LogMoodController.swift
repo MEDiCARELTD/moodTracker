@@ -14,7 +14,6 @@ import SCLAlertView
 class LogMoodController: UIViewController {
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    var userAlarms = [Alarm]()
     var retrievedData: [MoodLog] = []
     var aMoodLog: MoodLog = MoodLog()
 
@@ -94,11 +93,8 @@ class LogMoodController: UIViewController {
         let currentDate = String(NSDate().timeIntervalSinceReferenceDate)
         
         score = Int(self.sliderScore.value)
-        if notes != "Type some text here to remember how you mood is. Try to rememer what happened before and why this made you feel this way." {
-            notes = self.noteTextView.text
-        } else {
-            notes = ""
-        }
+       
+        notes = self.noteTextView.text
         
         // adding a moodLog to table "moodLogs"
         let moodRef = rootRef.child("moodLogs")
@@ -124,36 +120,18 @@ class LogMoodController: UIViewController {
     let notificationCenter = NSNotificationCenter()
     //// Override functions /////
     override func viewDidLoad(){
-    
-    
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.19, green:0.53, blue:0.96, alpha:1.0)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.19, green:0.53, blue:0.96, alpha:1.0)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
-
-        
         super.viewDidLoad()
+    
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+    
+        
         print(rootRef)
         
         var dateTaken:NSTimeInterval!
         var moodScore: Int!
         
-
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LogMoodController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LogMoodController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
-        
         alert = SCLAlertView(appearance: appearance)
-        
-        // setting up the textView
-        noteTextView.text = "Type some text here to remember how you mood is. Try to rememer what happened before and why this made you feel this way."
-        noteTextView.textColor = UIColor.lightGrayColor()
-        
-        
-        
-        
-        
         
         rootRef = FIRDatabase.database().reference()
         rootRef.child("Users")
@@ -194,47 +172,8 @@ class LogMoodController: UIViewController {
         
         
         rootRef.child("users/\(userID)/email").setValue(FIRAuth.auth()?.currentUser?.email)
-        
-        self.appDelegate.self.userAlarms  = self.userAlarms
+
     }
     
-    
-    func keyboardWillShow(notification: NSNotification) {
-        
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            if view.frame.origin.y == 0{
-                self.view.frame.origin.y -= keyboardSize.height
-            }
-            else {
-                
-            }
-            textViewDidBeginEditing(noteTextView)
-        }
-        
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            if view.frame.origin.y != 0 {
-                self.view.frame.origin.y += keyboardSize.height
-            }
-            else {
-                
-            }
-            textViewDidEndEditing(noteTextView)
-        }
-    }
-    func textViewDidBeginEditing(textView: UITextView) {
-        if textView.textColor == UIColor.lightGrayColor() {
-            textView.text = ""
-            textView.textColor = UIColor.redColor()
-        }
-    }
-    func textViewDidEndEditing(textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = "Type some text here to remember how you mood is. Try to rememer what happened before and why this made you feel this way."
-            textView.textColor = UIColor.lightGrayColor()
-        }
-    }
-}
+  }
 
