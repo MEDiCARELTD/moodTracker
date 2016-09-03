@@ -550,53 +550,37 @@ PRESS THE LOGO</string>
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="213"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZO-4j-OPv">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZO-4j-OPv">
                                             <rect key="frame" x="8" y="42" width="302" height="164"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hA-vA-R2A">
-                                            <rect key="frame" x="0.0" y="8" width="592" height="26"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sBR-kp-3Ip">
+                                            <rect key="frame" x="353" y="41" width="218" height="132"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="26" id="E24-Ys-QC9"/>
-                                                <constraint firstAttribute="width" constant="97" id="pvv-wY-NQa"/>
+                                                <constraint firstAttribute="width" constant="218" id="yaP-G5-FeD"/>
                                             </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hA-vA-R2A">
+                                            <rect key="frame" x="0.0" y="8" width="592" height="26"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBR-kp-3Ip">
-                                            <rect key="frame" x="353" y="41" width="218" height="132"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="218" id="Ji9-5K-Bd3"/>
-                                                <constraint firstAttribute="width" constant="274" id="L0N-BV-Ke9"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="1ZO-4j-OPv" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leadingMargin" id="0nx-Zg-jH5"/>
-                                        <constraint firstItem="4hA-vA-R2A" firstAttribute="trailing" secondItem="z0v-lh-mIX" secondAttribute="trailingMargin" id="3HY-WT-Vyb"/>
-                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="top" secondItem="4hA-vA-R2A" secondAttribute="bottom" constant="7" id="7Ye-ZQ-GdK"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="1ZO-4j-OPv" secondAttribute="bottom" constant="-0.5" id="7kl-Hz-3X5"/>
-                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="top" secondItem="z0v-lh-mIX" secondAttribute="topMargin" constant="33" id="Awd-tl-STd"/>
-                                        <constraint firstItem="1ZO-4j-OPv" firstAttribute="top" secondItem="sBR-kp-3Ip" secondAttribute="top" id="BqQ-hC-pKv"/>
-                                        <constraint firstItem="4hA-vA-R2A" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leading" id="CO8-rN-JYk"/>
-                                        <constraint firstItem="4hA-vA-R2A" firstAttribute="top" secondItem="z0v-lh-mIX" secondAttribute="topMargin" id="Cfn-s2-DWe"/>
-                                        <constraint firstItem="4hA-vA-R2A" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leading" id="Iio-wG-CfV"/>
-                                        <constraint firstItem="1ZO-4j-OPv" firstAttribute="top" secondItem="4hA-vA-R2A" secondAttribute="bottom" constant="8" symbolic="YES" id="L1X-C2-MqI"/>
-                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="leading" secondItem="1ZO-4j-OPv" secondAttribute="trailing" constant="43" id="Z8O-zZ-4za"/>
-                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="top" secondItem="z0v-lh-mIX" secondAttribute="topMargin" constant="33" id="a9f-jJ-6gW"/>
-                                        <constraint firstItem="1ZO-4j-OPv" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leadingMargin" id="hlW-nh-1fE"/>
-                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="trailing" secondItem="z0v-lh-mIX" secondAttribute="trailingMargin" id="jXR-oC-qet"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="1ZO-4j-OPv" secondAttribute="bottom" constant="-1" id="nD6-DN-2Le"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="1ZO-4j-OPv" secondAttribute="bottom" constant="-1" id="nPV-FD-zfr"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="sBR-kp-3Ip" secondAttribute="trailing" constant="21" id="odK-F7-css"/>
-                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="leading" secondItem="1ZO-4j-OPv" secondAttribute="trailing" constant="8" symbolic="YES" id="pFa-k7-l4S"/>
-                                        <constraint firstItem="1ZO-4j-OPv" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leadingMargin" id="qRk-UR-ASU"/>
-                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="centerY" secondItem="z0v-lh-mIX" secondAttribute="centerY" id="rm1-zK-fzn"/>
-                                        <constraint firstItem="1ZO-4j-OPv" firstAttribute="top" secondItem="4hA-vA-R2A" secondAttribute="bottom" constant="8" symbolic="YES" id="tIZ-XT-Bcs"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="sBR-kp-3Ip" secondAttribute="bottom" constant="-8.5" id="urk-Zc-Oxh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sBR-kp-3Ip" secondAttribute="trailing" constant="-12" id="5nF-gx-3c8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="sBR-kp-3Ip" secondAttribute="bottom" constant="32" id="608-4x-9Sz"/>
+                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="top" secondItem="4hA-vA-R2A" secondAttribute="bottom" constant="7" id="AU4-hD-l2L"/>
+                                        <constraint firstItem="1ZO-4j-OPv" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leadingMargin" id="Df2-Z7-qN1"/>
+                                        <constraint firstItem="1ZO-4j-OPv" firstAttribute="top" secondItem="4hA-vA-R2A" secondAttribute="bottom" constant="8" symbolic="YES" id="Gat-Dk-It9"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1ZO-4j-OPv" secondAttribute="bottom" constant="-1" id="Mvz-qn-geG"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4hA-vA-R2A" secondAttribute="trailing" constant="-33" id="Mxp-Mz-t1G"/>
+                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="centerY" secondItem="z0v-lh-mIX" secondAttribute="centerY" id="QvS-cD-YYX"/>
+                                        <constraint firstItem="sBR-kp-3Ip" firstAttribute="leading" secondItem="1ZO-4j-OPv" secondAttribute="trailing" constant="43" id="T4j-99-5iQ"/>
+                                        <constraint firstItem="4hA-vA-R2A" firstAttribute="top" secondItem="z0v-lh-mIX" secondAttribute="topMargin" id="gPB-rn-VSa"/>
+                                        <constraint firstItem="4hA-vA-R2A" firstAttribute="leading" secondItem="z0v-lh-mIX" secondAttribute="leading" id="xqp-G3-rjn"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

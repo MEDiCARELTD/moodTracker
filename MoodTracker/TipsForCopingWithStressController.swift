@@ -110,13 +110,13 @@ class TipsForCopingWithStressController: UITableViewController{
         
     }
     
-    
-    func pressed(sender: UITableViewCell!) {
+     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-            UIApplication.sharedApplication().openURL(NSURL(string: link)!)
-        }
-    
+        let element = whatToDisplay[indexPath.row]
+        UIApplication.sharedApplication().openURL(NSURL(string:element.link)!)
+        
     }
+}
 
 class TipCell: UITableViewCell{
     @IBOutlet var cellImage: UIImageView!
