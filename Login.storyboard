@@ -28,13 +28,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="monster" borderStyle="roundedRect" placeholder="Enter password" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="s4V-BY-40a">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="monster" borderStyle="roundedRect" placeholder="Enter password" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="s4V-BY-40a">
                                 <rect key="frame" x="12" y="356" width="288" height="30"/>
                                 <color key="textColor" red="0.0" green="0.5722355402" blue="0.88120993589999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dan106920@hotmail.com" borderStyle="roundedRect" placeholder="Please Enter email here" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-iI-H00">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dan106920@hotmail.com" borderStyle="roundedRect" placeholder="Please Enter email here" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-iI-H00">
                                 <rect key="frame" x="12" y="289" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qWx-6Y-Vg8"/>
@@ -57,7 +57,7 @@
                                     <action selector="createAccount" destination="DNz-l3-2Rd" eventType="touchUpInside" id="Vgt-Kf-JKZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8l-8W-Gru">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8l-8W-Gru">
                                 <rect key="frame" x="20" y="437" width="284" height="38"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Not registered? Sign up now">
@@ -67,16 +67,19 @@
                                     <segue destination="Ex8-MI-g9E" kind="push" id="oNN-Mt-Txa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Password: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfe-NR-xTl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfe-NR-xTl">
                                 <rect key="frame" x="16" y="327" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.054901960780000002" green="0.43137254899999999" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="BQx-Jh-xsc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="BQx-Jh-xsc">
                                 <rect key="frame" x="75" y="72" width="170" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="qRk-Lz-1hS"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjK-tI-x8e">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjK-tI-x8e">
                                 <rect key="frame" x="20" y="381" width="280" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Forgot password? Redeem here">
@@ -86,7 +89,7 @@
                                     <segue destination="lXX-3v-aGd" kind="push" id="8Ty-0h-Ycy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go8-4v-DdR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go8-4v-DdR">
                                 <rect key="frame" x="20" y="260" width="50" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gyy-p1-rUF"/>
@@ -100,8 +103,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="rU5-iI-H00" firstAttribute="top" secondItem="go8-4v-DdR" secondAttribute="bottom" constant="8" symbolic="YES" id="1UT-Yv-Cwm"/>
-                            <constraint firstItem="rU5-iI-H00" firstAttribute="top" secondItem="BQx-Jh-xsc" secondAttribute="bottom" constant="65" id="5ru-v8-rMl"/>
-                            <constraint firstItem="BQx-Jh-xsc" firstAttribute="top" secondItem="stM-UT-l4L" secondAttribute="bottom" constant="8" symbolic="YES" id="9A9-o4-cNN"/>
+                            <constraint firstItem="BQx-Jh-xsc" firstAttribute="leading" secondItem="0sH-Yb-IRa" secondAttribute="leadingMargin" constant="59" id="8vO-ce-eoD"/>
                             <constraint firstItem="go8-4v-DdR" firstAttribute="leading" secondItem="PjK-tI-x8e" secondAttribute="leading" id="9OM-Qc-4xP"/>
                             <constraint firstItem="b8l-8W-Gru" firstAttribute="top" secondItem="PjK-tI-x8e" secondAttribute="bottom" constant="21" id="DOL-cK-9FC"/>
                             <constraint firstItem="rU5-iI-H00" firstAttribute="leading" secondItem="s4V-BY-40a" secondAttribute="leading" id="Fr2-74-Kwt"/>
@@ -112,13 +114,13 @@
                             <constraint firstItem="PjK-tI-x8e" firstAttribute="centerX" secondItem="IiN-XF-XRo" secondAttribute="centerX" id="R8v-ax-gUP"/>
                             <constraint firstItem="PjK-tI-x8e" firstAttribute="leading" secondItem="b8l-8W-Gru" secondAttribute="leading" id="SH7-bI-oZX"/>
                             <constraint firstItem="Kfe-NR-xTl" firstAttribute="leading" secondItem="IiN-XF-XRo" secondAttribute="leading" id="Vdr-Q2-EM0"/>
+                            <constraint firstItem="BQx-Jh-xsc" firstAttribute="centerX" secondItem="PjK-tI-x8e" secondAttribute="centerX" id="Vi7-FX-6Bd"/>
+                            <constraint firstItem="BQx-Jh-xsc" firstAttribute="top" secondItem="stM-UT-l4L" secondAttribute="bottom" constant="8" symbolic="YES" id="ZWD-yJ-8QJ"/>
                             <constraint firstItem="rU5-iI-H00" firstAttribute="leading" secondItem="0sH-Yb-IRa" secondAttribute="leadingMargin" constant="-4" id="Zzd-zr-pno"/>
-                            <constraint firstItem="go8-4v-DdR" firstAttribute="top" secondItem="BQx-Jh-xsc" secondAttribute="bottom" constant="36" id="aQ2-gA-L9A"/>
                             <constraint firstItem="IiN-XF-XRo" firstAttribute="top" secondItem="b8l-8W-Gru" secondAttribute="bottom" constant="8" symbolic="YES" id="bfQ-uW-4MS"/>
                             <constraint firstItem="s4V-BY-40a" firstAttribute="trailing" secondItem="PjK-tI-x8e" secondAttribute="trailing" id="dHr-4n-OCh"/>
-                            <constraint firstItem="BQx-Jh-xsc" firstAttribute="leading" secondItem="0sH-Yb-IRa" secondAttribute="leadingMargin" constant="59" id="f7B-mg-BWz"/>
                             <constraint firstItem="b8l-8W-Gru" firstAttribute="trailing" secondItem="IiN-XF-XRo" secondAttribute="trailing" id="jDH-KU-av7"/>
-                            <constraint firstItem="BQx-Jh-xsc" firstAttribute="centerX" secondItem="PjK-tI-x8e" secondAttribute="centerX" id="pqn-9F-BdR"/>
+                            <constraint firstItem="rU5-iI-H00" firstAttribute="top" secondItem="BQx-Jh-xsc" secondAttribute="bottom" constant="65" id="nvF-w1-AH6"/>
                             <constraint firstItem="go8-4v-DdR" firstAttribute="leading" secondItem="0sH-Yb-IRa" secondAttribute="leadingMargin" constant="4" id="rEC-NM-E4I"/>
                             <constraint firstItem="s4V-BY-40a" firstAttribute="top" secondItem="Kfe-NR-xTl" secondAttribute="bottom" constant="8" symbolic="YES" id="rsc-kA-iec"/>
                             <constraint firstItem="Kfe-NR-xTl" firstAttribute="leading" secondItem="0sH-Yb-IRa" secondAttribute="leadingMargin" id="sjX-9r-bSf"/>
@@ -417,6 +419,6 @@
         <image name="register" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rhd-sT-2gG"/>
+        <segue reference="jFv-wu-5gT"/>
     </inferredMetricsTieBreakers>
 </document>

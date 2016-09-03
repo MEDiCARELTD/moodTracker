@@ -63,7 +63,7 @@ class AccountController: UITableViewController {
     
     @IBAction func clearData(sender: AnyObject) {
         
-        var clearData = SCLAlertView(appearance: appearance)
+        let clearData = SCLAlertView(appearance: appearance)
 
         clearData.addButton("Continue", action: {
             action in

@@ -72,8 +72,6 @@ class ErrorHandler {
             print(error)
         case .ErrorCodeInvalidUserToken:
             print(error)
-        case .ErrorCodeUserMismatch:
-            print(error)
         case .ErrorCodeCredentialAlreadyInUse:
             print(error)
         case .ErrorCodeInternalError:
