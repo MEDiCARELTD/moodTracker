@@ -179,6 +179,7 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
         averageMoodToday.text = "Average mood that day: \(String(totalScore / moodLogsSameDay.count))"
         numberOfLogsToday.text =  "Mood logs that day: \(moodLogsSameDay.count)"
         
+        print(" note touched" + moodLog.note)
         notesToday.text = moodLog.note
         
     }
@@ -261,13 +262,13 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-            return listForToday[index].getTime()
+            return "  " + listForToday[index].getTime()
         case 1:
-            return listForPastWeek[index].getDay()
+            return "  " + listForPastWeek[index].getDay()
         case 2:
-            return listForPast3Months[index].getMonth()
+            return "  " + listForPast3Months[index].getMonth()
         case 3:
-            return listForAllTime[index].getMonth()
+            return "  " + listForAllTime[index].getMonth()
         case 4:
             return listForCustomRange[index].getMonth()
         default:
@@ -310,6 +311,7 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
     @IBAction func goToNoteDetail(sender: AnyObject) {
         print("pressed go to note")
         tableView!.scrollToRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 3), atScrollPosition: .Top, animated: true)
+        
         
     }
     
