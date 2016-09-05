@@ -32,6 +32,7 @@
 		07C9AF0E1D48A75C00B2AC4F /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF0D1D48A75C00B2AC4F /* NotesController.swift */; };
 		07C9AF121D48C01600B2AC4F /* MoodLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF111D48C01600B2AC4F /* MoodLog.swift */; };
 		07C9AF141D48C3A600B2AC4F /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF131D48C3A600B2AC4F /* MainMenuController.swift */; };
+		65C305CC1D7CDD630049CA7B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C305CB1D7CDD630049CA7B /* Launch Screen.storyboard */; };
 		B116FEAF7506DF58F0484BB5 /* Pods_MoodTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FF4AD5B2D8A5436DB8B515 /* Pods_MoodTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		07C9AF131D48C3A600B2AC4F /* MainMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		32FF4AD5B2D8A5436DB8B515 /* Pods_MoodTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3829DEB44F11DA1D8055EDCD /* Pods-MoodTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodTracker/Pods-MoodTracker.release.xcconfig"; sourceTree = "<group>"; };
+		65C305CB1D7CDD630049CA7B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		81377144841897ADE6B49364 /* Pods-MoodTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodTracker/Pods-MoodTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 			children = (
 				077458881D6FBF4200FDD291 /* MainMenu.storyboard */,
 				078EB0251D4AB456004CE01E /* Login.storyboard */,
+				65C305CB1D7CDD630049CA7B /* Launch Screen.storyboard */,
 			);
 			name = StoryBoards;
 			path = ..;
@@ -296,6 +299,7 @@
 				078EB0261D4AB456004CE01E /* Login.storyboard in Resources */,
 				077458891D6FBF4200FDD291 /* MainMenu.storyboard in Resources */,
 				0776A46D1D419F700003BAB4 /* GoogleService-Info.plist in Resources */,
+				65C305CC1D7CDD630049CA7B /* Launch Screen.storyboard in Resources */,
 				0776A4621D419D880003BAB4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,8 +477,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kwong Chiu Li (56UNL9FDCT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kwong Chiu Li (56UNL9FDCT)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Analytics/Sources",
@@ -499,7 +503,7 @@
 				INFOPLIST_FILE = MoodTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.MoodTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielLi.OneSelf.MoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -515,8 +519,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kwong Chiu Li (56UNL9FDCT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kwong Chiu Li (56UNL9FDCT)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Analytics/Sources",
@@ -541,7 +545,7 @@
 				INFOPLIST_FILE = MoodTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.MoodTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielLi.OneSelf.MoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
