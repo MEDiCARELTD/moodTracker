@@ -82,16 +82,7 @@ class StatisticsController: UITableViewController, BEMSimpleLineGraphDataSource,
     
     override func viewDidLoad() {
         print("Statistics Controller")
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.19, green:0.53, blue:0.96, alpha:1.0)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.19, green:0.53, blue:0.96, alpha:1.0)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationItem.titleView?.tintColor = UIColor.whiteColor()
-        
-        
-        
+
         goToNoteDetail.enabled = false
         goToNoteDetail.hidden = true
         
