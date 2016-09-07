@@ -12,7 +12,7 @@ import GoogleSignIn
 import SCLAlertView
 
 
-class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
+class LoginController: UITableViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     
     @IBOutlet  var email: UITextField!
@@ -68,11 +68,8 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate 
             
             FIRAuth.auth()?.signInWithEmail(email.text!, password: password.text!, completion: {
                 
-                
                 user,error  in
-                
-               
-                
+
                 
                 if error != nil{
                     self.errorHandler.searchError(error!)
@@ -124,7 +121,13 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate 
             
             
         }
+    
+    
+    @IBAction func registerPressed(sender: AnyObject) {
         
+        self.performSegueWithIdentifier("registerSegue", sender: self)
+    }
+    
         
         
         @IBAction func googleSignIn(sender: AnyObject) {

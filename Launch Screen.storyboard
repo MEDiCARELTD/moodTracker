@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,21 +24,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoodTrakcerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0Va-rP-vKF">
-                                <rect key="frame" x="20" y="28" width="560" height="523"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-App-83.5x83.5.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Va-rP-vKF">
+                                <rect key="frame" x="166" y="166" width="269" height="267"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="523" id="eKm-Ry-X6P"/>
+                                    <constraint firstAttribute="width" constant="269" id="YOb-m1-V2B"/>
+                                    <constraint firstAttribute="width" secondItem="0Va-rP-vKF" secondAttribute="height" multiplier="269:267" id="mkl-Bd-L1E"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0Va-rP-vKF" firstAttribute="trailing" secondItem="obG-Y5-kRd" secondAttribute="trailing" id="1Vd-ob-uap"/>
-                            <constraint firstItem="0Va-rP-vKF" firstAttribute="leading" secondItem="obG-Y5-kRd" secondAttribute="leading" id="1o2-2w-plN"/>
                             <constraint firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
-                            <constraint firstItem="0Va-rP-vKF" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" symbolic="YES" id="HWO-ad-Wx0"/>
+                            <constraint firstItem="0Va-rP-vKF" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="146" id="FUD-Um-qFU"/>
+                            <constraint firstItem="0Va-rP-vKF" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="GfK-5B-D8K"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
                             <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
+                            <constraint firstItem="0Va-rP-vKF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="b5T-R6-gH8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,6 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MoodTrakcerIcon" width="500" height="500"/>
+        <image name="Icon-App-83.5x83.5.png" width="83" height="83"/>
     </resources>
 </document>

@@ -32,6 +32,8 @@
 		07C9AF0E1D48A75C00B2AC4F /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF0D1D48A75C00B2AC4F /* NotesController.swift */; };
 		07C9AF121D48C01600B2AC4F /* MoodLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF111D48C01600B2AC4F /* MoodLog.swift */; };
 		07C9AF141D48C3A600B2AC4F /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9AF131D48C3A600B2AC4F /* MainMenuController.swift */; };
+		6511116B1D809FC9005A83C0 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6511116A1D809FC9005A83C0 /* Icon-App-83.5x83.5@2x.png */; };
+		6511116D1D80A089005A83C0 /* Splash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6511116C1D80A089005A83C0 /* Splash.xib */; };
 		65C305CC1D7CDD630049CA7B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C305CB1D7CDD630049CA7B /* Launch Screen.storyboard */; };
 		B116FEAF7506DF58F0484BB5 /* Pods_MoodTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FF4AD5B2D8A5436DB8B515 /* Pods_MoodTracker.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		07C9AF131D48C3A600B2AC4F /* MainMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		32FF4AD5B2D8A5436DB8B515 /* Pods_MoodTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3829DEB44F11DA1D8055EDCD /* Pods-MoodTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodTracker/Pods-MoodTracker.release.xcconfig"; sourceTree = "<group>"; };
+		6511116A1D809FC9005A83C0 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-83.5x83.5@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		6511116C1D80A089005A83C0 /* Splash.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Splash.xib; sourceTree = "<group>"; };
 		65C305CB1D7CDD630049CA7B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		81377144841897ADE6B49364 /* Pods-MoodTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodTracker/Pods-MoodTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +105,7 @@
 				078F7CC01D4766590054AAC7 /* StatisticsController.swift */,
 				0738CE2F1D579D570042BA76 /* GraphingTool.swift */,
 				07C9AF111D48C01600B2AC4F /* MoodLog.swift */,
+				6511116A1D809FC9005A83C0 /* Icon-App-83.5x83.5@2x.png */,
 			);
 			name = StatisticsController;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 		0776A44E1D419D880003BAB4 = {
 			isa = PBXGroup;
 			children = (
+				6511116C1D80A089005A83C0 /* Splash.xib */,
 				07B90ED91D68DCF8004AC82A /* TipCellControlTableViewCell.swift */,
 				0776A46C1D419F700003BAB4 /* GoogleService-Info.plist */,
 				0776A4591D419D880003BAB4 /* MoodTracker */,
@@ -298,8 +304,10 @@
 			files = (
 				078EB0261D4AB456004CE01E /* Login.storyboard in Resources */,
 				077458891D6FBF4200FDD291 /* MainMenu.storyboard in Resources */,
+				6511116D1D80A089005A83C0 /* Splash.xib in Resources */,
 				0776A46D1D419F700003BAB4 /* GoogleService-Info.plist in Resources */,
 				65C305CC1D7CDD630049CA7B /* Launch Screen.storyboard in Resources */,
+				6511116B1D809FC9005A83C0 /* Icon-App-83.5x83.5@2x.png in Resources */,
 				0776A4621D419D880003BAB4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,11 +12,12 @@ import FirebaseAuth
 import FirebaseDatabase
 import SCLAlertView
 
-class RegisterController: UIViewController {
+class RegisterController: UITableViewController {
     
     
     @IBOutlet weak var confirmPassword: UITextField!
     @IBOutlet weak var password: UITextField!
+   
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var register: UIButton!
     

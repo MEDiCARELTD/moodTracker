@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SCLAlertView
 
-class RedeemPassword: UIViewController {
+class RedeemPassword: UITableViewController {
     
     
     @IBOutlet var email: UITextField!
